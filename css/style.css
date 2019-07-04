@@ -292,6 +292,10 @@ body{
 		max-width: 60px;
 		padding-right: 10px;
 	}
+	#pirates-logo img{
+		max-width: 40px;
+		padding: 0 15px;
+	}
 	.game-divider{
 		color: rgba(0,0,0,0);
 		font-size: 65px;
@@ -399,6 +403,7 @@ body{
 		padding: 0 10px;
 	}
 	.schedule-logo-heading img{
+		max-height: 120px;
 		max-width: 120px;
 		padding: 10px 0;
 	}
