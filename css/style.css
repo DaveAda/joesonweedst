@@ -8,10 +8,6 @@
 	src: url('../fonts/h-neu-light.ttf');
 }
 @font-face{
-	font-family: 'probasketball';
-	src: url('../fonts/pro-basketball.otf');
-}
-@font-face{
 	font-family: 'profootball';
 	src: url('../fonts/pro-football.ttf');
 }
@@ -30,17 +26,30 @@ body{
 	margin: 200px auto 0 auto;
 	max-width: 95%;
 }
+.coffee{
+	background-color: green;
+}
 /*DISPLAY NONE*/
 	.header-about-dropdown,
 	.header-menu-dropdown{
 		display: none;
 	}
-	/*CHICAGO BEARS*/
+	/*SPORTS*/
 	.table-reservation{
 		display: none;
 	}
 	#bears-schedule,
-	#illini-football-schedule{
+	#blackhawks-schedule,
+	#bulls-schedule,
+	#cubs-schedule,
+	#frogs-schedule,
+	#hoosiers-football-schedule,
+	#hoosiers-basketball-schedule,
+	#illini-basketball-schedule, 
+	#illini-football-schedule,
+	#razorbacks-schedule,
+	#tarheels-basketball-schedule,
+	#tarheels-football-schedule{
 		display: none;
 	}
 	/*TRIVIA*/
@@ -150,7 +159,7 @@ body{
 	}
 	.header-menu-dropdown{
 	    background-color: #000;
-	    box-shadow: 2px 2px 5px #000;
+	    box-shadow: -2px 2px 10px #000;
 	    left: 0;
 	    padding: 10px 0;
 	    position: absolute;
@@ -184,7 +193,8 @@ body{
 		transform: rotate(180deg);
 		transition: .5s;
 	}
-/***MAIN VIDEO***/
+/***MAIN PAGE***/
+/*MAIN VIDEO*/
 	.main-video{
 		margin: 60px auto 0 auto;
 		max-width: 1500px;
@@ -192,6 +202,398 @@ body{
 	}
 	.jarallax{
 		height: 500px;
+	}
+/*MAIN UPCOMING CAROUSEL*/
+	.main-upcoming{
+		margin: 40px 0;
+		max-width: 1500px;
+		width: 100%;
+	}
+	.main-upcoming-container{
+		display: flex;
+		justify-content: center;
+	}
+	/*UP NEXT*/
+	.main-next-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.main-next img{
+		border: 2px solid #fff;
+		max-width: 384px;
+		position: relative;
+	}
+	.next-concert,
+	.next-rooftop{
+		position: relative;
+	}
+	.rooftop-concert-series{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		padding: 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.next-concert-date{
+		background-color: #B5A267;
+		border: 2px solid #fff;
+		color: #fff;
+		font-family: 'h-neu', sans-serif;
+		left: 0;
+		padding: 10px;
+		position: absolute;
+		top: 0;
+	}
+	.next-concert-date-text{
+		align-items: center;
+		background-color: rgba(0,0,0,.5);
+		bottom: 6px;
+		display: flex;
+		left: 2px;
+		padding: 10px;
+		position: absolute;
+		width: calc(100% - 24px);
+	}
+	#next-band-name{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 16px;
+	}
+	#next-band-time{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 12px;
+	}
+	#next-band-time span{
+		color: rgba(0,0,0,0);
+	}
+	.main-next .ticket-button{
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 12px;
+		text-align: center;
+		width: 80px;
+	}
+	/*CAROUSEL*/
+	.main-upcoming-carousel{
+		max-width: 800px;
+		padding: 0 5px;
+		position: relative;
+		width: 100%;
+	}
+	.main-upcoming-carousel-text{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 40px;
+		text-align: center;
+	}
+	.main-upcoming .event-wrapper{
+		border: 2px solid #fff;
+		position: relative;
+		width: calc(100% + 4px);
+	}
+	.event-box{
+		position: relative;
+	}
+	.event-box img{
+		display: block;
+		height: 100%;
+		max-height: 500px;
+		max-width: 900px;
+		width: 100%;
+	}
+	.event-box .event-info{
+		align-items: center;
+		background-color: rgba(0,0,0,.5);
+		bottom: 0;
+		color: #fff;
+		display: flex;
+		font-size: 18px;
+		justify-content: space-between;
+		left: 0;
+		padding: 10px;
+		position: absolute;
+		text-shadow: 2px 2px #000;
+		width: calc(100% - 20px);
+	}
+	.event-box .event-title{
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 40px;
+	}
+	.event-box .event-title-extras{
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 24px;
+	}
+	.event-box .event-date{
+		font-family: 'h-neu', sans-serif;
+		font-size: 22px;
+		
+	}
+	.event-box .ticket-button{
+		
+		font-family: 'Roboto Mono', sans-serif;
+		position: relative;
+		
+		text-align: center;
+		width: 200px;
+	}
+	.event-box .rooftop-button{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 30px;
+		position: absolute;
+		right: 10px;
+		text-shadow: -10px 10px 2px #000;
+		top: 10px;
+	}
+	.main-upcoming-arrows-left,
+	.main-upcoming-arrows-right{
+		align-items: center;
+		border-radius: 45px;
+		color: #fff;
+		display: flex;
+		font-size: 24px;
+		margin: 0 12px;
+		transition: .2s;
+		z-index: 20;
+	}
+	.main-upcoming-arrows-left:hover,
+	.main-upcoming-arrows-right:hover{
+		color: #B5A267;
+		cursor: pointer;
+		transition: .2s;
+	}
+	#album-title{
+		font-style: italic;
+	}
+/*SOCIAL MEDIA*/
+	.social-media{
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+	}
+	.social-media-container{
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.social-media-heading{
+		color: #fff;
+		font-family: 'Roboto Mono';
+		font-size: 32px;
+		text-shadow: -2px 2px #000;
+	}
+	.social-media-icons{
+		display: flex;
+		justify-content: space-between;
+		max-width: 200px;
+		padding: 20px 0 10px 0;
+		text-shadow: -2px 2px #000;
+		width: 100%;
+	}
+	.social-media .icon i{
+		color: #B5A267;
+		font-size: 40px;
+		transition: .3s;
+	}
+	.social-media .icon i:hover{
+		color: #fff;
+		margin-top: -5px;
+		padding-bottom: 5px;
+		transition: .3s;
+	}
+	.icon img{
+		max-height: 20px;
+		max-width: 100px;
+	}
+/*INSTAFEED*/
+	.instagram{
+		margin: 20px auto;
+		max-width: 1200px;
+		position: relative;
+	}
+	#instafeed{
+		z-index: 10;
+	}
+	#instafeed img{
+		border: 2px solid #fff;
+		height: 290px;
+		margin: 0 2px;
+		position: relative;
+		width: 292px;
+		object-fit: cover;
+	}
+	#instafeed .slick-slide{
+		position: relative;
+		width: 800px;
+	}
+	.insta-likes{
+		align-items: center;
+		bottom: 6px;
+		color: rgba(255,255,255,0);
+		display: flex;
+		flex-direction: column;
+		font-family: 'h-neu', sans-serif;
+		font-size: 26px;
+		height: 290px;
+		justify-content: center;
+		left: 5px;
+		width: 290px;
+		position: absolute;
+		transition: .2s;
+	}
+	.insta-likes:hover{
+		background-color: rgba(0,0,0,.8);
+		color: #B5A267;
+		transition: .2s;
+	}
+	.insta-likes i{
+		padding-left: 5px;
+	}
+	.insta-ig{
+		font-size: 40px;
+		padding: 20px 0;
+	}
+	.insta-caption{
+		font-size: 12px;
+		padding: 0 10px;
+		text-align: center;
+	}
+	#instafeed img:hover{
+		opacity: .2;
+	}
+	.instafeed-arrows,
+	.main-upcoming-arrows{
+		align-items: center;
+		display: flex;
+		height: calc(100% - 4px);
+		justify-content: space-between;
+		left: 0;
+		margin: 0 auto;
+		max-width: calc(1200px);
+		right: 50%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.instafeed-arrows-left,
+	.instafeed-arrows-right{
+		align-items: center;
+		background-color: rgba(0,0,0,.5);
+		color: rgba(255,255,255,.3);
+		display: flex;
+		font-size: 24px;
+		height: 100%;
+		padding: 0 12px;
+		transition: .2s;
+		z-index: 20;
+	}
+	.instafeed-arrows-left:hover,
+	.instafeed-arrows-right:hover{
+		background-color: #B5A267;
+		color: rgba(255,255,255,1);
+		cursor: pointer;
+		transition: .2s;
+	}
+/*ACM AWARD*/
+	.acm-award{
+		background-color: #B5A267;
+		background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+		box-shadow: 0 10px 10px #000;
+		margin: 0 auto;
+		max-width: 1500px;
+		width: 100%;
+	}
+	
+	.acm-award-header{
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 900px;
+		width:	100%;
+	}
+	.acm-award-header img{
+		padding: 10px 0;
+		width: 190px;
+	}
+	.acm-award-header h1{
+		color: #fff;
+		font-family: 'h-neu', sans-serif;
+		font-size: 40px;
+		text-shadow: -2px 2px #000;
+	}
+/*MAIN BIO*/
+	.main-bio{
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+	.bio-photo{
+		border: 2px solid #fff;
+	}
+	.main-bio-photo img{
+		max-width: 100%;
+	}
+	#garth-brooks-logo{
+		max-width: 300px;
+		padding-bottom: 10px;
+	}
+	#dive-bar{
+		font-size: 32px;
+	}
+	#jimmy-kimmel-live-logo{
+		max-width: 200px;
+	}
+	.bio-photo{
+		position: relative;
+	}
+	.main-bio-header-caption{
+		align-items: center;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		font-family: 'Roboto Mono', sans-serif;
+		height: 100%;
+		justify-content: center;
+		position: absolute;
+		right: 20px;
+		text-shadow: -2px 2px #000;
+	}
+	.main-bio-header-caption a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.main-bio-header-caption-artist{
+		font-size: 36px;
+	}
+	.main-bio-copy{
+		background-color: #000;
+		border: 2px solid #fff;
+		color: #fff;
+		font-family: 'h-neu', sans-serif;
+		font-size: 22px;
+		margin: 20px auto;
+		max-width: 1200px;
+		text-align: center;
+		width: calc(100% - 4px);
+	}
+	.main-bio-copy-container{
+		border: 2px dashed #fff;
+		margin: 5px;
+		padding: 10px 20px;
+	}
+	.bio-link{
+		border-bottom: 2px solid #B5A267;
+		color: #B5A267;
+		text-decoration: none;
+		transition: .3s;
+	}
+	.bio-link:hover{
+		border-color: #fff;
+		color: #fff;
+		transition: .3s;
 	}
 /***SPORTS PAGE***/
 	
@@ -201,7 +603,7 @@ body{
 		font-family: 'h-neu', sans-serif;
 		font-size: 22px;
 		line-height: 1.4;
-		margin: 0 auto;
+		margin: 40px auto 0 auto;
 		max-width: 90%;
 		text-align: center;
 		text-transform: uppercase;
@@ -257,9 +659,6 @@ body{
 	#dot{
 		padding: 0 5px;
 	}
-	#illini-basketball-button{
-		font-family: 'probasketball', sans-serif;
-	}
 	.sports-schedule-container,
 	.game-details{
 		align-items: center;
@@ -285,6 +684,10 @@ body{
 		font-family: 'profootball';
 		font-size: 26px;
 	}
+	.sports-schedule .upcoming-schedule{
+		font-size: 50px;
+		text-align: center;
+	}
 	.game-details span{
 		font-size: 20px;
 	}
@@ -292,10 +695,65 @@ body{
 		max-width: 60px;
 		padding-right: 10px;
 	}
-	#pirates-logo img{
-		max-width: 40px;
-		padding: 0 15px;
-	}
+	/*SPECIFIC LOGOS*/
+		#appalachian-state-logo{
+			max-width: 80px;
+		}
+		#ball-state-logo{
+			max-width: 40px;
+			padding: 0 15px;
+		}
+		#colts-logo{
+			max-height: 90px;
+		}
+		#duke-logo{
+			max-width: 100px;
+		}
+		#illini-logo{
+			max-height: 90px;
+		}
+		#mlb-all-star-game-logo{
+			max-width: 200px;
+		}
+		#nc-state-logo{
+			max-height: 60px;
+			padding: 0 15px 0 5px;
+		}
+		#nc-state-pop-up-logo{
+			max-width: 80px;
+		}
+		#northwestern-logo{
+			max-height: 75px;
+			padding: 0 16px 0 6px;
+		}
+		#ny-giants-logo{
+			max-height: 90px;
+		}
+		#pirates-logo img{
+			max-width: 40px;
+			padding: 0 15px;
+		}
+		#sf-giants-logo{
+			max-width: 180px;
+		}
+		#sooners-logo{
+			max-height: 65px;
+			padding: 0 15px 0 5px;
+		}
+		#wildcats-logo{
+			max-height: 100px;
+		}
+		#golden-knights-logo,
+		#senators-logo{
+			max-width: 50px;
+			padding: 0 10px;
+		}
+		#cornhuskers-logo,
+		#eastern-michigan-eagles-logo,
+		#rutgers-knights-logo,
+		#spartans-logo{
+			max-height: 88px;
+		}
 	.game-divider{
 		color: rgba(0,0,0,0);
 		font-size: 65px;
@@ -512,6 +970,7 @@ body{
 		position: absolute;
 		top: 0;
 	}
+	.ticket-button,
 	.trivia-reserve-table{
 		background-color: rgba(0,0,0,0.6);
 		border-left: 1px solid #fff;
@@ -525,6 +984,7 @@ body{
 		right: 0;
 		transition: .3s;
 	}
+	.ticket-button:hover,
 	.trivia-reserve-table:hover{
 		color: #000;
 		background-color: #B5A267;
@@ -532,6 +992,7 @@ body{
 		cursor: pointer;
 		transition: .3s;
 	}
+	.ticket-button:hover #table-p
 	.trivia-reserve-table:hover #table-p{
 		color: #000;
 		background-color: #B5A267;
@@ -539,10 +1000,12 @@ body{
 		cursor: pointer;
 		transition: .3s;
 	}
+	.ticket-button a,
 	.trivia-reserve-table a{
 		color: #fff;
 		text-decoration: none;
 	}
+	.ticket-button p,
 	.trivia-reserve-table p{
 		border: 2px dashed #fff;
 		padding: 5px;

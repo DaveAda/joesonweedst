@@ -1,4 +1,45 @@
 $(document).ready(function(){
+    /*MAIN UPCOMING CAROUSEL*/
+    $('.event-wrapper').slick({
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      lazyLoad: 'ondemand',
+      prevArrow: $('#main-upcoming-arrows-left'),
+      nextArrow: $('#main-upcoming-arrows-right')
+      });
+/*MAIN INSTAGRAM FEED*/
+    var feed = new Instafeed({
+        get: 'user',
+        limit: 50,
+        sortBy:'most-recent',
+        userId: 337719583,
+        resolution: 'standard_resolution',
+        accessToken: '337719583.1677ed0.4994e26055cc4cf595c0cb6853f12337',
+        template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="insta-likes"><div>{{likes}} <i class="fa fa-heart"></i></div><i class="fab fa-instagram insta-ig"></i><div class="insta-caption">{{caption}}</div></div></a></li>',
+      
+       /* <div class="ig-caption">{{caption}}</div>*/
+      after: function() {
+     
+        $('#instafeed').slick({
+          arrows: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          prevArrow: $('#arrow-left'),
+          nextArrow: $('#arrow-right'),
+          slidesToShow: 4,
+          slidesToScroll: 1
+        });
+      },
+      success: function() {
+      }
+    });
+    feed.run();
+});
+$(document).ready(function(){
 /*VARIABLES*/
     var $bears = $('#bears');
     var $blackhawks = $('#blackhawks');
@@ -10,7 +51,23 @@ $(document).ready(function(){
     var $razorbacks = $('#razorbacks');
     var $tarheels = $('#tarheels');
     var $bearsschedule = $('#bears-schedule');
+    var $bullsschedule = $('#bulls-schedule');
+    var $blackhawksschedule = $('#blackhawks-schedule');
+    var $cubsschedule = $('#cubs-schedule');
+    var $frogsschedule = $('#frogs-schedule');
+    var $hoosiersbasketballbutton = $('.hoosiers-basketball-button');
+    var $hoosiersbasketballschedule = $('#hoosiers-basketball-schedule');
+    var $hoosiersfootballbutton = $('.hoosiers-football-button');
+    var $hoosiersfootballschedule = $('#hoosiers-football-schedule');
+    var $illinibasketballbutton = $('.illini-basketball-button');
+    var $illinibasketballschedule = $('#illini-basketball-schedule');
+    var $illinifootballbutton = $('.illini-football-button');
     var $illinifootballschedule = $('#illini-football-schedule');
+    var $razorbacksschedule = $('#razorbacks-schedule');
+    var $tarheelsbasketballbutton = $('.tarheels-basketball-button');
+    var $tarheelsbasketballschedule = $('#tarheels-basketball-schedule');
+    var $tarheelsfootballbutton = $('.tarheels-football-button');
+    var $tarheelsfootballschedule = $('#tarheels-football-schedule');
     var $headeraboutarrow = $('.header-about-arrow');
     var $headerabouttitle = $('.header-about-title');
     var $headeraboutdropdown = $('.header-about-dropdown');
@@ -29,13 +86,10 @@ $(document).ready(function(){
     var $headermenutitle = $('.header-menu-title');
     var $headermenudropdown = $('.header-menu-dropdown');
 /*HEADER LOGO SHRINK*/
-
     $headershrinkpoint.waypoint(function(){
         $headerlogo.toggleClass('header-logo-shrink');
   });
-    
 /*HEADER DROPDOWNS*/
-
     $headerabouttitle.click(function(){
         $headeraboutdropdown.slideToggle();
         $headeraboutarrow.toggleClass('head-arrow-flip');
@@ -44,12 +98,22 @@ $(document).ready(function(){
         $headermenudropdown.slideToggle();
         $headermenuarrow.toggleClass('head-arrow-flip');
     });
-/*SPORTS LOGOS*/
 
+   
 /*SPORTS SCHEDULES*/
     $bears.click(function(){
         $bearsschedule.show();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
         $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
         $bears.css('opacity', '1');
         $blackhawks.css('opacity', '.2');
         $bulls.css('opacity', '.2');
@@ -60,9 +124,179 @@ $(document).ready(function(){
         $razorbacks.css('opacity', '.2');
         $tarheels.css('opacity', '.2');
     });
+    $blackhawks.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.show();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '1');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $bulls.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.show();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '1');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $cubs.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.show();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '1');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $frogs.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.show();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '1');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $hoosiers.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersfootballschedule.show();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '1');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $hoosiersbasketballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.show();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '1');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $hoosiersfootballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.show();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '1');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
     $illini.click(function(){
         $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
         $illinifootballschedule.show();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
         $bears.css('opacity', '.2');
         $blackhawks.css('opacity', '.2');
         $bulls.css('opacity', '.2');
@@ -73,19 +307,268 @@ $(document).ready(function(){
         $razorbacks.css('opacity', '.2');
         $tarheels.css('opacity', '.2');
     });
+    $illinibasketballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.show();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '1');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $illinifootballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.show();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '1');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '.2');
+    });
+    $razorbacks.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.show();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '1');
+        $tarheels.css('opacity', '.2');
+    });
+    $tarheels.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.show();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '1');
+    });
+    $tarheelsbasketballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.show();
+        $tarheelsfootballschedule.hide();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '1');
+    });
+    $tarheelsfootballbutton.click(function(){
+        $bearsschedule.hide();
+        $blackhawksschedule.hide();
+        $bullsschedule.hide();
+        $cubsschedule.hide();
+        $frogsschedule.hide();
+        $hoosiersbasketballschedule.hide();
+        $hoosiersfootballschedule.hide();
+        $illinibasketballschedule.hide();
+        $illinifootballschedule.hide();
+        $razorbacksschedule.hide();
+        $tarheelsbasketballschedule.hide();
+        $tarheelsfootballschedule.show();
+        $bears.css('opacity', '.2');
+        $blackhawks.css('opacity', '.2');
+        $bulls.css('opacity', '.2');
+        $cubs.css('opacity', '.2');
+        $hoosiers.css('opacity', '.2');
+        $frogs.css('opacity', '.2');
+        $illini.css('opacity', '.2');
+        $razorbacks.css('opacity', '.2');
+        $tarheels.css('opacity', '1');
+    });
 
 /*SPORTS TABLE RESERVATIONS*/
-    $bearstableweekone = $('#bears-table-week-one');
-    $bearsweekonebutton = $('#bears-week-one-button');
     $sportsschedule = $('.sports-schedule');
-
     $tablereservation = $('.table-reservation');
     $tablereservationx = $('.table-reservation-x');
 
-    $bearsweekonebutton.click(function(){
-        $bearstableweekone.fadeIn();
-        $sportsschedule.addClass('schedule-background-fade');
+    $tablereservationx.click(function(){
+        $privatepartiesrooms.removeClass('schedule-background-fade');
+        $sportsschedule.removeClass('schedule-background-fade');
+        $triviamonths.removeClass('schedule-background-fade');
+        $tablereservation.fadeOut();
     });
+/*BEARS TABLE RESERVATIONS*/
+    $bearspreseasonweek1button = $('#bears-preseason-week-1-button'); $bearspreseasonweek1popup = $('#bears-preseason-week-1-pop-up');$bearspreseasonweek1button.click(function(){$bearspreseasonweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearspreseasonweek2button = $('#bears-preseason-week-2-button'); $bearspreseasonweek2popup = $('#bears-preseason-week-2-pop-up');$bearspreseasonweek2button.click(function(){$bearspreseasonweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearspreseasonweek3button = $('#bears-preseason-week-3-button'); $bearspreseasonweek3popup = $('#bears-preseason-week-3-pop-up');$bearspreseasonweek3button.click(function(){$bearspreseasonweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearspreseasonweek4button = $('#bears-preseason-week-4-button'); $bearspreseasonweek4popup = $('#bears-preseason-week-4-pop-up');$bearspreseasonweek4button.click(function(){$bearspreseasonweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek1button = $('#bears-week-1-button'); $bearsweek1popup = $('#bears-week-1-pop-up');$bearsweek1button.click(function(){$bearsweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek2button = $('#bears-week-2-button'); $bearsweek2popup = $('#bears-week-2-pop-up');$bearsweek2button.click(function(){$bearsweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek3button = $('#bears-week-3-button'); $bearsweek3popup = $('#bears-week-3-pop-up');$bearsweek3button.click(function(){$bearsweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek4button = $('#bears-week-4-button'); $bearsweek4popup = $('#bears-week-4-pop-up');$bearsweek4button.click(function(){$bearsweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek5button = $('#bears-week-5-button'); $bearsweek5popup = $('#bears-week-5-pop-up');$bearsweek5button.click(function(){$bearsweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek6button = $('#bears-week-6-button'); $bearsweek6popup = $('#bears-week-6-pop-up');$bearsweek6button.click(function(){$bearsweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek7button = $('#bears-week-7-button'); $bearsweek7popup = $('#bears-week-7-pop-up');$bearsweek7button.click(function(){$bearsweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek8button = $('#bears-week-8-button'); $bearsweek8popup = $('#bears-week-8-pop-up');$bearsweek8button.click(function(){$bearsweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek9button = $('#bears-week-9-button'); $bearsweek9popup = $('#bears-week-9-pop-up');$bearsweek9button.click(function(){$bearsweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek10button = $('#bears-week-10-button'); $bearsweek10popup = $('#bears-week-10-pop-up');$bearsweek10button.click(function(){$bearsweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek11button = $('#bears-week-11-button'); $bearsweek11popup = $('#bears-week-11-pop-up');$bearsweek11button.click(function(){$bearsweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek12button = $('#bears-week-12-button'); $bearsweek12popup = $('#bears-week-12-pop-up');$bearsweek12button.click(function(){$bearsweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek13button = $('#bears-week-13-button'); $bearsweek13popup = $('#bears-week-13-pop-up');$bearsweek13button.click(function(){$bearsweek13popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek14button = $('#bears-week-14-button'); $bearsweek14popup = $('#bears-week-14-pop-up');$bearsweek14button.click(function(){$bearsweek14popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek15button = $('#bears-week-15-button'); $bearsweek15popup = $('#bears-week-15-pop-up');$bearsweek15button.click(function(){$bearsweek15popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek16button = $('#bears-week-16-button'); $bearsweek16popup = $('#bears-week-16-pop-up');$bearsweek16button.click(function(){$bearsweek16popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $bearsweek17button = $('#bears-week-17-button'); $bearsweek17popup = $('#bears-week-17-pop-up');$bearsweek17button.click(function(){$bearsweek17popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+/*BLACKHAWKS TABLE RESERVATIONS*/
+    /*OCTOBER 2019*/
+    $blackhawks104button = $('#blackhawks-10-4-button'); $blackhawks104popup = $('#blackhawks-10-4-pop-up');$blackhawks104button.click(function(){$blackhawks104popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1010button = $('#blackhawks-10-10-button'); $blackhawks1010popup = $('#blackhawks-10-10-pop-up');$blackhawks1010button.click(function(){$blackhawks1010popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1012button = $('#blackhawks-10-12-button'); $blackhawks1012popup = $('#blackhawks-10-12-pop-up');$blackhawks1012button.click(function(){$blackhawks1012popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1014button = $('#blackhawks-10-14-button'); $blackhawks1014popup = $('#blackhawks-10-14-pop-up');$blackhawks1014button.click(function(){$blackhawks1014popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1018button = $('#blackhawks-10-18-button'); $blackhawks1018popup = $('#blackhawks-10-18-pop-up');$blackhawks1018button.click(function(){$blackhawks1018popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1020button = $('#blackhawks-10-20-button'); $blackhawks1020popup = $('#blackhawks-10-20-pop-up');$blackhawks1020button.click(function(){$blackhawks1020popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1022button = $('#blackhawks-10-22-button'); $blackhawks1022popup = $('#blackhawks-10-22-pop-up');$blackhawks1022button.click(function(){$blackhawks1022popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1024button = $('#blackhawks-10-24-button'); $blackhawks1024popup = $('#blackhawks-10-24-pop-up');$blackhawks1024button.click(function(){$blackhawks1024popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1026button = $('#blackhawks-10-26-button'); $blackhawks1026popup = $('#blackhawks-10-26-pop-up');$blackhawks1026button.click(function(){$blackhawks1026popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1027button = $('#blackhawks-10-27-button'); $blackhawks1027popup = $('#blackhawks-10-27-pop-up');$blackhawks1027button.click(function(){$blackhawks1027popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1029button = $('#blackhawks-10-29-button'); $blackhawks1029popup = $('#blackhawks-10-29-pop-up');$blackhawks1029button.click(function(){$blackhawks1029popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*NOVEMBER 2019*/
+    $blackhawks112button = $('#blackhawks-11-2-button'); $blackhawks112popup = $('#blackhawks-11-2-pop-up');$blackhawks112button.click(function(){$blackhawks112popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks113button = $('#blackhawks-11-3-button'); $blackhawks113popup = $('#blackhawks-11-3-pop-up');$blackhawks113button.click(function(){$blackhawks113popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks115abutton = $('#blackhawks-11-5-button'); $blackhawks115apopup = $('#blackhawks-11-5-pop-up');$blackhawks115abutton.click(function(){$blackhawks115apopup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks117button = $('#blackhawks-11-7-button'); $blackhawks117popup = $('#blackhawks-11-7-pop-up');$blackhawks117button.click(function(){$blackhawks117popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks119abutton = $('#blackhawks-11-9-button'); $blackhawks119apopup = $('#blackhawks-11-9-pop-up');$blackhawks119abutton.click(function(){$blackhawks119apopup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1110button = $('#blackhawks-11-10-button'); $blackhawks1110popup = $('#blackhawks-11-10-pop-up');$blackhawks1110button.click(function(){$blackhawks1110popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1113button = $('#blackhawks-11-13-button'); $blackhawks1113popup = $('#blackhawks-11-13-pop-up');$blackhawks1113button.click(function(){$blackhawks1113popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1116button = $('#blackhawks-11-16-button'); $blackhawks1116popup = $('#blackhawks-11-16-pop-up');$blackhawks1116button.click(function(){$blackhawks1116popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1117button = $('#blackhawks-11-17-button'); $blackhawks1117popup = $('#blackhawks-11-17-pop-up');$blackhawks1117button.click(function(){$blackhawks1117popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1119button = $('#blackhawks-11-19-button'); $blackhawks1119popup = $('#blackhawks-11-19-pop-up');$blackhawks1119button.click(function(){$blackhawks1119popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1121button = $('#blackhawks-11-21-button'); $blackhawks1121popup = $('#blackhawks-11-21-pop-up');$blackhawks1121button.click(function(){$blackhawks1121popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1123button = $('#blackhawks-11-23-button'); $blackhawks1123popup = $('#blackhawks-11-23-pop-up');$blackhawks1123button.click(function(){$blackhawks1123popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1126button = $('#blackhawks-11-26-button'); $blackhawks1126popup = $('#blackhawks-11-26-pop-up');$blackhawks1126button.click(function(){$blackhawks1126popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1129button = $('#blackhawks-11-29-button'); $blackhawks1129popup = $('#blackhawks-11-29-pop-up');$blackhawks1129button.click(function(){$blackhawks1129popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1130button = $('#blackhawks-11-30-button'); $blackhawks1130popup = $('#blackhawks-11-30-pop-up');$blackhawks1130button.click(function(){$blackhawks1130popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*DECEMBER 2019*/
+    $blackhawks122button = $('#blackhawks-12-2-button'); $blackhawks122popup = $('#blackhawks-12-2-pop-up');$blackhawks122button.click(function(){$blackhawks122popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks125button = $('#blackhawks-12-5-button'); $blackhawks125popup = $('#blackhawks-12-5-pop-up');$blackhawks125button.click(function(){$blackhawks125popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks126button = $('#blackhawks-12-6-button'); $blackhawks126popup = $('#blackhawks-12-6-pop-up');$blackhawks126button.click(function(){$blackhawks126popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks128button = $('#blackhawks-12-8-button'); $blackhawks128popup = $('#blackhawks-12-8-pop-up');$blackhawks128button.click(function(){$blackhawks128popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1210button = $('#blackhawks-12-10-button'); $blackhawks1210popup = $('#blackhawks-12-10-pop-up');$blackhawks1210button.click(function(){$blackhawks1210popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1212button = $('#blackhawks-12-12-button'); $blackhawks1212popup = $('#blackhawks-12-12-pop-up');$blackhawks1212button.click(function(){$blackhawks1212popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1214button = $('#blackhawks-12-14-button'); $blackhawks1214popup = $('#blackhawks-12-14-pop-up');$blackhawks1214button.click(function(){$blackhawks1214popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1215button = $('#blackhawks-12-15-button'); $blackhawks1215popup = $('#blackhawks-12-15-pop-up');$blackhawks1215button.click(function(){$blackhawks1215popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1218button = $('#blackhawks-12-18-button'); $blackhawks1218popup = $('#blackhawks-12-18-pop-up');$blackhawks1218button.click(function(){$blackhawks1218popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1219button = $('#blackhawks-12-19-button'); $blackhawks1219popup = $('#blackhawks-12-19-pop-up');$blackhawks1219button.click(function(){$blackhawks1219popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1221button = $('#blackhawks-12-21-button'); $blackhawks1221popup = $('#blackhawks-12-21-pop-up');$blackhawks1221button.click(function(){$blackhawks1221popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1223button = $('#blackhawks-12-23-button'); $blackhawks1223popup = $('#blackhawks-12-23-pop-up');$blackhawks1223button.click(function(){$blackhawks1223popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1227button = $('#blackhawks-12-27-button'); $blackhawks1227popup = $('#blackhawks-12-27-pop-up');$blackhawks1227button.click(function(){$blackhawks1227popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1229button = $('#blackhawks-12-29-button'); $blackhawks1229popup = $('#blackhawks-12-29-pop-up');$blackhawks1229button.click(function(){$blackhawks1229popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks1231button = $('#blackhawks-12-31-button'); $blackhawks1231popup = $('#blackhawks-12-31-pop-up');$blackhawks1231button.click(function(){$blackhawks1231popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*JANUARY 2020*/
+    $blackhawks12button = $('#blackhawks-1-2-button'); $blackhawks12popup = $('#blackhawks-1-2-pop-up');$blackhawks12button.click(function(){$blackhawks12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks15button = $('#blackhawks-1-5-button'); $blackhawks15popup = $('#blackhawks-1-5-pop-up');$blackhawks15button.click(function(){$blackhawks15popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks17button = $('#blackhawks-1-7-button'); $blackhawks17popup = $('#blackhawks-1-7-pop-up');$blackhawks17button.click(function(){$blackhawks17popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks19button = $('#blackhawks-1-9-button'); $blackhawks19popup = $('#blackhawks-1-9-pop-up');$blackhawks19button.click(function(){$blackhawks19popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks111button = $('#blackhawks-1-11-button'); $blackhawks111popup = $('#blackhawks-1-11-pop-up');$blackhawks111button.click(function(){$blackhawks111popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks114button = $('#blackhawks-1-14-button'); $blackhawks114popup = $('#blackhawks-1-14-pop-up');$blackhawks114button.click(function(){$blackhawks114popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks115bbutton = $('#blackhawks-1-15-button'); $blackhawks115bpopup = $('#blackhawks-1-15-pop-up');$blackhawks115bbutton.click(function(){$blackhawks115bpopup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks118button = $('#blackhawks-1-18-button'); $blackhawks118popup = $('#blackhawks-1-18-pop-up');$blackhawks118button.click(function(){$blackhawks118popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks119bbutton = $('#blackhawks-1-19-button'); $blackhawks119bpopup = $('#blackhawks-1-19-pop-up');$blackhawks119bbutton.click(function(){$blackhawks119bpopup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks121button = $('#blackhawks-1-21-button'); $blackhawks121popup = $('#blackhawks-1-21-pop-up');$blackhawks121button.click(function(){$blackhawks121popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*FEBRUARY 2020*/
+    $blackhawks21button = $('#blackhawks-2-1-button'); $blackhawks21popup = $('#blackhawks-2-1-pop-up');$blackhawks21button.click(function(){$blackhawks21popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks24button = $('#blackhawks-2-4-button'); $blackhawks24popup = $('#blackhawks-2-4-pop-up');$blackhawks24button.click(function(){$blackhawks24popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks25button = $('#blackhawks-2-5-button'); $blackhawks25popup = $('#blackhawks-2-5-pop-up');$blackhawks25button.click(function(){$blackhawks25popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks29button = $('#blackhawks-2-9-button'); $blackhawks29popup = $('#blackhawks-2-9-pop-up');$blackhawks29button.click(function(){$blackhawks29popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks211button = $('#blackhawks-2-11-button'); $blackhawks211popup = $('#blackhawks-2-11-pop-up');$blackhawks211button.click(function(){$blackhawks211popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks212button = $('#blackhawks-2-12-button'); $blackhawks212popup = $('#blackhawks-2-12-pop-up');$blackhawks212button.click(function(){$blackhawks212popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks215button = $('#blackhawks-2-15-button'); $blackhawks215popup = $('#blackhawks-2-15-pop-up');$blackhawks215button.click(function(){$blackhawks215popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks216button = $('#blackhawks-2-16-button'); $blackhawks216popup = $('#blackhawks-2-16-pop-up');$blackhawks216button.click(function(){$blackhawks216popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks219button = $('#blackhawks-2-19-button'); $blackhawks219popup = $('#blackhawks-2-19-pop-up');$blackhawks219button.click(function(){$blackhawks219popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks221button = $('#blackhawks-2-21-button'); $blackhawks221popup = $('#blackhawks-2-21-pop-up');$blackhawks221button.click(function(){$blackhawks221popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks223button = $('#blackhawks-2-23-button'); $blackhawks223popup = $('#blackhawks-2-23-pop-up');$blackhawks223button.click(function(){$blackhawks223popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks225button = $('#blackhawks-2-25-button'); $blackhawks225popup = $('#blackhawks-2-25-pop-up');$blackhawks225button.click(function(){$blackhawks225popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks227button = $('#blackhawks-2-27-button'); $blackhawks227popup = $('#blackhawks-2-27-pop-up');$blackhawks227button.click(function(){$blackhawks227popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks229button = $('#blackhawks-2-29-button'); $blackhawks229popup = $('#blackhawks-2-29-pop-up');$blackhawks229button.click(function(){$blackhawks229popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*MARCH 2020*/
+    $blackhawks33button = $('#blackhawks-3-3-button'); $blackhawks33popup = $('#blackhawks-3-3-pop-up');$blackhawks33button.click(function(){$blackhawks33popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks35button = $('#blackhawks-3-5-button'); $blackhawks35popup = $('#blackhawks-3-5-pop-up');$blackhawks35button.click(function(){$blackhawks35popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks36button = $('#blackhawks-3-6-button'); $blackhawks36popup = $('#blackhawks-3-6-pop-up');$blackhawks36button.click(function(){$blackhawks36popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks38button = $('#blackhawks-3-8-button'); $blackhawks38popup = $('#blackhawks-3-8-pop-up');$blackhawks38button.click(function(){$blackhawks38popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks311button = $('#blackhawks-3-11-button'); $blackhawks311popup = $('#blackhawks-3-11-pop-up');$blackhawks311button.click(function(){$blackhawks311popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks313button = $('#blackhawks-3-13-button'); $blackhawks313popup = $('#blackhawks-3-13-pop-up');$blackhawks313button.click(function(){$blackhawks313popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks314button = $('#blackhawks-3-14-button'); $blackhawks314popup = $('#blackhawks-3-14-pop-up');$blackhawks314button.click(function(){$blackhawks314popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks317button = $('#blackhawks-3-17-button'); $blackhawks317popup = $('#blackhawks-3-17-pop-up');$blackhawks317button.click(function(){$blackhawks317popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks319button = $('#blackhawks-3-19-button'); $blackhawks319popup = $('#blackhawks-3-19-pop-up');$blackhawks319button.click(function(){$blackhawks319popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks321button = $('#blackhawks-3-21-button'); $blackhawks321popup = $('#blackhawks-3-21-pop-up');$blackhawks321button.click(function(){$blackhawks321popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks322button = $('#blackhawks-3-22-button'); $blackhawks322popup = $('#blackhawks-3-22-pop-up');$blackhawks322button.click(function(){$blackhawks322popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks325button = $('#blackhawks-3-25-button'); $blackhawks325popup = $('#blackhawks-3-25-pop-up');$blackhawks325button.click(function(){$blackhawks325popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks327button = $('#blackhawks-3-27-button'); $blackhawks327popup = $('#blackhawks-3-27-pop-up');$blackhawks327button.click(function(){$blackhawks327popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks329button = $('#blackhawks-3-29-button'); $blackhawks329popup = $('#blackhawks-3-29-pop-up');$blackhawks329button.click(function(){$blackhawks329popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks331button = $('#blackhawks-3-31-button'); $blackhawks331popup = $('#blackhawks-3-31-pop-up');$blackhawks331button.click(function(){$blackhawks331popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    /*APRIL 2020*/
+    $blackhawks42button = $('#blackhawks-4-2-button'); $blackhawks42popup = $('#blackhawks-4-2-pop-up');$blackhawks42button.click(function(){$blackhawks42popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $blackhawks44button = $('#blackhawks-4-4-button'); $blackhawks44popup = $('#blackhawks-4-4-pop-up');$blackhawks44button.click(function(){$blackhawks44popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
 /*CUBS TABLE RESERVATIONS*/
     /*JULY 2019*/
     $cubs79button = $('#cubs-7-9-button'); $cubs79popup = $('#cubs-7-9-pop-up');$cubs79button.click(function(){$cubs79popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
@@ -163,15 +646,72 @@ $(document).ready(function(){
     $cubs927button = $('#cubs-9-27-button'); $cubs927popup = $('#cubs-9-27-pop-up');$cubs927button.click(function(){$cubs927popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
     $cubs928button = $('#cubs-9-28-button'); $cubs928popup = $('#cubs-9-28-pop-up');$cubs928button.click(function(){$cubs928popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
     $cubs929button = $('#cubs-9-29-button'); $cubs929popup = $('#cubs-9-29-pop-up');$cubs929button.click(function(){$cubs929popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
-    
-
-    $tablereservationx.click(function(){
-        $privatepartiesrooms.removeClass('schedule-background-fade');
-        $sportsschedule.removeClass('schedule-background-fade');
-        $triviamonths.removeClass('schedule-background-fade');
-        $tablereservation.fadeOut();
-
-    });
+/*ILLINI FOOTBALL TABLE RESERVATIONS*/
+    $illinifootballweek1button = $('#illini-football-week-1-button'); $illinifootballweek1popup = $('#illini-football-week-1-pop-up');$illinifootballweek1button.click(function(){$illinifootballweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek2button = $('#illini-football-week-2-button'); $illinifootballweek2popup = $('#illini-football-week-2-pop-up');$illinifootballweek2button.click(function(){$illinifootballweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek3button = $('#illini-football-week-3-button'); $illinifootballweek3popup = $('#illini-football-week-3-pop-up');$illinifootballweek3button.click(function(){$illinifootballweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek4button = $('#illini-football-week-4-button'); $illinifootballweek4popup = $('#illini-football-week-4-pop-up');$illinifootballweek4button.click(function(){$illinifootballweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek5button = $('#illini-football-week-5-button'); $illinifootballweek5popup = $('#illini-football-week-5-pop-up');$illinifootballweek5button.click(function(){$illinifootballweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek6button = $('#illini-football-week-6-button'); $illinifootballweek6popup = $('#illini-football-week-6-pop-up');$illinifootballweek6button.click(function(){$illinifootballweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek7button = $('#illini-football-week-7-button'); $illinifootballweek7popup = $('#illini-football-week-7-pop-up');$illinifootballweek7button.click(function(){$illinifootballweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek8button = $('#illini-football-week-8-button'); $illinifootballweek8popup = $('#illini-football-week-8-pop-up');$illinifootballweek8button.click(function(){$illinifootballweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek9button = $('#illini-football-week-9-button'); $illinifootballweek9popup = $('#illini-football-week-9-pop-up');$illinifootballweek9button.click(function(){$illinifootballweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek10button = $('#illini-football-week-10-button'); $illinifootballweek10popup = $('#illini-football-week-10-pop-up');$illinifootballweek10button.click(function(){$illinifootballweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek11button = $('#illini-football-week-11-button'); $illinifootballweek11popup = $('#illini-football-week-11-pop-up');$illinifootballweek11button.click(function(){$illinifootballweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $illinifootballweek12button = $('#illini-football-week-12-button'); $illinifootballweek12popup = $('#illini-football-week-12-pop-up');$illinifootballweek12button.click(function(){$illinifootballweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+/*FROGS TABLE RESERVATIONS*/
+    $frogsweek1button = $('#frogs-week-1-button'); $frogsweek1popup = $('#frogs-week-1-pop-up');$frogsweek1button.click(function(){$frogsweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek2button = $('#frogs-week-2-button'); $frogsweek2popup = $('#frogs-week-2-pop-up');$frogsweek2button.click(function(){$frogsweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek3button = $('#frogs-week-3-button'); $frogsweek3popup = $('#frogs-week-3-pop-up');$frogsweek3button.click(function(){$frogsweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek4button = $('#frogs-week-4-button'); $frogsweek4popup = $('#frogs-week-4-pop-up');$frogsweek4button.click(function(){$frogsweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek5button = $('#frogs-week-5-button'); $frogsweek5popup = $('#frogs-week-5-pop-up');$frogsweek5button.click(function(){$frogsweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek6button = $('#frogs-week-6-button'); $frogsweek6popup = $('#frogs-week-6-pop-up');$frogsweek6button.click(function(){$frogsweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek7button = $('#frogs-week-7-button'); $frogsweek7popup = $('#frogs-week-7-pop-up');$frogsweek7button.click(function(){$frogsweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek8button = $('#frogs-week-8-button'); $frogsweek8popup = $('#frogs-week-8-pop-up');$frogsweek8button.click(function(){$frogsweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek9button = $('#frogs-week-9-button'); $frogsweek9popup = $('#frogs-week-9-pop-up');$frogsweek9button.click(function(){$frogsweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek10button = $('#frogs-week-10-button'); $frogsweek10popup = $('#frogs-week-10-pop-up');$frogsweek10button.click(function(){$frogsweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek11button = $('#frogs-week-11-button'); $frogsweek11popup = $('#frogs-week-11-pop-up');$frogsweek11button.click(function(){$frogsweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $frogsweek12button = $('#frogs-week-12-button'); $frogsweek12popup = $('#frogs-week-12-pop-up');$frogsweek12button.click(function(){$frogsweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+/*HOOSIERS FOOTBALL TABLE RESERVATIONS*/
+    $hoosiersfootballweek1button = $('#hoosiers-football-week-1-button'); $hoosiersfootballweek1popup = $('#hoosiers-football-week-1-pop-up');$hoosiersfootballweek1button.click(function(){$hoosiersfootballweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek2button = $('#hoosiers-football-week-2-button'); $hoosiersfootballweek2popup = $('#hoosiers-football-week-2-pop-up');$hoosiersfootballweek2button.click(function(){$hoosiersfootballweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek3button = $('#hoosiers-football-week-3-button'); $hoosiersfootballweek3popup = $('#hoosiers-football-week-3-pop-up');$hoosiersfootballweek3button.click(function(){$hoosiersfootballweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek4button = $('#hoosiers-football-week-4-button'); $hoosiersfootballweek4popup = $('#hoosiers-football-week-4-pop-up');$hoosiersfootballweek4button.click(function(){$hoosiersfootballweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek5button = $('#hoosiers-football-week-5-button'); $hoosiersfootballweek5popup = $('#hoosiers-football-week-5-pop-up');$hoosiersfootballweek5button.click(function(){$hoosiersfootballweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek6button = $('#hoosiers-football-week-6-button'); $hoosiersfootballweek6popup = $('#hoosiers-football-week-6-pop-up');$hoosiersfootballweek6button.click(function(){$hoosiersfootballweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek7button = $('#hoosiers-football-week-7-button'); $hoosiersfootballweek7popup = $('#hoosiers-football-week-7-pop-up');$hoosiersfootballweek7button.click(function(){$hoosiersfootballweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek8button = $('#hoosiers-football-week-8-button'); $hoosiersfootballweek8popup = $('#hoosiers-football-week-8-pop-up');$hoosiersfootballweek8button.click(function(){$hoosiersfootballweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek9button = $('#hoosiers-football-week-9-button'); $hoosiersfootballweek9popup = $('#hoosiers-football-week-9-pop-up');$hoosiersfootballweek9button.click(function(){$hoosiersfootballweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek10button = $('#hoosiers-football-week-10-button'); $hoosiersfootballweek10popup = $('#hoosiers-football-week-10-pop-up');$hoosiersfootballweek10button.click(function(){$hoosiersfootballweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek11button = $('#hoosiers-football-week-11-button'); $hoosiersfootballweek11popup = $('#hoosiers-football-week-11-pop-up');$hoosiersfootballweek11button.click(function(){$hoosiersfootballweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $hoosiersfootballweek12button = $('#hoosiers-football-week-12-button'); $hoosiersfootballweek12popup = $('#hoosiers-football-week-12-pop-up');$hoosiersfootballweek12button.click(function(){$hoosiersfootballweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+/*RAZORBACKS TABLE RESERVATIONS*/
+    $razorbacksweek1button = $('#razorbacks-week-1-button'); $razorbacksweek1popup = $('#razorbacks-week-1-pop-up');$razorbacksweek1button.click(function(){$razorbacksweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek2button = $('#razorbacks-week-2-button'); $razorbacksweek2popup = $('#razorbacks-week-2-pop-up');$razorbacksweek2button.click(function(){$razorbacksweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek3button = $('#razorbacks-week-3-button'); $razorbacksweek3popup = $('#razorbacks-week-3-pop-up');$razorbacksweek3button.click(function(){$razorbacksweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek4button = $('#razorbacks-week-4-button'); $razorbacksweek4popup = $('#razorbacks-week-4-pop-up');$razorbacksweek4button.click(function(){$razorbacksweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek5button = $('#razorbacks-week-5-button'); $razorbacksweek5popup = $('#razorbacks-week-5-pop-up');$razorbacksweek5button.click(function(){$razorbacksweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek6button = $('#razorbacks-week-6-button'); $razorbacksweek6popup = $('#razorbacks-week-6-pop-up');$razorbacksweek6button.click(function(){$razorbacksweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek7button = $('#razorbacks-week-7-button'); $razorbacksweek7popup = $('#razorbacks-week-7-pop-up');$razorbacksweek7button.click(function(){$razorbacksweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek8button = $('#razorbacks-week-8-button'); $razorbacksweek8popup = $('#razorbacks-week-8-pop-up');$razorbacksweek8button.click(function(){$razorbacksweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek9button = $('#razorbacks-week-9-button'); $razorbacksweek9popup = $('#razorbacks-week-9-pop-up');$razorbacksweek9button.click(function(){$razorbacksweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek10button = $('#razorbacks-week-10-button'); $razorbacksweek10popup = $('#razorbacks-week-10-pop-up');$razorbacksweek10button.click(function(){$razorbacksweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek11button = $('#razorbacks-week-11-button'); $razorbacksweek11popup = $('#razorbacks-week-11-pop-up');$razorbacksweek11button.click(function(){$razorbacksweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek12button = $('#razorbacks-week-12-button'); $razorbacksweek12popup = $('#razorbacks-week-12-pop-up');$razorbacksweek12button.click(function(){$razorbacksweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $razorbacksweek13button = $('#razorbacks-week-13-button'); $razorbacksweek13popup = $('#razorbacks-week-13-pop-up');$razorbacksweek13button.click(function(){$razorbacksweek13popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+/*TARHEELS FOOTBALL TABLE RESERVATIONS*/
+    $tarheelsfootballweek1button = $('#tarheels-football-week-1-button'); $tarheelsfootballweek1popup = $('#tarheels-football-week-1-pop-up');$tarheelsfootballweek1button.click(function(){$tarheelsfootballweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek2button = $('#tarheels-football-week-2-button'); $tarheelsfootballweek2popup = $('#tarheels-football-week-2-pop-up');$tarheelsfootballweek2button.click(function(){$tarheelsfootballweek2popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek3button = $('#tarheels-football-week-3-button'); $tarheelsfootballweek3popup = $('#tarheels-football-week-3-pop-up');$tarheelsfootballweek3button.click(function(){$tarheelsfootballweek3popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek4button = $('#tarheels-football-week-4-button'); $tarheelsfootballweek4popup = $('#tarheels-football-week-4-pop-up');$tarheelsfootballweek4button.click(function(){$tarheelsfootballweek4popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek5button = $('#tarheels-football-week-5-button'); $tarheelsfootballweek5popup = $('#tarheels-football-week-5-pop-up');$tarheelsfootballweek5button.click(function(){$tarheelsfootballweek5popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek6button = $('#tarheels-football-week-6-button'); $tarheelsfootballweek6popup = $('#tarheels-football-week-6-pop-up');$tarheelsfootballweek6button.click(function(){$tarheelsfootballweek6popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek7button = $('#tarheels-football-week-7-button'); $tarheelsfootballweek7popup = $('#tarheels-football-week-7-pop-up');$tarheelsfootballweek7button.click(function(){$tarheelsfootballweek7popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek8button = $('#tarheels-football-week-8-button'); $tarheelsfootballweek8popup = $('#tarheels-football-week-8-pop-up');$tarheelsfootballweek8button.click(function(){$tarheelsfootballweek8popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek9button = $('#tarheels-football-week-9-button'); $tarheelsfootballweek9popup = $('#tarheels-football-week-9-pop-up');$tarheelsfootballweek9button.click(function(){$tarheelsfootballweek9popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek10button = $('#tarheels-football-week-10-button'); $tarheelsfootballweek10popup = $('#tarheels-football-week-10-pop-up');$tarheelsfootballweek10button.click(function(){$tarheelsfootballweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek11button = $('#tarheels-football-week-11-button'); $tarheelsfootballweek11popup = $('#tarheels-football-week-11-pop-up');$tarheelsfootballweek11button.click(function(){$tarheelsfootballweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
+    $tarheelsfootballweek12button = $('#tarheels-football-week-12-button'); $tarheelsfootballweek12popup = $('#tarheels-football-week-12-pop-up');$tarheelsfootballweek12button.click(function(){$tarheelsfootballweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
 /*TRIVIA*/
     $friendsjuly10 = $('#friends-july-10');
     $friendsjuly10reservation = $('#friends-july-10-reservation');
