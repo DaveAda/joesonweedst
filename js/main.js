@@ -1,94 +1,115 @@
 $(document).ready(function(){
-    /*MAIN UPCOMING CAROUSEL*/
-    $('.event-wrapper').slick({
-      fade: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      lazyLoad: 'ondemand',
-      prevArrow: $('#main-upcoming-arrows-left'),
-      nextArrow: $('#main-upcoming-arrows-right')
-      });
-/*MAIN INSTAGRAM FEED*/
-    var feed = new Instafeed({
-        get: 'user',
-        limit: 50,
-        sortBy:'most-recent',
-        userId: 337719583,
-        resolution: 'standard_resolution',
-        accessToken: '337719583.1677ed0.4994e26055cc4cf595c0cb6853f12337',
-        template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="insta-likes"><div>{{likes}} <i class="fa fa-heart"></i></div><i class="fab fa-instagram insta-ig"></i><div class="insta-caption">{{caption}}</div></div></a></li>',
-      
-       /* <div class="ig-caption">{{caption}}</div>*/
-      after: function() {
-     
-        $('#instafeed').slick({
-          arrows: true,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          prevArrow: $('#arrow-left'),
-          nextArrow: $('#arrow-right'),
-          slidesToShow: 4,
-          slidesToScroll: 1
-        });
-      },
-      success: function() {
-      }
-    });
-    feed.run();
-});
-$(document).ready(function(){
 /*VARIABLES*/
-    var $bears = $('#bears');
-    var $blackhawks = $('#blackhawks');
-    var $bulls = $('#bulls');
-    var $cubs = $('#cubs');
-    var $hoosiers = $('#hoosiers');
-    var $frogs = $('#frogs');
-    var $illini = $('#illini');
-    var $razorbacks = $('#razorbacks');
-    var $tarheels = $('#tarheels');
-    var $bearsschedule = $('#bears-schedule');
-    var $bullsschedule = $('#bulls-schedule');
-    var $blackhawksschedule = $('#blackhawks-schedule');
-    var $cubsschedule = $('#cubs-schedule');
-    var $frogsschedule = $('#frogs-schedule');
-    var $hoosiersbasketballbutton = $('.hoosiers-basketball-button');
-    var $hoosiersbasketballschedule = $('#hoosiers-basketball-schedule');
-    var $hoosiersfootballbutton = $('.hoosiers-football-button');
-    var $hoosiersfootballschedule = $('#hoosiers-football-schedule');
-    var $illinibasketballbutton = $('.illini-basketball-button');
-    var $illinibasketballschedule = $('#illini-basketball-schedule');
-    var $illinifootballbutton = $('.illini-football-button');
-    var $illinifootballschedule = $('#illini-football-schedule');
-    var $razorbacksschedule = $('#razorbacks-schedule');
-    var $tarheelsbasketballbutton = $('.tarheels-basketball-button');
-    var $tarheelsbasketballschedule = $('#tarheels-basketball-schedule');
-    var $tarheelsfootballbutton = $('.tarheels-football-button');
-    var $tarheelsfootballschedule = $('#tarheels-football-schedule');
+    /*HEADER*/
     var $headeraboutarrow = $('.header-about-arrow');
-    var $headerabouttitle = $('.header-about-title');
     var $headeraboutdropdown = $('.header-about-dropdown');
-    var $headermenuarrow = $('.header-menu-arrow');
-    var $headermenutitle = $('.header-menu-title');
-    var $headermenudropdown = $('.header-menu-dropdown');
-    var $thechapterroompopup = $('#the-chapter-room-pop-up');
-    var $thechapterroomreserve = $('#the-chapter-room-reserve');
-    var $privatepartiesrooms = $('.private-parties-rooms');
-    var $headeraboutarrow = $('.header-about-arrow');
     var $headerabouttitle = $('.header-about-title');
-    var $headeraboutdropdown = $('.header-about-dropdown');
-    var $headershrinkpoint = $('#header-shrink-point');
     var $headerlogo = $('.header-logo');
     var $headermenuarrow = $('.header-menu-arrow');
     var $headermenutitle = $('.header-menu-title');
     var $headermenudropdown = $('.header-menu-dropdown');
+    var $headershrinkpoint = $('#header-shrink-point');
+    /*CALENDAR*/
+    var $bullridingfridaybutton = $('#bull-riding-friday-button');
+    var $bullridingfridayspecials = $('.bull-riding-friday-specials');
+    var $karaokethursdaybutton = $('#karaoke-thursday-button');
+    var $karaokethursdayspecials = $('.karaoke-thursday-specials');
+    var $tipsytuesdaybutton = $('#tipsy-tuesday-button');
+    var $tipsytuesdayspecials = $('.tipsy-tuesday-specials');
+    var $eventswrapper = $('.events-wrapper');
+    /*SPORTS*/
+    var $bears = $('#bears');
+    var $bearsschedule = $('#bears-schedule');
+    var $blackhawks = $('#blackhawks');
+    var $blackhawksschedule = $('#blackhawks-schedule');
+    var $bulls = $('#bulls');
+    var $bullsschedule = $('#bulls-schedule');
+    var $cubs = $('#cubs');
+    var $cubsschedule = $('#cubs-schedule');
+    var $hoosiers = $('#hoosiers');
+    var $hoosiersbasketballbutton = $('.hoosiers-basketball-button');
+    var $hoosiersbasketballschedule = $('#hoosiers-basketball-schedule');
+    var $hoosiersfootballbutton = $('.hoosiers-football-button');
+    var $hoosiersfootballschedule = $('#hoosiers-football-schedule');
+    var $frogs = $('#frogs');
+    var $frogsschedule = $('#frogs-schedule');
+    var $illini = $('#illini');
+    var $illinibasketballbutton = $('.illini-basketball-button');
+    var $illinibasketballschedule = $('#illini-basketball-schedule');
+    var $illinifootballbutton = $('.illini-football-button');
+    var $illinifootballschedule = $('#illini-football-schedule');
+    var $razorbacks = $('#razorbacks');
+    var $razorbacksschedule = $('#razorbacks-schedule');
+    var $sportsschedule = $('.sports-schedule');
+    var $tablereservation = $('.table-reservation');
+    var $tablereservationx = $('.table-reservation-x');
+    var $tarheels = $('#tarheels');
+    var $tarheelsbasketballbutton = $('.tarheels-basketball-button');
+    var $tarheelsbasketballschedule = $('#tarheels-basketball-schedule');
+    var $tarheelsfootballbutton = $('.tarheels-football-button');
+    var $tarheelsfootballschedule = $('#tarheels-football-schedule');
+    /*PRIVATE PARTIES*/
+    var $basicpackage = $('#basic-package');
+    var $basicpackagedetails = $('#basic-package-details');
+    var $basicminussign = $('#basic-minus-sign');
+    var $basicplussign = $('#basic-plus-sign');
+    var $bridalblackoutpackage = $('#bridal-blackout-package');
+    var $bridalblackoutpackagedetails = $('#bridal-blackout-package-details');
+    var $bridalblackoutminussign = $('#bridal-blackout-minus-sign');
+    var $bridalblackoutplussign = $('#bridal-blackout-plus-sign');
+    var $packagedetails = $('.package-details');
+    var $partypackages = $('.party-packages');
+    var $partypackagespopup = $('.party-packages-pop-up');
+    var $premiumpackage = $('#premium-package');
+    var $premiumpackagedetails = $('#premium-package-details');
+    var $premiumminussign = $('#premium-minus-sign');
+    var $premiumplussign = $('#premium-plus-sign');
+    var $privatepartieswrapper = $('.private-parties-wrapper');
+    var $rooftoppackage = $('#rooftop-package');
+    var $rooftoppackagedetails = $('#rooftop-package-details');
+    var $rooftopminussign = $('#rooftop-minus-sign');
+    var $rooftopplussign = $('#rooftop-plus-sign');
+    var $standardpackage = $('#standard-package');
+    var $standardpackagedetails = $('#standard-package-details');
+    var $standardminussign = $('#standard-minus-sign');
+    var $standardplussign = $('#standard-plus-sign');
+    var $thealleysuitepopup = $('#the-alley-suite-pop-up');
+    var $thealleysuitereserve = $('#the-alley-suite-reserve');
+    var $thebachelorettepackage = $('#the-bachelorette-package');
+    var $thebachelorettepackagedetails = $('#the-bachelorette-package-details');
+    var $thebacheloretteminussign = $('#the-bachelorette-minus-sign');
+    var $thebacheloretteplussign = $('#the-bachelorette-plus-sign');
+    var $thechapterroompopup = $('#the-chapter-room-pop-up');
+    var $thechapterroomreserve = $('#the-chapter-room-reserve');
+    var $theclubhousepopup = $('#the-clubhouse-pop-up');
+    var $theclubhousereserve = $('#the-clubhouse-reserve');
+    var $theredroompopup = $('#the-red-room-pop-up');
+    var $theredroomreserve = $('#the-red-room-reserve');
+    var $therooftoppopup = $('#the-rooftop-pop-up');
+    var $therooftopreserve = $('#the-rooftop-reserve');
+    var $topshelfpackage = $('#top-shelf-package');
+    var $topshelfpackagedetails = $('#top-shelf-package-details');
+    var $topshelfminussign = $('#top-shelf-minus-sign');
+    var $topshelfplussign = $('#top-shelf-plus-sign');
+    var $viploftloungepopup = $('#vip-loft-lounge-pop-up');
+    var $viploftloungereserve = $('#vip-loft-lounge-reserve');
+    var $privatepartiesrooms = $('.private-parties-rooms');
+    /*TRIVIA*/
+    var $theofficejuly31 = $('#the-office-july-31');
+    var $theofficejuly31reservation = $('#the-office-july-31-reservation');
+    var $wrestlingaugust7 = $('#wrestling-august-7');
+    var $wrestlingaugust7reservation = $('#wrestling-august-7-reservation');
+    var $newgirlaugust14 = $('#new-girl-august-14');
+    var $newgirlaugust14reservation = $('#new-girl-august-14-reservation');
+    var $itsalwayssunnyaugust21 = $('#its-always-sunny-august-21');
+    var $itsalwayssunnyaugust21reservation = $('#its-always-sunny-august-21-reservation');
+    var $theofficeaugust28 = $('#the-office-august-28');
+    var $theofficeaugust28reservation = $('#the-office-august-28-reservation');
+    var $triviamonths = $('.trivia-months');
 /*HEADER LOGO SHRINK*/
     $headershrinkpoint.waypoint(function(){
         $headerlogo.toggleClass('header-logo-shrink');
-  });
+    });
 /*HEADER DROPDOWNS*/
     $headerabouttitle.click(function(){
         $headeraboutdropdown.slideToggle();
@@ -98,8 +119,6 @@ $(document).ready(function(){
         $headermenudropdown.slideToggle();
         $headermenuarrow.toggleClass('head-arrow-flip');
     });
-
-   
 /*SPORTS SCHEDULES*/
     $bears.click(function(){
         $bearsschedule.show();
@@ -445,16 +464,13 @@ $(document).ready(function(){
         $razorbacks.css('opacity', '.2');
         $tarheels.css('opacity', '1');
     });
-
-/*SPORTS TABLE RESERVATIONS*/
-    $sportsschedule = $('.sports-schedule');
-    $tablereservation = $('.table-reservation');
-    $tablereservationx = $('.table-reservation-x');
-
+/*TABLE RESERVATIONS X*/
     $tablereservationx.click(function(){
         $privatepartiesrooms.removeClass('schedule-background-fade');
+        $privatepartieswrapper.removeClass('schedule-background-fade');
         $sportsschedule.removeClass('schedule-background-fade');
         $triviamonths.removeClass('schedule-background-fade');
+        $eventswrapper.removeClass('schedule-background-fade');
         $tablereservation.fadeOut();
     });
 /*BEARS TABLE RESERVATIONS*/
@@ -712,13 +728,26 @@ $(document).ready(function(){
     $tarheelsfootballweek10button = $('#tarheels-football-week-10-button'); $tarheelsfootballweek10popup = $('#tarheels-football-week-10-pop-up');$tarheelsfootballweek10button.click(function(){$tarheelsfootballweek10popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
     $tarheelsfootballweek11button = $('#tarheels-football-week-11-button'); $tarheelsfootballweek11popup = $('#tarheels-football-week-11-pop-up');$tarheelsfootballweek11button.click(function(){$tarheelsfootballweek11popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
     $tarheelsfootballweek12button = $('#tarheels-football-week-12-button'); $tarheelsfootballweek12popup = $('#tarheels-football-week-12-pop-up');$tarheelsfootballweek12button.click(function(){$tarheelsfootballweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
-/*TRIVIA*/
-    $friendsjuly10 = $('#friends-july-10');
-    $friendsjuly10reservation = $('#friends-july-10-reservation');
-    $triviamonths = $('.trivia-months');
 
-    $friendsjuly10reservation.click(function(){
-        $friendsjuly10.fadeIn();
+/*TRIVIA*/
+    $theofficejuly31reservation.click(function(){
+        $theofficejuly31.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $wrestlingaugust7reservation.click(function(){
+        $wrestlingaugust7.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $newgirlaugust14reservation.click(function(){
+        $newgirlaugust14.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $itsalwayssunnyaugust21reservation.click(function(){
+        $itsalwayssunnyaugust21.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $theofficeaugust28reservation.click(function(){
+        $theofficeaugust28.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
     });
 /*PRIVATE PARTIES*/
@@ -776,9 +805,161 @@ $(document).ready(function(){
       autoplaySpeed: 1800,
       infinite: true,
     });
-
+    $thealleysuitereserve.click(function(){
+        $thealleysuitepopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
+    });
     $thechapterroomreserve.click(function(){
         $thechapterroompopup.fadeIn();
         $privatepartiesrooms.addClass('schedule-background-fade');
     });
+    $theclubhousereserve.click(function(){
+        $theclubhousepopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
+    });
+    $theredroomreserve.click(function(){
+        $theredroompopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
+    });
+    $therooftopreserve.click(function(){
+        $therooftoppopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
+    });
+    $viploftloungereserve.click(function(){
+        $viploftloungepopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
+    });
+    /*PRIVATE PARTIES POP UPS*/
+    $partypackages.click(function(){
+        $partypackagespopup.show();
+        $privatepartieswrapper.addClass('schedule-background-fade');
+    });
+    $basicpackage.click(function(){
+        $basicpackagedetails.slideToggle();
+        $basicminussign.toggle();
+        $basicplussign.toggle();
+    });
+    $bridalblackoutpackage.click(function(){
+        $bridalblackoutpackagedetails.slideToggle();
+        $bridalblackoutminussign.toggle();
+        $bridalblackoutplussign.toggle();
+    });
+    $premiumpackage.click(function(){
+        $premiumpackagedetails.slideToggle();
+        $premiumminussign.toggle();
+        $premiumplussign.toggle();
+    });
+    $rooftoppackage.click(function(){
+        $rooftoppackagedetails.slideToggle();
+        $rooftopminussign.toggle();
+        $rooftopplussign.toggle();
+    });
+    $standardpackage.click(function(){
+        $standardpackagedetails.slideToggle();
+        $standardminussign.toggle();
+        $standardplussign.toggle();
+    });
+    $thebachelorettepackage.click(function(){
+        $thebachelorettepackagedetails.slideToggle();
+        $thebacheloretteminussign.toggle();
+        $thebacheloretteplussign.toggle();
+    });
+    $topshelfpackage.click(function(){
+        $topshelfpackagedetails.slideToggle();
+        $topshelfminussign.toggle();
+        $topshelfplussign.toggle();
+    });
+/*CALENDAR*/
+    $tipsytuesdaybutton.click(function(){
+        $tipsytuesdayspecials.fadeIn();
+        $eventswrapper.addClass('schedule-background-fade');
+    });
+    $karaokethursdaybutton.click(function(){
+        $karaokethursdayspecials.fadeIn();
+        $eventswrapper.addClass('schedule-background-fade');
+    });
+    $bullridingfridaybutton.click(function(){
+        $bullridingfridayspecials.fadeIn();
+        $eventswrapper.addClass('schedule-background-fade');
+    });
+/*MOMENT*/
+    sorryForPartying726rooftop(dateThing("2019-07-21"));
+    dayTwo(dateThing("2019-08-20"));
+    
+
+    function sorryForPartying726rooftop(daysAway){
+        if(daysAway >= 1){
+            $('.7-26-sorry-for-partying').hide()
+        }else{
+            $('.7-26-sorry-for-partying').show()
+        }
+    }
+    function dayTwo(daysAway){
+        if(daysAway >= 1){
+            $('.day-2').hide()
+        }else{
+            $('.day-2').show()
+        }
+    }
+    function dateThing(val) {
+        // for now freezing the "now" so that precise testcases can be written.
+        // var currDate = moment.now();
+        var currDate = moment();
+        var dateToTest = moment(val);
+        // if dateToTest will always be in past, use currDate as the base to diff, else be prepared to handle the negative outcomes. 
+        var result = currDate.diff(dateToTest, 'days')
+        console.log(result);
+
+        return result;
+    }
+/*MAIN UPCOMING CAROUSEL*/
+    $('.event-wrapper').slick({
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      lazyLoad: 'ondemand',
+      prevArrow: $('#main-upcoming-arrows-left'),
+      nextArrow: $('#main-upcoming-arrows-right')
+      });
+/*MAIN INSTAGRAM FEED*/
+    var feed = new Instafeed({
+        get: 'user',
+        limit: 50,
+        sortBy:'most-recent',
+        userId: 337719583,
+        resolution: 'standard_resolution',
+        accessToken: '337719583.1677ed0.4994e26055cc4cf595c0cb6853f12337',
+        template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="insta-likes"><div>{{likes}} <i class="fa fa-heart"></i></div><i class="fab fa-instagram insta-ig"></i><div class="insta-caption">{{caption}}</div></div></a></li>',
+      
+       /* <div class="ig-caption">{{caption}}</div>*/
+      after: function() {
+     
+        $('#instafeed').slick({
+          arrows: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          prevArrow: $('#arrow-left'),
+          nextArrow: $('#arrow-right'),
+          slidesToShow: 4,
+          slidesToScroll: 1
+        });
+      },
+      success: function() {
+      }
+    });
+    feed.run();
+/*CONCERT CAROUSEL*/
+    $('.concerts-banner').slick({
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      lazyLoad: 'ondemand',
+      pauseOnHover: false
+      });
 });

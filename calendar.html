@@ -9,25 +9,23 @@
    	<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
    	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-   	<link href="css/slick.css" rel="stylesheet" type="text/css">
-	<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="calendar">
 <!--HEADER-->
 	<header>
 		<div class="header-container">
 			<div class="header-left">
 				<div class="header-left-container">
 					<a href="calendar.html"><p>Calendar</p></a>
-					<a href="#"><p>Concerts</p></a>
+					<a href="concerts.html"><p>Concerts</p></a>
 					<a href="sports.html"><p>Sports</p></a>
 					<a href="trivia.html"><p>Trivia</p></a>
 				</div>
 			</div>
 			<div class="header-logo">
-				<a href="index.html"><img id="header-logo-img" src="media/images/logos/joes-main-logo.png"/></a>
+				<a href="index.html"><img id="header-start-shrunk-img" src="media/images/logos/joes-main-logo.png"/></a>
 			</div>
 			<div class="header-right">
 				<div class="header-right-container">
@@ -39,6 +37,7 @@
 							<i class="fas fa-chevron-down header-menu-arrow"></i>
 							<div class="header-menu-dropdown">
 								<div class="header-menu-dropdown-menu">
+									<a href="http://places.singleplatform.com/joes-on-weed-st/menu?ref=integration" target="blank_"><img src="media/images/logos/menu-icon.png"></a>
 									<a href="https://www.doordash.com/store/joe-s-bar-on-weed-st-chicago-2470/" target="blank_"><img src="media/images/logos/doordash-icon.png"</></a>
 									<a href="https://www.grubhub.com/restaurant/joes-bar-940-w-weed-st-chicago/281294?classicAffiliateId=%2Fr%2Fw%2F21909%2F&utm_source=content-cms.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=281294" target="blank_"><img src="media/images/logos/grubhub-icon.png"</></a>
 									<a href="https://www.ubereats.com/en-US/chicago/food-delivery/joes-bar/P_NLiunvTs6XTGwzx5vqmw/" target="blank_"><img src="media/images/logos/ubereats-icon.png"</></a>
@@ -57,7 +56,7 @@
 									<a href="https://twitter.com/joesonweedst" target="blank_"><i class="fab fa-twitter"></i></a>
 									<a href="https://www.youtube.com/user/JoesBarChicago/featured" target="blank_"><i class="fab fa-youtube"></i></a>
 									<a href="tel:312-337-3486"><i class="fas fa-phone"></i></a>
-									<a href="mailto:events@joesbar.com"><i class="fas fa-envelope"></i></a>
+									<a href="#"><i class="fas fa-info"></i></a>
 									<a href="https://goo.gl/maps/6btEr7sM4dp7fwVQ6" target="blank_"><i class="fas fa-map-marked-alt"></i></a>
 								</div>
 							</div>
@@ -68,732 +67,155 @@
 		</div>
 		<div id="header-shrink-point"></div>
 	</header>
-
-
-<main id="main" class="wrapper">
-	<section id="hero" class="music-hero" aria-label="Featured Events and links to sort events">
-		<div id="featured-main" class="round">
-			
-						
-			
-			      
-			<div class="photo " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Blackjack-Billy-website.jpg);">
-				<img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Blackjack-Billy-website.jpg" alt="photo of Blackjack Billy">
-			</div>
-			<div class="content">
-        <h2 class="name shadow"><a href="https://www.joesliverosemont.com/performance/blackjack-billy/" class="tracked" data-category="Music" data-action="Details" data-label="Blackjack Billy">Blackjack Billy</a></h2>
-				<h3 class="date shadow">Saturday, July 6, 2019</h3>
-				<div class="buttons">
-											<a href="https://www.ticketweb.com/event/blackjack-billy-joes-live-rosemont-tickets/9481445?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Blackjack Billy">Buy Tickets</a>
-										<a href="https://www.joesliverosemont.com/performance/blackjack-billy/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Blackjack Billy">Details</a>
+<!--WEEKLY EVENTS-->
+			<div class="weekly-events">
+				<div class="page-heading">
+					<p>JOE'S WEEKLY EVENTS</p>
+				</div>
+				<div class="weekly-events-container">
+					<!--TIPSY TUESDAY-->
+					<div id="tipsy-tuesday-button" class="weekly-box">
+						<a href="#">
+							<p>EVERY TUESDAY</p>
+							<img src="media/images/upcoming/events/tipsy-tuesday.jpg"/>
+							<p>CLICK TO SEE<br>FOOD & DRINK SPECIALS</p>
+						</a>
+					</div>
+					<!--TRIVIA WEDNESDAY-->
+					<div class="weekly-box">
+						<a href="trivia.html">
+							<p>EVERY WEDNESDAY</p>
+							<img src="media/images/upcoming/events/trivia-wednesday-square.png"/>
+							<p>RESERVE YOUR TABLE<br>FOR UPCOMING TRIVIA</p>
+						</a>
+					</div>
+					<!--KARAOKE THURSDAY-->
+					<div id="karaoke-thursday-button" class="weekly-box">
+						<a href="#">
+							<p>EVERY THURSDAY</p>
+							<img src="media/images/upcoming/events/pop-up-karaoke.jpg"/>
+							<p>CLICK TO SEE<br>FOOD SPECIALS</p>
+						</a>
+					</div>
+					<!--BULL RIDING FRIDAY-->
+					<div id="bull-riding-friday-button" class="weekly-box">
+						<a href="#">
+							<p>EVERY FRIDAY</p>
+							<img src="media/images/upcoming/events/bull-riding.jpg"/>
+							<p>CLICK TO RESERVE THE BULL<br>AND SEE DRINK SPECIALS </p>
+						</a>
+					</div>		
 				</div>
 			</div>
-			<div class="calendar">
-				<div class="month">Jul</div>
-				<div class="day">6</div>
-			</div>
-			
-					</div>
-		
-		<div id="featured-links">
-			<a href="https://www.joesliverosemont.com/music/?feature=Just+Announced" class="shadow tracked" data-category="Music" data-action="Just Announced" data-label="">
-				<span>View Just Announced Shows</span>
-			</a>
-			<a href="https://www.joesliverosemont.com/music/?feature=VIP" class="shadow tracked" data-category="Music" data-action="VIP Shows" data-label="">
-				<span>View VIP Shows</span>
-			</a>
-
-			<a id="next-weekend-url" href="" class="shadow tracked" data-category="Music" data-action="This weekend" data-label="">
-				<span>This Weekend <br><span class="current-month">January</span> <span class="next-friday">18</span> - <span class="next-saturday">19</span></span>
-			</a>
-
-			<a href="https://www.joesliverosemont.com/music/" class="shadow tracked" data-category="Music" data-action="View All Shows" data-label="">
-				<span>View All Shows</span>
-			</a>
 		</div>
-		
-	</section>
-	
-		
-	<section id="filters" class="round" aria-label="filter events">
-		
-		<form id="filter-form">
-			<fieldset>
-				<legend>Filter By</legend>
-				<label for="filter-genre">Genre</sup>
-					<select id="filter-genre" name="genre">
-						<option selected>Any</option>
-													<option>R&amp;B</option>
-													<option>Country</option>
-													<option>Hip-Hop/Rap</option>
-													<option>Latin</option>
-													<option>Pop</option>
-													<option>Rock</option>
-													<option>Various</option>
-													<option>World</option>
-											</select>
-				</label>
+		<!--TIPSY TUESDAY POP UP-->
+		<div id="weekly-specials" class="tipsy-tuesday-specials table-reservation">
+			<div class="weekly-specials-container">
+				<div class="weekly-specials-image">
+					<img src="media/images/upcoming/events/tipsy-tuesday.jpg"/>
+				</div>
+				<div class="weekly-specials-copy">
+					<p id="weekly-pop-up-header">DRINK SPECIALS</p>
+						<p>$3 Bud Light Pitchers</p>
+						<p>$4 Vodka Drinks</p>
+						<p>$4 Fireball Shots</p>
+						<p>$4 Jameson Shots</p>
+						<p>$3 Shots</p>
+					<p id="weekly-pop-up-header">FOOD SPECIALS</p>
+						<p>1/2 Price Pizza</p>
+						<p id="specials-italics">* Not offered on speciality pizzas.<br>Toppings are extra.</p>
+					<p class="weekly-pop-up-hours">$10 Cover After 10:00 PM</p>
+				</div>
+				<div class="table-reservation-x">
+					<i class="far fa-times-circle"></i>
+				</div>
+			</div>
+		</div>
+		<!--KARAOKE THRUSDAY POP UP-->
+		<div id="weekly-specials" class="karaoke-thursday-specials table-reservation">
+			<div class="weekly-specials-container">
+				<div class="weekly-specials-image">
+					<img src="media/images/upcoming/events/pop-up-karaoke.jpg"/>
+				</div>
+				<div class="weekly-specials-copy">
+					<p id="weekly-pop-up-header">FOOD SPECIALS</p>
+						<p>(6) free wings with the order of 10” pizza</p>
+						<p>(10) free wings with the order of 18” pizza</p>
+						<p>$5 breadsticks with marinara</p>
+						
+					<p class="weekly-pop-up-hours">Karaoke starts at 9:00 PM</p>
+				</div>
+				<div class="table-reservation-x">
+					<i class="far fa-times-circle"></i>
+				</div>
+			</div>
+		</div>
+		<!--BULL RIDING FRIDAY POP UP-->
+		<div id="bull-pop-up" class="bull-riding-friday-specials table-reservation">
+			<div class="weekly-specials-container">
+				<div class="weekly-specials-image">
+					<img src="media/images/upcoming/events/bull-riding.jpg"/>
+				</div>
+				<div class="bull-riding-bottom">
+					<div class="weekly-specials-copy">
+						<p id="weekly-pop-up-header">DRINK SPECIALS</p>
+							<p>$3 Naturdays</p>
+							<p>$4 Bud Light Cans</p>
+							<p>$4 Fireball Shots</p>
+							<p>$5 Shiner Drafts</p>
+							<p>$5 Ketel Botanicals</p>
+							<p>$6 Don Julio Shots</p>
+							<br>
+							<p id="bull-copy">Bachelors, bachelorettes, birthday, engagements you name it we’re here for it!  Get bucked up ALL SUMMER LONG at Joe’s Bar with our BULL NIGHTS! Make whatever you’re celebrating all the EXTRA your and your friends deserve. For special events or private parties with the BULL, contact us below:</p>
+					</div>
+					<div id="bull-riding-form">
+						<form action="table-reservations/bull-reservation.php" target="_blank" method="POST">
+							<div class="bull-reservation-column-wrapper">
+								<div class="bull-reservation-one">
+									<div class="bull-form-input">
+										<input  type="text" name="firstname" placeholder="First Name" required>
+									</div>
+									<div class="bull-form-input">
+										<input  type="text" name="lastname" placeholder="Last Name" required>
+									</div>
+								</div>
+								<div class="bull-reservation-two">
+									<div class="bull-form-input">
+										<input  type="email" name="email" placeholder="E-Mail" required>
+									</div>
+									<div class="bull-form-input">
+										<input  type="tel" name="phone" placeholder="Phone" required>
+									</div>
+								</div>
+							</div>
+							<div class="bull-reservation-message">
+							    <textarea type="text" name="message" placeholder="Tell Us About Your Event" required></textarea>
+							</div>
+							<div class="bull-reservation-form-buttons">
+							    <div id="bull-reservation-submit" onClick="submitForm()"><input type="submit" name="submit" value="Submit"></div>
+							    <div id="bull-reservation-reset"><input type="reset" name="reset"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="table-reservation-x">
+					<i class="far fa-times-circle"></i>
+				</div>
+			</div>
+		</div>
+	</div>
 
-				<label for="filter-features">Features</sup>
-					<select id="filter-features" name="feature">
-						<option selected>Any</option>
-						<option>Just Announced</option>
-													<option>Tables</option>
-													<option>Suites</option>
-													<option>Wristbands</option>
-											</select>
-				</label>
-			</fieldset>
-			<fieldset id="fieldset-date">
-				<legend>Date</legend>
-				<label for="filter-date-from">From</sup>
-					<input type="text" id="filter-date-from" name="date-from" class="datepicker">
-				</label>
-
-				<label for="filter-date-to">To</sup>
-					<input type="text" id="filter-date-to" name="date-to" class="datepicker">
-				</label>
-			</fieldset>
-
-			<label for="search" class="full">Search</sup>
-				<input type="text" id="search" name="search" class="">
-			</label>
-			
-			<label for="sort" class="margin-right">Sort By</sup>
-				<select id="sort" name="sort" class="">
-					<option>Date - Ascending</option>
-					<option>Date - Descending</option>
-				</select>
-			</label>
-
-			
-
-			<input type="submit" class="button" value="Filter">
-		
-		</form>
-	
-	</section>
-	
-	<section id="music-list" aria-label="upcoming events">
-			
-				
-      <div class="performance" data-timestamp="07/05/2019" data-genre="Hip-Hop/Rap" data-features="">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg" alt="photo of Summer Rooftop Party">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-4/" class="tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Summer Rooftop Party</a></h2>
-                    <h3 class="date">Friday, July 5, 2019</h3>
-          <h4 class="genre">Hip-Hop/Rap</h4>
-          <p>Reggaeton x HipHop x Top40 Music by DownLow + Friends Info: 773.567.3034 Text JOESLIVE to 545454</p>
-        </div>
-
-        <div class="buttons">
-                      <p>FREE</p>
-                    <a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-4/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">5</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/06/2019" data-genre="Country" data-features="Tables Suites Hero ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Blackjack-Billy-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Blackjack-Billy-website.jpg" alt="photo of Blackjack Billy">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/blackjack-billy/" class="tracked" data-category="Music" data-action="Details" data-label="Blackjack Billy">Blackjack Billy</a></h2>
-                      <h3 class="opener">Karlye Lapetina</h3>
-                    <h3 class="date">Saturday, July 6, 2019</h3>
-          <h4 class="genre">Country</h4>
-          <p>$8.00 General Admission Advance / $10.00 General Admission Day of Show Blackjack Billy is bonded together by no-holds-barred, good-time, party-down rockin’ country music that is endearing them to fans internationally. Members include dynamic frenetic lead [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/blackjack-billy-joes-live-rosemont-tickets/9481445?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Blackjack Billy">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="Blackjack Billy">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Blackjack Billy">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/blackjack-billy/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Blackjack Billy">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">6</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/12/2019" data-genre="Hip-Hop/Rap" data-features="">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg" alt="photo of Summer Rooftop Party">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-5/" class="tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Summer Rooftop Party</a></h2>
-                    <h3 class="date">Friday, July 12, 2019</h3>
-          <h4 class="genre">Hip-Hop/Rap</h4>
-          <p>Reggaeton x HipHop x Top40 Music by DownLow + Friends Info: 773.567.3034 Text JOESLIVE to 545454</p>
-        </div>
-
-        <div class="buttons">
-                      <p>FREE</p>
-                    <a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-5/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">12</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/13/2019" data-genre="Pop" data-features="Featured ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/03/Pop-2k-website-2.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/03/Pop-2k-website-2.jpg" alt="photo of Pop 2000 Tour Hosted by Lance Bass of *NSYNC">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/pop-2000-tour-hosted-by-lance-bass-of-nsync/" class="tracked" data-category="Music" data-action="Details" data-label="Pop 2000 Tour Hosted by Lance Bass of *NSYNC">Pop 2000 Tour Hosted by Lance Bass of *NSYNC</a></h2>
-                      <h3 class="opener">O-Town : Aaron Carter : Ryan Cabrera : Tyler Hilton</h3>
-                    <h3 class="date">Saturday, July 13, 2019</h3>
-          <h4 class="genre">Pop</h4>
-          <p>$25 General Admission Early Bird (until March 22 at noon) / $30 and up General Admission $50 Balcony $76 Fan PIT $199 On Stage Seating ​$300 Suite 3 Tables (up to 4 people) $1,500 Suite [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/pop-2000-tour-hosted-by-joes-live-rosemont-tickets/9278605?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Pop 2000 Tour Hosted by Lance Bass of *NSYNC">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/pop-2000-tour-hosted-by-lance-bass-of-nsync/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Pop 2000 Tour Hosted by Lance Bass of *NSYNC">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">13</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/19/2019" data-genre="Hip-Hop/Rap" data-features="">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg" alt="photo of Summer Rooftop Party">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-6/" class="tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Summer Rooftop Party</a></h2>
-                    <h3 class="date">Friday, July 19, 2019</h3>
-          <h4 class="genre">Hip-Hop/Rap</h4>
-          <p>Reggaeton x HipHop x Top40 Music by DownLow + Friends Info: 773.567.3034 Text JOESLIVE to 545454</p>
-        </div>
-
-        <div class="buttons">
-                      <p>FREE</p>
-                    <a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-6/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">19</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/20/2019" data-genre="Pop" data-features="Tables Suites Wristbands Featured ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/04/StacheUltrabeat_7-20-19_1200x800px-imageonly.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/04/StacheUltrabeat_7-20-19_1200x800px-imageonly.jpg" alt="photo of Stache">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/stache/" class="tracked" data-category="Music" data-action="Details" data-label="Stache">Stache</a></h2>
-                      <h3 class="opener">UltraBeat</h3>
-                    <h3 class="date">Saturday, July 20, 2019</h3>
-          <h4 class="genre">Pop</h4>
-          <p>Stache! uses a creative blend of song arrangement and skilled musicianship to bring a unique twist to everything from today&#8217;s pop hits to the 80s rock anthems you&#8217;ve been loving for years. UltraBeat brings electronic [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/stache-ultra-beat-joes-live-rosemont-tickets/9367135?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Stache">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="Stache">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Stache">Suites</a>
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Wristbands" data-label="Stache">Wristbands</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/stache/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Stache">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">20</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                              <span>Wristbands</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/26/2019" data-genre="Hip-Hop/Rap" data-features="">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DJOra-1.jpg" alt="photo of Summer Rooftop Party">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-7/" class="tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Summer Rooftop Party</a></h2>
-                    <h3 class="date">Friday, July 26, 2019</h3>
-          <h4 class="genre">Hip-Hop/Rap</h4>
-          <p>Reggaeton x HipHop x Top40 Music by DownLow + Friends Info: 773.567.3034 Text JOESLIVE to 545454</p>
-        </div>
-
-        <div class="buttons">
-                      <p>FREE</p>
-                    <a href="https://www.joesliverosemont.com/performance/hip-hop-x-reggaeton-night-7/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Summer Rooftop Party">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">26</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="07/27/2019" data-genre="" data-features="Featured Just Announced ">
-
-        <div class="photo cover round just-announced" style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Omar-Chaparro-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Omar-Chaparro-website.jpg" alt="photo of Omar Chaparro">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/omar-chaparro/" class="tracked" data-category="Music" data-action="Details" data-label="Omar Chaparro">Omar Chaparro</a></h2>
-                    <h3 class="date">Saturday, July 27, 2019</h3>
-          <h4 class="genre"></h4>
-          <p>Get your tickets to see Omar Chaparro live at Joe&#8217;s Live!</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/omar-chaparro-joes-live-rosemont-tickets/9620615?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Omar Chaparro">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/omar-chaparro/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Omar Chaparro">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Jul</div>
-            <div class="day">27</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/02/2019" data-genre="Various" data-features="Just Announced ">
-
-        <div class="photo cover round just-announced" style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/1200-x-800-BoomBoom-notext2.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/1200-x-800-BoomBoom-notext2.jpg" alt="photo of Summer Boom Boom 2019 &#8211; &#8216;Freestyle &#038; Old School&#8217; Edition">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/summer-boom-boom-2019-freestyle-old-school-edition/" class="tracked" data-category="Music" data-action="Details" data-label="Summer Boom Boom 2019 &#8211; &#8216;Freestyle &#038; Old School&#8217; Edition">Summer Boom Boom 2019 &#8211; &#8216;Freestyle &#038; Old School&#8217; Edition</a></h2>
-                    <h3 class="date">Friday, August 2, 2019</h3>
-          <h4 class="genre">Various</h4>
-          <p>Summer Boom Boom 2019 – ‘Freestyle &amp; Old School’ presents a LIVE concert featuring 3 of the biggest artists of the 90s: Rob Base, George LaMond and Sweet Sensation, with special guest Julian Jumpin’ Perez. [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/summer-boom-boom-2019-joes-live-rosemont-tickets/9650945?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Summer Boom Boom 2019 &#8211; &#8216;Freestyle &#038; Old School&#8217; Edition">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/summer-boom-boom-2019-freestyle-old-school-edition/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Summer Boom Boom 2019 &#8211; &#8216;Freestyle &#038; Old School&#8217; Edition">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">2</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/03/2019" data-genre="R&amp;B" data-features="Tables Suites Wristbands ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DancingNoods.png);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/DancingNoods.png" alt="photo of The Dancing Noodles">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/dancing-noodles/" class="tracked" data-category="Music" data-action="Details" data-label="The Dancing Noodles">The Dancing Noodles</a></h2>
-                    <h3 class="date">Saturday, August 3, 2019</h3>
-          <h4 class="genre">R&amp;B</h4>
-          <p>$10 General Admission Over three decades of high energy jam packed R&amp;B Soul. One of the midwest’s most durable and entertaining bands continues to leave crowds gasping for air. Non stop foot stompin’ toe tappin’ [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/dancing-noodles-joes-live-rosemont-tickets/9567955?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="The Dancing Noodles">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="The Dancing Noodles">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="The Dancing Noodles">Suites</a>
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Wristbands" data-label="The Dancing Noodles">Wristbands</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/dancing-noodles/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="The Dancing Noodles">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">3</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                              <span>Wristbands</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/09/2019" data-genre="Country" data-features="Tables Suites Just Announced ">
-
-        <div class="photo cover round just-announced" style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Whitey-Morgan-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Whitey-Morgan-website.jpg" alt="photo of Whitey Morgan">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/whitey-morgan/" class="tracked" data-category="Music" data-action="Details" data-label="Whitey Morgan">Whitey Morgan</a></h2>
-                      <h3 class="opener">Red Shahan</h3>
-                    <h3 class="date">Friday, August 9, 2019</h3>
-          <h4 class="genre">Country</h4>
-          <p>$25.00 General Admission Advance / $75.00 VIP / $80.00 4-Pack General Admission VIP ticket includes (1) General Admission ticket, VIP laminate, koozie, signed CD and meet &amp; greet with Whitey Morgan. Whitey Morgan and the 78&#8217;s [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/whitey-morgan-red-shahan-joes-live-rosemont-tickets/9514225?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Whitey Morgan">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="Whitey Morgan">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Whitey Morgan">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/whitey-morgan/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Whitey Morgan">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">9</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/16/2019" data-genre="Hip-Hop/Rap" data-features="Suites ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Method-Man-and-Redman-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Method-Man-and-Redman-website.jpg" alt="photo of Method Man and Redman">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/method-man-and-redman/" class="tracked" data-category="Music" data-action="Details" data-label="Method Man and Redman">Method Man and Redman</a></h2>
-                      <h3 class="opener">Radcliff, RhymStar, JaiTheArtist, Outfitt & Al Koleon</h3>
-                    <h3 class="date">Friday, August 16, 2019</h3>
-          <h4 class="genre">Hip-Hop/Rap</h4>
-          <p>$40.00 General Admission Advance / $45.00 General Admission Day of Show / $70 Balcony / $100 VIP Pit Method Man &amp; Redman, live on tour in Chicagoland at Joe&#8217;s Live!</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/method-man-and-redman-joes-live-rosemont-tickets/9586085?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Method Man and Redman">Buy Tickets</a>
-                          <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Method Man and Redman">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/method-man-and-redman/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Method Man and Redman">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">16</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/17/2019" data-genre="World" data-features="Tables Suites ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Molotov-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Molotov-website.jpg" alt="photo of Molotov: Unplugged">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/molotov/" class="tracked" data-category="Music" data-action="Details" data-label="Molotov: Unplugged">Molotov: Unplugged</a></h2>
-                    <h3 class="date">Saturday, August 17, 2019</h3>
-          <h4 class="genre">World</h4>
-          <p>$35.00 General Admission Advance / $45.00 General Admission Day of Show / $70.00 Balcony This will be an acoustic, unplugged show with Molotov. Mosh pits will not be tolerated. Anyone found moshing will be removed [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/molotov-joes-live-rosemont-tickets/9459985?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Molotov: Unplugged">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="Molotov: Unplugged">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Molotov: Unplugged">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/molotov/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Molotov: Unplugged">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">17</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/24/2019" data-genre="Various" data-features="Just Announced ">
-
-        <div class="photo cover round just-announced" style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Trisha-Paytas-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Trisha-Paytas-website.jpg" alt="photo of Trisha Paytas &#8211; The Heartbreak Tour">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/trisha-paytas-the-heartbreak-tour/" class="tracked" data-category="Music" data-action="Details" data-label="Trisha Paytas &#8211; The Heartbreak Tour">Trisha Paytas &#8211; The Heartbreak Tour</a></h2>
-                    <h3 class="date">Saturday, August 24, 2019</h3>
-          <h4 class="genre">Various</h4>
-          <p>See Trisha Paytas live at Joe&#8217;s Live! CLICK HERE for more information!</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.theheartbreaktour.com/chicago" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Trisha Paytas &#8211; The Heartbreak Tour">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/trisha-paytas-the-heartbreak-tour/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Trisha Paytas &#8211; The Heartbreak Tour">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">24</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="08/25/2019" data-genre="" data-features="">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Dobre-Brothers-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Dobre-Brothers-website.jpg" alt="photo of The Dobre Brothers Live">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/the-dobre-brothers-live/" class="tracked" data-category="Music" data-action="Details" data-label="The Dobre Brothers Live">The Dobre Brothers Live</a></h2>
-                    <h3 class="date">Sunday, August 25, 2019</h3>
-          <h4 class="genre"></h4>
-          <p>See The Dobre Brothers Live at Joe&#8217;s Live on August 25! CLICK HERE for more information!</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.dobretour.com/chicago" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="The Dobre Brothers Live">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/the-dobre-brothers-live/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="The Dobre Brothers Live">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Aug</div>
-            <div class="day">25</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="09/13/2019" data-genre="World" data-features="Suites ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Kalimba-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Kalimba-website.jpg" alt="photo of Kalimba">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/kalimba/" class="tracked" data-category="Music" data-action="Details" data-label="Kalimba">Kalimba</a></h2>
-                    <h3 class="date">Friday, September 13, 2019</h3>
-          <h4 class="genre">World</h4>
-          <p>KALIMBA “SOMOS MUCHOS Y VENIMOS TODOS TOUR” Kalimba Kadjaly Marichal Ibar nace el 26 de julio del año1982 en la Ciudad de México y a los 2 años comienza su carrera en la televisión mexicana [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/kalimba-joes-live-rosemont-tickets/9583735?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Kalimba">Buy Tickets</a>
-                          <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Kalimba">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/kalimba/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Kalimba">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Sep</div>
-            <div class="day">13</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="09/27/2019" data-genre="Latin" data-features="Tables Suites ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Grupo-Canaveral-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/05/Grupo-Canaveral-website.jpg" alt="photo of Grupo Cañaveral">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/grupo-canaveral/" class="tracked" data-category="Music" data-action="Details" data-label="Grupo Cañaveral">Grupo Cañaveral</a></h2>
-                    <h3 class="date">Friday, September 27, 2019</h3>
-          <h4 class="genre">Latin</h4>
-          <p>$45.00 General Admission Early Bird (until May 4 10:00am) / $65.00 General Admission / $85.00 Balcony Nunca ha habido ni habrá un grupo tan icónico de la cumbia. Desde hace 20 años todos los asistentes [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/grupo-caaveral-joes-live-rosemont-tickets/9444835?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Grupo Cañaveral">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="Grupo Cañaveral">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="Grupo Cañaveral">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/grupo-canaveral/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Grupo Cañaveral">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Sep</div>
-            <div class="day">27</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="10/19/2019" data-genre="World" data-features="Just Announced ">
-
-        <div class="photo cover round just-announced" style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Nikos-Vertis-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/Nikos-Vertis-website.jpg" alt="photo of Nikos Vertis">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/nikos-vertis/" class="tracked" data-category="Music" data-action="Details" data-label="Nikos Vertis">Nikos Vertis</a></h2>
-                    <h3 class="date">Saturday, October 19, 2019</h3>
-          <h4 class="genre">World</h4>
-          <p>General Admission tickets are standing room only. For table reservations, call Greek Music Live at 312-451-5001.</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/nikos-vertis-joes-live-rosemont-tickets/9625505?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="Nikos Vertis">Buy Tickets</a>
-                    <a href="https://www.joesliverosemont.com/performance/nikos-vertis/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="Nikos Vertis">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Oct</div>
-            <div class="day">19</div>
-          </div>
-                  </div>
-      </div>
-	
-				
-      <div class="performance" data-timestamp="11/27/2019" data-genre="Latin" data-features="Tables Suites ">
-
-        <div class="photo cover round " style="background: url(https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/India-website.jpg);">
-          <img src="https://s3.amazonaws.com/bucket2.joesliverosemont.com/wp-content/uploads/2019/06/India-website.jpg" alt="photo of LA India">
-        </div>
-
-        <div class="content">
-          <h2 class="name"><a href="https://www.joesliverosemont.com/performance/la-india/" class="tracked" data-category="Music" data-action="Details" data-label="LA India">LA India</a></h2>
-                    <h3 class="date">Wednesday, November 27, 2019</h3>
-          <h4 class="genre">Latin</h4>
-          <p>$55.00 General Admission Presale / $65.00 General Admission / $85.00 Balcony Presale: Friday, June 7 10:00am &#8211; Saturday, June 8 9:59pm On Sale: Saturday, June 8 at 10:00am Born Linda Bell Caballero in Rio Piedras, [&hellip;]</p>
-        </div>
-
-        <div class="buttons">
-                      <a href="https://www.ticketweb.com/event/la-india-joes-live-rosemont-tickets/9554135?pl=joeslive" class="button tracked" data-category="Music" data-action="Buy Tickets" data-label="LA India">Buy Tickets</a>
-                          <a class="button tracked" target="_blank" href="https://www.exploretock.com/joesliverosemont"  data-tock-reserve=true data-tock-experience-list=true data-category="Music" data-action="Tables" data-label="LA India">Tables</a>
-
-                            
-                            <a href="https://www.joesliverosemont.com/vip" class="button tracked" data-category="Music" data-action="Suites" data-label="LA India">Suites</a>
-                            
-                      <a href="https://www.joesliverosemont.com/performance/la-india/" class="button button-dark tracked" data-category="Music" data-action="Details" data-label="LA India">Details</a>
-        </div>
-
-        <div class="details">
-          <div class="calendar">
-            <div class="month">Nov</div>
-            <div class="day">27</div>
-          </div>
-                      <h3>Features</h3>
-            <div class="features">
-                              <span>Tables</span>
-                              <span>Suites</span>
-                          </div>
-                  </div>
-      </div>
-	
-		
-	</section>
-
-</main>
 
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
 <script src="js/jarallax/jarallax.min.js"></script>
 <script src="js/jarallax/jarallax-video.min.js"></script>
 <script src="js/jarallax/jarallax-element.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="http://res.cloudinary.com/vsevolodts/raw/upload/v1503371762/timeit.min.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
