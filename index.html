@@ -7,10 +7,10 @@
    	<link href="css/jarallax.css" rel="stylesheet" type="text/css">
    	<link href="css/slick.css" rel="stylesheet" type="text/css">
    	<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
-   	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--HEADER-->
@@ -18,7 +18,7 @@
 		<div class="header-container">
 			<div class="header-left">
 				<div class="header-left-container">
-					<a href="calendar.html"><p>Calendar</p></a>
+					<a href="events.html"><p>Events</p></a>
 					<a href="concerts.html"><p>Concerts</p></a>
 					<a href="sports.html"><p>Sports</p></a>
 					<a href="trivia.html"><p>Trivia</p></a>
@@ -65,7 +65,6 @@
 				</div>
 			</div>
 		</div>
-		<div id="header-shrink-point"></div>
 	</header>
 <!--MAIN VIDEO-->
 	<div class="main-video">
@@ -82,11 +81,13 @@
 	</div>
 <!--UPCOMING EVENTS/CONCERTS CAROUSEL-->
 	<div class="main-upcoming">
+		<div class="main-concerts-heading">
+				<h2>JOE'S CONCERTS</h2>
+			</div>
 		<div class="main-upcoming-container">
-			<!--NEXT CONCERT SECION-->
 			<div class="main-next">
 				<div class="main-next-container">
-					<!--NEXT CONCERT-->
+<!--NEXT CONCERT TOP-->
 					<div class="next-concert">
 						<img src="media/images/upcoming/concerts/7-25-19-home-free.jpg"/>
 						<div class="next-concert-date">
@@ -100,7 +101,7 @@
 							</div>
 						</div>
 					</div>
-					<!--NEXT CONCERT ROOFTOP-->
+<!--NEXT CONCERT BOTTOM-->
 					<!--7/26 SORRY FOR PARTYING - ROOFTOP-->
 					<div class="next-rooftop">
 						<img src="media/images/upcoming/concerts/7-26-19-sorry-for-partying.jpg"/>
@@ -118,7 +119,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="next-rooftop 7-26-sorry-for-partying">
+					<!--div class="next-rooftop 7-26-sorry-for-partying">
 						<img src="media/images/upcoming/concerts/7-26-19-sorry-for-partying.jpg"/>
 						<div class="next-concert-date">
 							<p>FRI 7/26</p>
@@ -133,10 +134,10 @@
 								<a href="#" target="blank_"><p id="table-p">INFO</p></a>
 							</div>
 						</div>
-					</div>
+					</div-->
 				</div>
 			</div>
-			<!--CAROUSEL-->
+<!--CAROUSEL-->
 			<div class="main-upcoming-carousel">
 				<div class="event-wrapper">
 					<!--HOME FREE 7-25-19-->
@@ -248,29 +249,185 @@
 			</div>
 		</div>
 	</div>
-<!--MAIN BIO-->
-	<div class="main-bio">
-		<div class="main-bio-container">
-			<div class="main-bio-header">
-				<div data-jarallax data-speed="0.5" class="jarallax bio-photo">
-					<img class="jarallax-img" src="media/images/live/garth-brooks-1.jpg"/>
-					<div data-jarallax-element="-100" class="main-bio-header-caption">
-						<img id="garth-brooks-logo" src="media/images/logos/garth-brooks-logo.png"/>
-						<p id="dive-bar">2019 'Dive Bar' Tour</p>
-						<a href="https://youtu.be/nYqNlfKO0UY?t=12m55s" target="blank_"><p>click to see Joe's on:</p></a>
-						<div class="dive-bar-logos">
-							<a href="https://youtu.be/nYqNlfKO0UY?t=12m55s" target="blank_"><img id="jimmy-kimmel-live-logo" src="media/images/logos/jimmy-kimmel-live-logo.png"/></a>
+<!--SPORTS BANNER-->
+	<div class="main-sports-banner">
+		<div class="main-events-heading">
+			<h2>UPCOMING EVENTS AT JOE'S</h2>
+		</div>
+		<div class="main-sports-banner-container">
+			<div id="sports-logos-1" class="sports-logos">
+				<img src="media/images/sports-logos/chicago-bears-logo-square.png"/>
+				<img src="media/images/sports-logos/north-carolina-tarheels-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-blackhawks-logo-square.png"/>
+			</div>
+			<div id="sports-logos-2" class="sports-logos">
+				<img src="media/images/sports-logos/chicago-cubs-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-bulls-logo-square.png"/>
+				<img src="media/images/sports-logos/indiana-hoosiers-logo-square.png"/>
+			</div>
+			<div id="sports-logos-3" class="sports-logos">
+				<img src="media/images/sports-logos/illinois-illini-logo-square.png"/>
+				<img src="media/images/sports-logos/tcu-horned-frogs-logo-square.png"/>
+				<img src="media/images/sports-logos/arkansas-razorbacks-logo-square.png"/>
+			</div>
+			<div id="sports-logos-4" class="sports-logos">
+				<img src="media/images/sports-logos/chicago-blackhawks-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-bears-logo-square.png"/>
+				<img src="media/images/sports-logos/north-carolina-tarheels-logo-square.png"/>
+			</div>
+			<div id="sports-logos-5" class="sports-logos">
+				<img src="media/images/sports-logos/indiana-hoosiers-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-cubs-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-bulls-logo-square.png"/>
+			</div>
+			<div id="sports-logos-6" class="sports-logos">
+				<img src="media/images/sports-logos/arkansas-razorbacks-logo-square.png"/>
+				<img src="media/images/sports-logos/illinois-illini-logo-square.png"/>
+				<img src="media/images/sports-logos/tcu-horned-frogs-logo-square.png"/>
+			</div>
+			<div id="sports-logos-7" class="sports-logos">
+				<img src="media/images/sports-logos/north-carolina-tarheels-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-blackhawks-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-bears-logo-square.png"/>
+			</div>
+			<div id="sports-logos-8" class="sports-logos">
+				<img src="media/images/sports-logos/chicago-bulls-logo-square.png"/>
+				<img src="media/images/sports-logos/indiana-hoosiers-logo-square.png"/>
+				<img src="media/images/sports-logos/chicago-cubs-logo-square.png"/>
+			</div>
+			<div id="sports-logos-9" class="sports-logos">
+				<img src="media/images/sports-logos/tcu-horned-frogs-logo-square.png"/>
+				<img src="media/images/sports-logos/arkansas-razorbacks-logo-square.png"/>
+				<img src="media/images/sports-logos/illinois-illini-logo-square.png"/>
+			</div>
+			<div class="main-sports-copy">
+				<div class="main-sports-copy-wrapper">
+					<div class="main-sports-copy-container">
+						<p>With over 120 plasma televisions and high definition projector screens, Joe’s is sure to have your game on TV! There is no better or bigger place in Chicago to catch all the NFL, NCAA, NBA or NHL action. With 14 satellites, we can show all the games at the same time.</p>
+						<div class="sports-copy-links">
+							<a href="sports.html"><p>View upcoming schedules for your favorite teams and reserve your table today!</p></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="main-bio-copy">
-				<div class="main-bio-copy-container">
-					<p> Joe's is a 20,000 square foot warehouse-style venue located near Lincoln Park in Chicago. Joe’s specializes in sports, live music, and private parties. Joe’s features five party rooms, each offering their own unique environment.<br><br>With over 120 plasma televisions and high definition projector screens, Joe’s is sure to have your game on TV! We are host to 4 different college alumni groups such as the Fighting Illini, the Indiana Hoosiers and the Arkansas Razorbacks, just to name a few. There is no better or bigger place in Chicago to catch all the NFL, NCAA, NBA, or NHL action. With 14 satellites, we can show all the games at the same time.  <a class="bio-link" href="sports.html">Reserve your table for an upcoming game!</a><br><br>Joe’s is also host to both national and local music acts. We have been home to acts such as Eric Church, Brad Paisley, Miranda Lambert, Dierks Bentley, Randy Houser, and Salt N Pepa. We also have monthly performances by local bands such as Rod Tuffcurls & The Benchpress, 16 Candles, Wedding Banned and many, many more.  Tickets for shows are available <a class="bio-link" href="https://www.ticketweb.com/venue/joe-s-on-weed-street-chicago-il/11879" target="blank_">online</a> or at the box office here at Joe’s. Check out our concert schedule to see each individual concert and where/when tickets are available.<br><br>Planning a <a class="bio-link" href="private-parties.html">private party</a>? Joe’s is the perfect choice! Whether it is a corporate event or a surprise birthday party, we have the perfect room for you. Joe’s can accommodate parties of 15 to 2,000 guests. We have a full on-site sound and lighting system and incredible AV capabilities.<br><br>JOE’S IS A 21 AND OLDER VENUE.  You must be 21+ to attend all shows and events.</p>
+		</div>
+	</div>
+<!--UPCOMING EVENTS-->
+	<div class="main-events">
+		<div class="main-events-container">
+			<div class="main-events-carousel">
+				<div class="main-events-carousel-container">
+					<!--WRESTLING TRIVIA 8-7-->
+					<div id="wrestling-trivia-8-7" class="main-events-carousel-box">
+						<img src="media/images/trivia-logos/wrestling-banner.jpg"/>
+						<div class="main-events-date">
+							<p>WED 8/7</p>
+						</div>
+						<div class="main-events-date-text">
+							<div class="main-events-date-text-box">
+								<p id="main-events-name">WRESTLING TRIVIA <span id="span-line">|</span> </p>
+								<p id="main-events-time"><span>X</span>8:00pm</p>
+							</div>
+							<div class="ticket-button">
+								<a href="trivia.html"><p id="table-p">REGISTER NOW</p></a>
+							</div>
+						</div>
+					</div>
+					<!--NEW GIRL TRIVIA 8-14-->
+					<div id="new-girl-trivia-8-14" class="main-events-carousel-box">
+						<img src="media/images/trivia-logos/new-girl-banner.jpg"/>
+						<div class="main-events-date">
+							<p>WED 8/14</p>
+						</div>
+						<div class="main-events-date-text">
+							<div class="main-events-date-text-box">
+								<p id="main-events-name">NEW GIRL TRIVIA <span id="span-line">|</span> </p>
+								<p id="main-events-time"><span>X</span>8:00pm</p>
+							</div>
+							<div class="ticket-button">
+								<a href="trivia.html"><p id="table-p">REGISTER NOW</p></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!--UPCOMING ARROWS-->
+				<div id="main-events-arrows-left" class="main-events-arrows-left">
+					<i class="fas fa-chevron-left"></i>
+				</div>
+				<div id="main-events-arrows-right" class="main-events-arrows-right">
+					<i class="fas fa-chevron-right"></i>
+				</div>
+			</div>
+			<!--SIDE BOXES-->
+			<div class="main-events-side-boxes">
+				<a href="events.html">
+					<div class="main-events-side-boxes-heading">
+						<h2>EVERY WEEK AT JOE'S</h2>
+					</div>
+					<div class="main-events-side-boxes-container">
+						<div class="side-boxes">
+							<img src="media/images/upcoming/events/weekly-events.png"/>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+	</div>
+<!--MAIN BIO-->
+	<div class="main-bio">
+		<div class="main-bio-container">
+			<div class="main-bio-heading">
+				<h2>JOIN US AT JOE'S ON WEED ST.</h2>
+			</div>
+			<div class="main-bio-info">
+				<div class="main-bio-copy">
+					<div class="main-bio-copy-container">
+						<h1>Joe’s on Weed St. is a 20,000 square foot warehouse-style venue located near Lincoln Park in Chicago. Joe’s specializes in sports, live music and private parties. Joe’s features five party rooms, each offering a unique experience.</h1>
+					</div>
+					<div class="bio-copy-sections">
+						
+						<div class="bio-copy-column bio-columns">
+							<div>
+								<p class="bio-column-heading">LOCATION</p>
+								<a href="https://goo.gl/maps/6btEr7sM4dp7fwVQ6" target="blank_"><i class="fas fa-map-marked-alt"></i>940 W Weed St, Chicago, IL 60642</a>
+							</div>
+							<div>
+								<p id="bio-contact-heading" class="bio-column-heading">CONTACT US</p>
+								<div id="bio-contact">
+									<a href="tel:312-337-3486"><i class="fas fa-phone"></i>312-337-3486</a>
+									<a href="mailto:events@joesbar.com"><i class="fas fa-envelope"></i>Events@joesbar.com</a>
+								</div>
+								<div id="bio-social">
+									<a href="https://www.facebook.com/joesonweedst/" target="blank_"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://www.instagram.com/joesonweedst/" target="blank_"><i class="fab fa-instagram"></i></a>
+									<a href="https://twitter.com/joesonweedst" target="blank_"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.youtube.com/user/JoesBarChicago/featured" target="blank_"><i class="fab fa-youtube"></i></a>
+								</div>
+							</div>
+						</div>
+						<div id="bio-logo" class="bio-copy-column">
+							<img src="media/images/logos/joes-main-logo.png"/>
+						</div>
+						<div id="bio-hours" class="bio-copy-column">
+							<div class="bio-wrap">
+								<p class="bio-column-heading">HOURS</p>
+								<div class="bio-hours">
+									<p>Monday 11AM-6PM /12AM*</p>
+									<p>Tuesday-Thursday 11AM-12AM OR 2AM</p>
+									<p>Friday 11AM-4AM</p>
+									<p>Saturday 11AM-5AM</p>
+									<p>Sunday 11AM-6PM/12AM*</p><br>
+									<p id="depends">*(Depends on events/games)</i>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>

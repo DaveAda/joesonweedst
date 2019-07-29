@@ -11,6 +11,7 @@
    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
    	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--HEADER-->
@@ -18,7 +19,7 @@
 		<div class="header-container">
 			<div class="header-left">
 				<div class="header-left-container">
-					<a href="calendar.html"><p>Calendar</p></a>
+					<a href="events.html"><p>Events</p></a>
 					<a href="concerts.html"><p>Concerts</p></a>
 					<a href="sports.html"><p>Sports</p></a>
 					<a href="trivia.html"><p>Trivia</p></a>
@@ -71,6 +72,7 @@
 	<div class="concerts">
 		<div class="concerts-container">
 			<div class="concerts-banner">
+				<div data-jarallax data-speed=".2" class="jarallax"><img class="jarallax-img" src="media/images/live/garth-brooks-1.jpg"/></div>
 				<div data-jarallax data-speed=".2" class="jarallax"><img class="jarallax-img" src="media/images/live/concerts-banner-1.jpg"/></div>
 				<div data-jarallax data-speed=".2" class="jarallax"><img class="jarallax-img" src="media/images/live/concerts-banner-2.jpg"/></div>
 				<div data-jarallax data-speed=".2" class="jarallax"><img class="jarallax-img" src="media/images/live/concerts-banner-3.jpg"/></div>
@@ -98,24 +100,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">BIZ MARKIE w/ WAYNE WILLIAMS (CHOSEN FEW) : MARK FLAVA (1st FRIDAYS)</p>
+									<p class="date">FRI AUG 2</p>
+									<div>
+										<p class="artist">BIZ MARKIE</p>
+										<p class="event-title-extras">w/ WAYNE WILLIAMS (CHOSEN FEW) : MARK FLAVA (1st FRIDAYS)</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/biz-markie-wayne-williams-chosen-joes-on-weed-street-tickets/9661305?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="biz-markie-8-2-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 9:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 10:00 PM</p>
-
 								</div>
-								
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="biz-markie-8-2-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>BIZ MARKIE</p>
+										</div>
+										<div class="opening-act">
+											<p>w/ WAYNE WILLIAMS (CHOSEN FEW) : MARK FLAVA (1st FRIDAYS)</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 2</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 9:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 10:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $30 General Admission / $50 PIT / $50 Alley Suite / Ages 21+</p>
+											<a class="show-details-tickets" href="https://www.ticketweb.com/event/biz-markie-wayne-williams-chosen-joes-on-weed-street-tickets/9661305?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>The legendary Biz Markie brings more than 30 years of solid hip-hop acumen and an overwhelming fan-base that stretches from New York City to Japan to Europe. At the age of 14, Marcel Hall dazzled his neighborhood under the alias of Biz Markie. His music scene debut began in 1985 as a beat box for Roxanne Shante of the Juice Crew. From then Biz began constructing his own destiny in the mystifying world of rap and hip-hop. Now 30 years older and immensely wiser, Biz continues to be universally praised by the ever-fickle and unforgiving hip-hop industry. No easy feat to accomplish, Biz is the definition of longevity and has managed to remain one of the most notable artists and DJs in the industry.</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">2</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/OfficialBizMarkie/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/officialbizmarkie/"><i class="fab fa-instagram"></i></a>
+								<!--a href="#"><i class="fas fa-globe"></i></a-->
 							</div>
 						</div>
 					</div>
@@ -127,25 +161,59 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">SUN STEREO w/ THE ARS NOVA & SPACE MAFIA</p>
+									<p class="date">FRI AUG 9</p>
+									<div>
+										<p class="artist">MILK & KILTS</p>
+										<p class="event-title-extras">SUN STEREO w/ THE ARS NOVA & SPACE MAFIA</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/sun-stereo-the-ars-nova-joes-on-weed-street-tickets/9495475?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="sun-stereo-8-9-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:30 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:00 PM</p>
 								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="sun-stereo-8-9-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>MILK & KILTS</p>
+										</div>
+										<div class="opening-act">
+											<p>SUN STEREO w/ THE ARS NOVA & SPACE MAFIA</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 9</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:30 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $10 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/sun-stereo-the-ars-nova-joes-on-weed-street-tickets/9495475?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Swizzlesteve presents Milk & Kilts featuring Sun Stereo, The Ars Nova & Space Mafia!</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">9</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/sunstereo/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/sunstereomusic/"><i class="fab fa-instagram"></i></a>
+								<a href="http://sunstereomusic.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
-					</div>
+					</div>	
 <!--8/16 FAT POCKETS-->
 					<div class="fat-pocket-8-16-19 concert-listing">
 						<div class="concert-listing-container">
@@ -154,26 +222,120 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">FAT POCKETS</p>
+									<p class="date">FRI AUG 16</p>
+									<div>
+										<p class="artist">FAT POCKETS</p>
+										<!--p class="event-title-extras">w/ THE ARS NOVA & SPACE MAFIA</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/fat-pockets-joes-on-weed-street-tickets/9568175?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="fat-pockets-8-16-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="fat-pockets-8-16-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>FAT POCKETS</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ THE ARS NOVA & SPACE MAFIA</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 16</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $8 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/fat-pockets-joes-on-weed-street-tickets/9568175?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Fat Pockets is a seven-piece funk/rock/soul band from Bloomington, Indiana formed in September 2017. Fronted by two dynamic, well-chaoreographed female vocalists, the band’s rhythm section is second-to-none when it comes to big sound, smooth transitions, and making an audience groove.<br><br>Whether it is a wedding, a street festival, or a nightclub, Fat Pockets is able to keep any audiences entertained and dancing with their alluring, high-energy performances. Capable of pulling just about any song or genre out of their “pocket”, Fat Pockets has quickly solidified themselves as premier party band in the Heartland of America.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">16</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/FatPockets.Band/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/fatpockets.band/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.fatpocketsband.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
-					</div>
+					</div>	
+<!--8/16 LIME-->
+					<div class="lime-8-16-19 concert-listing">
+						<div class="concert-listing-container">
+							<div class="concert-listing-image">
+								<img src="media/images/upcoming/concerts/8-16-19-lime.jpg"/>
+							</div>
+							<div class="concert-listing-info">
+								<div class="info-top">
+									<p class="date">FRI AUG 16</p>
+									<div>
+										<p class="artist">LIME</p>
+										<!--p class="event-title-extras">w/ THE ARS NOVA & SPACE MAFIA</p-->
+									</div>
+								</div>
+								<div class="artist-bottom">
+									<div class="ticket-button">
+										<a href="https://www.ticketweb.com/event/lime-joes-on-weed-street-tickets/9730455?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
+									</div>
+									<div id="lime-8-16-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
+									<p class="doors">Doors: 10:00 PM<span>X</span>|</p>
+									<p class="time"><span>X</span>Show: 11:59 PM</p>
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="lime-8-16-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>LIME</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ THE ARS NOVA & SPACE MAFIA</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 16</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 10:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 11:59 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $10 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/lime-joes-on-weed-street-tickets/9730455?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>THE ULTIMATE OLD SCHOOL PARTY<br><br>LIME live in CONCERT performing their timeless Hits “ANGEL EYES” “UNEXPECTED LOVERS” “BABE WERE GONNE ROCK TONIGHT” “YOUR LOVE”</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/limethegroup/"><i class="fab fa-facebook-f"></i></a>
+								<!--a href="#"><i class="fab fa-instagram"></i></a-->
+								<!--a href="#"><i class="fas fa-globe"></i></a-->
+							</div>
+						</div>
+					</div>	
 <!--8/17 JIMMY SARR-->
 					<div class="jimmy-sarr-8-17-19 concert-listing">
 						<div class="concert-listing-container">
@@ -182,26 +344,59 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">JIMMY SARR w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+									<p class="date">SAT AUG 17</p>
+									<div>
+										<p class="artist">JIMMY SARR</p>
+										<p class="event-title-extras">w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/jimmy-sarr-hoosier-ditty-the-joes-on-weed-street-tickets/9388045?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="jimmy-sarr-8-17-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 6:30 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 7:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="jimmy-sarr-8-17-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>JIMMY SARR</p>
+										</div>
+										<div class="opening-act">
+											<p>w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT AUG 17</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 6:30 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 7:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $10 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/jimmy-sarr-hoosier-ditty-the-joes-on-weed-street-tickets/9388045?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Chi-Town Throw Down: A night of original country music from some of Chicago’s own rising stars. Featuring Jimmy Sarr and special guests Hoosier Ditty, The Northern Lights, and Michael Keys.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">17</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/jimmysarr"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/jimmysarr/"><i class="fab fa-instagram"></i></a>
+								<a href="http://jimmysarr.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
-					</div>
+					</div>	
 <!--8/23 SASY-->
 					<div class="sasy-8-23-19 concert-listing">
 						<div class="concert-listing-container">
@@ -210,23 +405,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">SASY</p>
+									<p class="date">FRI AUG 23</p>
+									<div>
+										<p class="artist">SASY</p>
+										<!--p class="event-title-extras">w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/sasy-joes-on-weed-street-tickets/9591185?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="sasy-8-23-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 9:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 10:15 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="sasy-8-23-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>SASY</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 23</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 9:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 10:15 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: General Admission Early Bird 2: $55.00 / General Admission 1: $59.00 / General Admission 2: $65.00 / General Admission 3 / Door: $70.00 / Tables: $98.00 per person / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/sasy-joes-on-weed-street-tickets/9591185?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<!--div class="artist-bio">
+												<p>Chi-Town Throw Down: A night of original country music from some of Chicago’s own rising stars. Featuring Jimmy Sarr and special guests Hoosier Ditty, The Northern Lights, and Michael Keys.</p>
+											</div-->
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">23</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/sasymusic1/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/sasy/"><i class="fab fa-instagram"></i></a>
+								<!--a href="#"><i class="fas fa-globe"></i></a-->
 							</div>
 						</div>
 					</div>
@@ -238,23 +466,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">GONDWANA</p>
+									<p class="date">FRI AUG 30</p>
+									<div>
+										<p class="artist">GONDWANA</p>
+										<!--p class="event-title-extras">w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/gondwana-joes-on-weed-street-tickets/9711805?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="gondwana-8-30-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:30 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="gondwana-8-30-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>GONDWANA</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI AUG 30</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:30 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $25.00 advance / $30.00 day of show / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/gondwana-joes-on-weed-street-tickets/9711805?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>GONDWANA, es sin dudas una de las bandas más fuertes del reggae latinoamericano. Formado en Chile en 1987, el grupo mantiene una trayectoria muy destacada, con ventas multiplatino y presentaciones de los mejores festivales de toda Latinoamérica (Reggae On the River en California, Rock al Parque en Bogotá, Vive Latino en México, Pepsi Music en Buenos Aires, Cosquín Rock en Córdoba, Quito Fest en Ecuador y varias apariciones en el Festival de Viña del Mar son testigos de su impacto masivo).</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">AUG</p>
-								<p class="date-date">30</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/GondwanaChile/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/gondwanachile/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.gondwana.cl/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -266,23 +527,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">SHINYRIBS</p>
+									<p class="date">FRI SEP 6</p>
+									<div>
+										<p class="artist">SHINYRIBS</p>
+										<p class="event-title-extras">w/ MIKE MAIMONE BAND</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/shinyribs-mike-maimone-band-joes-on-weed-street-tickets/9487475?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="shinyribs-9-6-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:30 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="shinyribs-9-6-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>SHINYRIBS</p>
+										</div>
+										<div class="opening-act">
+											<p>w/ MIKE MAIMONE BAND</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI SEP 6</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:30 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $20 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/shinyribs-mike-maimone-band-joes-on-weed-street-tickets/9487475?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Once you’ve seen Shinyribs’ Kevin Russell on-stage and heard his band’s music, it’s impossible to forget. Known for his outrageous outfits and antics, he’s a regular fashion icon, liable to turn up in anything from his lime-green sherbet leisure suit to a flashing LED cloak, which he donned for a soulful performance of “East Texas Rust” on the award-winning PBS show Austin City Limits.<br><br>Born and raised in Beaumont, East Texas, Russell’s been variously dubbed (mostly by himself), the Baryshnikov of the Big Thicket, the Pavarotti of the Pineywoods, the Shakespeare of Swamp Pop, or the Shiniest Man in Showbidniz. One of the pioneers of Americana as a member of The Gourds, Russell took his musical inspiration from the fertile Ark-La-Tex turf. In the immortal words of the title track to their most recent album, “I Got Your Medicine,” Shinyribs have the cure to whatever ails you, moving that ass until you’re a helpless member of the Kevin Russell-led “all-in” conga line which snakes through the audience at the close of every show.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">SEP</p>
-								<p class="date-date">6</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/ShinyribsOfficial/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/shinyribs/"><i class="fab fa-instagram"></i></a>
+								<a href="https://shinyribs.org/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -294,23 +588,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">LATERALUS w/ FREAK ON A LEASH & NOW I'M NOTHING</p>
+									<p class="date">SAT SEP 7</p>
+									<div>
+										<p class="artist">LATERALUS w/ FREAK ON A LEASH & NOW I'M NOTHING</p>
+										<!--p class="event-title-extras"></p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/lateralus-freak-on-a-leash-joes-on-weed-street-tickets/9495925?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
-									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
+									<div id="lateralus-9-7-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
+									<p class="doors">Doors: 7:30 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="lateralus-9-7-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>LATERALUS w/ FREAK ON A LEASH & NOW I'M NOTHING</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ FREAK ON A LEASH & NOW I'M NOTHING</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT SEP 7</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:30 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $12 advance / $15 door / 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/lateralus-freak-on-a-leash-joes-on-weed-street-tickets/9495925?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Swizzlesteve presents a tribute to Tool, Korn and Nine Inch Nails with Lateralus, Freak on a Leash and Now I'm Nothing!</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">SEP</p>
-								<p class="date-date">7</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/lateraluschicago/"><i class="fab fa-facebook-f"></i></a>
+								<!--a href="#"><i class="fab fa-instagram"></i></a-->
+								<!--a href="#"><i class="fas fa-globe"></i></a-->
 							</div>
 						</div>
 					</div>
@@ -322,23 +649,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">KOE WETZEL</p>
+									<p class="date">SAT SEP 28</p>
+									<div>
+										<p class="artist">KOE WETZEL</p>
+										<!--p class="event-title-extras">w/ MIKE MAIMONE BAND</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/koe-wetzel-joes-on-weed-street-tickets/9485175?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="koe-wetzel-9-28-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 9:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="koe-wetzel-9-28-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>KOE WETZEL</p>
+										</div>
+										<!--div class="opening-act">
+											<p>w/ SPECIAL GUESTS: HOOSIER DITTY, THE NORTHERN LIGHTS, and MICHAEL KEYS</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT SEP 28</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 9:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $10 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/koe-wetzel-joes-on-weed-street-tickets/9485175?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Born and raised in East Texas, Koe Wetzel is rapidly gaining momentum in the Texas scene. The band brings a strong mixture of southern rock energy and East Texas charm. <br><br>Koe began performing at an early age. Overnight, he had what seemed like an immediate fan base in his home state. He has since brought together this band and hit the road touring heavily. The band is made up of Koe Wetzel (Vocals/ Acoustic Guitar), Andres Rocha (Drums), Mason Morris (Harmony Vocals/Bass), Jerrod Flusche (Rhythm/Lead Guitar), and Michael Odis Parrish (Lead Guitar.) <br><br>As the band continued to play shows, Koe began writing in between performances. Bringing personal experience and inspiration from others to life with a melody was second nature to the young artist, “Being able to connect with an audience, or a fan, because they feel like they can relate to your lyrics is one of the coolest experiences in the world. There's no greater feeling than hearing that your lyrics or your song mean something to someone.” <br><br>Koe Wetzel's album, "Noise Complaint" was released  in 2016 and the band has hit the studio to work on their sophomore album.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">SEP</p>
-								<p class="date-date">28</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/KoeWetzelMusic/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/koe_wetzel/"><i class="fab fa-instagram"></i></a>
+								<a href="https://koewetzelmusic.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -350,23 +710,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">FLATLAND CAVALRY w/ TOM O'CONNOR</p>
+									<p class="date">SAT OCT 19</p>
+									<div>
+										<p class="artist">FLATLAND CAVALRY</p>
+										<p class="event-title-extras">w/ TOM O'CONNOR</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/flatland-cavalry-tom-oconnor-joes-on-weed-street-tickets/9490205?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="flatland-cavalry-10-19-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 9:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="flatland-cavalry-10-19-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>FLATLAND CAVALRY</p>
+										</div>
+										<div class="opening-act">
+											<p>w/ TOM O'CONNOR</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT OCT 19</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 9:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $12.00 General Admission Advance / $15.00 General Admission at the Door / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/flatland-cavalry-tom-oconnor-joes-on-weed-street-tickets/9490205?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>There's an old adage in the music business - hurry up and wait. It's as old as time itself and still rings true today. All too often, we're stuck in a no man's land where the present is almost non-existent. You look at the past, the  "good old days," with rose-colored glasses. The future is presented as when evertything will be figured out and make sense - there's an unparalled optimism towards the future. Days drag on, but the years fly by.<br><br>With their highly anticipated sophomore album, Homeland Insecurity, Texas' Flatland Cavalary wants to stop and smell the roses. Bandleader and chief lyricist Cleto Cordero is fine with examining and the present. There's an appreciation for all the sharp detail and high-spirited emotions of today.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">OCT</p>
-								<p class="date-date">19</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/FlatlandCavalry/?ref=br_rs&fb_dtsg_ag=AQw4We7hXW_0Fa_9rcRH-b_rIsYUKxQkPeUh7m0hciSo7w%3AAQyPcKuj33p61cHWeRpGbaFtWk7bK2RWUOZQBEGwG-kbAQ&jazoest=27915"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/flatlandcavalry/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.flatlandcavalry.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -378,23 +771,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">MUSCADINE BLOODLINE w/ JORDAN FLETCHER</p>
+									<p class="date">THU OCT 24</p>
+									<div>
+										<p class="artist">MUSCADINE BLOODLINE</p>
+										<p class="event-title-extras">w/ JORDAN FLETCHER</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/muscadine-bloodline-jordan-fletcher-joes-on-weed-street-tickets/9670215?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="muscadine-bloodline-10-24-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:00 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="muscadine-bloodline-10-24-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>MUSCADINE BLOODLINE</p>
+										</div>
+										<div class="opening-act">
+											<p>w/ JORDAN FLETCHER</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">THU OCT 24</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $10  / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/muscadine-bloodline-jordan-fletcher-joes-on-weed-street-tickets/9670215?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>There’s a new force making major waves in country music, Muscadine Bloodline. Proud natives of Mobile Alabama, Gary Stanton and Charlie Muncaster started Muscadine Bloodline in early 2016.  From the first time they took stage, Nashville started talking... so now, with two Billboard charting critically acclaimed EP’s  under their belt, it’s no surprise the rest of the music world is quickly catching on. The duo’s reputation for high-energy live experiences has resulted in a schedule full of shows spanning from coast to coast.  Charlie’s contemporary vocals complimented by Gary’s harmonies and masterful guitar licks make MB a powerfully refreshing mix of talent, passion and unfiltered authenticity. Infamously undaunted by the big stage, their sound intertwines the brash irreverence of early southern rockers with the seductive quality of 90s country love songs. Captivating hooks heard in songs like “Movin' On” and the aggressively anthemic “WD-40” stand as a testament to MB’s wide ranging music-making capability. Every song and every show is a moving experience but at the same time, unmistakably Muscadine Bloodline.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">OCT</p>
-								<p class="date-date">24</p>
-								<p class="date-dow">THU</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/muscadinebloodline/?ref=br_rs"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/muscadinebline/"><i class="fab fa-instagram"></i></a>
+								<a href="https://muscadinebloodline.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -406,24 +832,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">MASON RAMSEY</p>
-									<p class="artist-two">HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+									<p class="date">FRI NOV 1</p>
+									<div>
+										<p class="artist">MASON RAMSEY</p>
+										<p class="event-title-extras">HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/mason-ramseys-hows-ur-girl-joes-on-weed-street-tickets/9413055?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="mason-ramsey-11-1-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 7:30 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="mason-ramsey-11-1-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>MASON RAMSEY</p>
+										</div>
+										<div class="opening-act">
+											<p>HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+										</div>
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI NOV 1</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 7:30 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $20 advance / $22 day of show / Ages 18+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/mason-ramseys-hows-ur-girl-joes-on-weed-street-tickets/9413055?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Mason Ramsey is a 12 year old country artist signed to Big Loud and Atlantic Records. He was discovered in April of 2018 when a video of him singing Hank William’s “Love Sick Blues” went viral.<br><br>Raised by his Grandparents, Mason is from Golconda, IL, which is a small town with a population of 700 people. Growing up without Internet, a cellphone or computers meant that a majority of his time was spent with his Grandpa Ernie learning about the history of Country music. With his guidance he learned to play guitar and start singing at the age of 4.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">NOV</p>
-								<p class="date-date">1</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/theMasonRamsey/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/lilhankwilliams/"><i class="fab fa-instagram"></i></a>
+								<a href="https://masonramseyofficial.com/tour/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -435,23 +893,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">JOSH ABBOTT BAND</p>
+									<p class="date">SAT NOV 9</p>
+									<div>
+										<p class="artist">JOSH ABBOTT BAND</p>
+										<!--p class="event-title-extras">HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/josh-abbott-band-joes-on-weed-street-tickets/9585915?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
-									<p class="doors">Doors: 10:00 PM<span>X</span>|</p>
-									<p class="time"><span>X</span>Show: 10:30 PM</p>
-
+									<div id="josh-abbott-band-11-9-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
+									<p class="doors">Doors: 10:30 PM<span>X</span>|</p>
+									<p class="time"><span>X</span>Show: 11:00 PM</p>
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="josh-abbott-band-11-9-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>JOSH ABBOTT BAND</p>
+										</div>
+										<!--div class="opening-act">
+											<p>HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT NOV 9</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 10:30 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 11:00 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $20 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/josh-abbott-band-joes-on-weed-street-tickets/9585915?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Thanks to its inherently upbeat and singable material, Josh Abbott Band has become one of the leading acts in Texas music, winning four trophies in the inaugural Texas Regional Radio Awards. But JAB has national cred to boot – it’s landed three singles on the Billboard Hot Country Songs chart – including “Oh, Tonight,” the first charted track to feature Grammy-winning Kacey Musgraves – and nabbed a Top 10 album with the 2012 release Small Town Family Dreams and reached No. 12 with the 2014 EP Tuesday Night. The six-piece ensemble is releasing its most ambitious project to date with the 2015 album Front Row Seat, a song cycle that follows a relationship from first meeting through its euphoric rise to a difficult breakup and contemplative aftermath. The release is accompanied by a national tour that takes the band to some of America’s most iconic country clubs.</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">NOV</p>
-								<p class="date-date">9</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/joshabbottband/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/joshabbottband/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.joshabbottband.com/#!/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -463,23 +954,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">RANDY ROGERS BAND</p>
+									<p class="date">SAT DEC 7</p>
+									<div>
+										<p class="artist">RANDY ROGERS BAND</p>
+										<!--p class="event-title-extras">HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/randy-rogers-band-joes-on-weed-street-tickets/9580875?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="randy-rogers-band-12-7-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:30 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="randy-rogers-band-12-7-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>RANDY ROGERS BAND</p>
+										</div>
+										<!--div class="opening-act">
+											<p>HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">SAT DEC 7</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:30 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $25 / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/randy-rogers-band-joes-on-weed-street-tickets/9580875?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>Few relationships in life are more complicated than those among band members. Music history is filled with stories of the rise and fall of creative personalities, but the Randy Rogers Band is a unique brotherhood fueled by a shared passion for making great music and a strong commitment to each other. That bond forms the foundation for the new music on their latest album Hellbent, a high-octane collection of songs buoyed by the same fearless spirit and sense of camaraderie that has made them one of country’s most compelling bands.<br><br>In a business where bands come and go and membership is often a revolving door, the Randy Rogers Band has been together for more than 17 years. “Just like any other relationship, you have to pick your battles and have respect for each other,” Rogers says. “None of us know how to do anything else. This is our livelihood. It’s how we take care of our families. Years ago when we were really struggling and wondering how we were going to make it, there were some deep and emotional conversations that we all had with each other about if this is really what we all wanted and the decision was made a long time ago. The answer was yes then and the answer is still yes now.  It’s something we all believe in. This is our life’s work.”</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">DEC</p>
-								<p class="date-date">9</p>
-								<p class="date-dow">SAT</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/RandyRogersBand/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/randyrogersband/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.randyrogersband.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>
@@ -491,23 +1015,56 @@
 							</div>
 							<div class="concert-listing-info">
 								<div class="info-top">
-									<p class="artist">MORGAN EVANS</p>
+									<p class="date">FRI DEC 13</p>
+									<div>
+										<p class="artist">MORGAN EVANS</p>
+										<!--p class="event-title-extras">HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p-->
+									</div>
 								</div>
 								<div class="artist-bottom">
 									<div class="ticket-button">
 										<a href="https://www.ticketweb.com/event/morgan-evans-joes-on-weed-street-tickets/9576915?pl=joesbar" target="blank_"><p id="table-p">TICKETS</p></a>
 									</div>
+									<div id="morgan-evans-12-13-19-info-button" class="info-button">
+										<p id="table-p">INFO</p>
+									</div>
 									<p class="doors">Doors: 7:00 PM<span>X</span>|</p>
 									<p class="time"><span>X</span>Show: 8:30 PM</p>
-
+								</div>
+							<!--CONERT LISTING DROPDOWN-->
+								<div id="morgan-evans-12-13-19-dropdown" class="concert-listing-info-dropdown">
+									<div class="concert-listing-info-dropdown-container">
+										<div class="table-reservation-x">
+											<i class="far fa-times-circle"></i>
+										</div>
+										<div class="artist">
+											<p>MORGAN EVANS</p>
+										</div>
+										<!--div class="opening-act">
+											<p>HOW'S UR GIRL & HOW'S UR FAMILY TOUR PT. II</p>
+										</div-->
+										<div class="about-the-show">
+											<p class="show-details">Show Details</p>
+											<p class="show-details-p">FRI DEC 13</p>
+											<div class="show-details-body">
+												<p class="show-details-p">Doors: 7:00 PM<span>X</span>|</p>
+												<p class="show-details-p"><span>X</span>Show: 8:30 PM</p>
+											</div>
+											<p class="show-details-p">Ticket Price: $20.00 advance / $25.00 day of show / Ages 21+</p>
+											<a class="show-details-tickets"href="https://www.ticketweb.com/event/morgan-evans-joes-on-weed-street-tickets/9576915?pl=joesbar" target="blank_">Buy Tickets Here</a>
+											<div class="artist-bio">
+												<p>When Australian singer/songwriter Morgan Evans released his self-titled debut album in 2014, it was the culmination of a musical journey that began when he started his first band at the age of thirteen.<br><br>It’s a journey that has seen the country-rocker tour with superstars like Taylor Swift and Alan Jackson, play to over 50,000 people in Nashville at the world’s biggest country music festival and build a large, devoted following as he’s played the length and breadth of his native land and across the USA.”</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="concert-listing-date">
-							<div class="concert-listing-date-container">
-								<p class="date-month">DEC</p>
-								<p class="date-date">13</p>
-								<p class="date-dow">FRI</p>
+						<div class="concert-listing-icons">
+							<div class="concert-listing-icons-container">
+								<a href="https://www.facebook.com/morganevansmusic/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/morganevansmusic/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.morganevansmusic.com/"><i class="fas fa-globe"></i></a>
 							</div>
 						</div>
 					</div>

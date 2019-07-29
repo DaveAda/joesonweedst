@@ -8,8 +8,8 @@ $(document).ready(function(){
     var $headermenuarrow = $('.header-menu-arrow');
     var $headermenutitle = $('.header-menu-title');
     var $headermenudropdown = $('.header-menu-dropdown');
-    var $headershrinkpoint = $('#header-shrink-point');
-    /*CALENDAR*/
+    var $headershrinkpoint = $('.acm-award');
+    /*EVENTS*/
     var $bullridingfridaybutton = $('#bull-riding-friday-button');
     var $bullridingfridayspecials = $('.bull-riding-friday-specials');
     var $karaokethursdaybutton = $('#karaoke-thursday-button');
@@ -17,6 +17,40 @@ $(document).ready(function(){
     var $tipsytuesdaybutton = $('#tipsy-tuesday-button');
     var $tipsytuesdayspecials = $('.tipsy-tuesday-specials');
     var $eventswrapper = $('.events-wrapper');
+    /*CONCERTS*/
+    var $bizmarkie8219infobutton = $('#biz-markie-8-2-19-info-button');
+    var $bizmarkie8219dropdown = $('#biz-markie-8-2-19-dropdown');
+    var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
+    var $sunstereo8919infobutton = $('#sun-stereo-8-9-19-info-button');
+    var $sunstereo8919dropdown = $('#sun-stereo-8-9-19-dropdown');
+    var $fatpockets81619infobutton = $('#fat-pockets-8-16-19-info-button');
+    var $fatpockets81619dropdown = $('#fat-pockets-8-16-19-dropdown');
+    var $lime81619infobutton = $('#lime-8-16-19-info-button');
+    var $lime81619dropdown = $('#lime-8-16-19-dropdown');
+    var $jimmysarr81719infobutton = $('#jimmy-sarr-8-17-19-info-button');
+    var $jimmysarr81719dropdown = $('#jimmy-sarr-8-17-19-dropdown');
+    var $sasy82319infobutton = $('#sasy-8-23-19-info-button');
+    var $sasy82319dropdown = $('#sasy-8-23-19-dropdown');
+    var $gondwana83019infobutton = $('#gondwana-8-30-19-info-button');
+    var $gondwana83019dropdown = $('#gondwana-8-30-19-dropdown');
+    var $shinyribs9619infobutton = $('#shinyribs-9-6-19-info-button');
+    var $shinyribs9619dropdown = $('#shinyribs-9-6-19-dropdown');
+    var $lateralus9719infobutton = $('#lateralus-9-7-19-info-button');
+    var $lateralus9719dropdown = $('#lateralus-9-7-19-dropdown');
+    var $koewetzel92819infobutton = $('#koe-wetzel-9-28-19-info-button');
+    var $koewetzel92819dropdown = $('#koe-wetzel-9-28-19-dropdown');
+    var $flatlandcavalry101919infobutton = $('#flatland-cavalry-10-19-19-info-button');
+    var $flatlandcavalry101919dropdown = $('#flatland-cavalry-10-19-19-dropdown');
+    var $muscadinebloodline102419infobutton = $('#muscadine-bloodline-10-24-19-info-button');
+    var $muscadinebloodline102419dropdown = $('#muscadine-bloodline-10-24-19-dropdown');
+    var $masonramsey11119infobutton = $('#mason-ramsey-11-1-19-info-button');
+    var $masonramsey11119dropdown = $('#mason-ramsey-11-1-19-dropdown');
+    var $joshabbottband11919infobutton = $('#josh-abbott-band-11-9-19-info-button');
+    var $joshabbottband11919dropdown = $('#josh-abbott-band-11-9-19-dropdown');
+    var $randyrogersband12719infobutton = $('#randy-rogers-band-12-7-19-info-button');
+    var $randyrogersband12719dropdown = $('#randy-rogers-band-12-7-19-dropdown');
+    var $morganevans121319infobutton = $('#morgan-evans-12-13-19-info-button');
+    var $morganevans121319dropdown = $('#morgan-evans-12-13-19-dropdown');
     /*SPORTS*/
     var $bears = $('#bears');
     var $bearsschedule = $('#bears-schedule');
@@ -49,36 +83,34 @@ $(document).ready(function(){
     var $tarheelsfootballbutton = $('.tarheels-football-button');
     var $tarheelsfootballschedule = $('#tarheels-football-schedule');
     /*PRIVATE PARTIES*/
-    var $basicpackage = $('#basic-package');
-    var $basicpackagedetails = $('#basic-package-details');
-    var $basicminussign = $('#basic-minus-sign');
-    var $basicplussign = $('#basic-plus-sign');
-    var $bridalblackoutpackage = $('#bridal-blackout-package');
-    var $bridalblackoutpackagedetails = $('#bridal-blackout-package-details');
-    var $bridalblackoutminussign = $('#bridal-blackout-minus-sign');
-    var $bridalblackoutplussign = $('#bridal-blackout-plus-sign');
     var $packagedetails = $('.package-details');
+    var $packagepopupdetails = $('.package-pop-up-details');
+    var $party1 = $('#party-1');
+    var $party2 = $('#party-2');
+    var $party3 = $('#party-3');
+    var $party4 = $('#party-4');
+    var $party5 = $('#party-5');
+    var $party6 = $('#party-6');
+    var $party7 = $('#party-7');
     var $partypackages = $('.party-packages');
+
+    var $partypackagesbasicpackage = $('#party-packages-basic-package');
+    var $partypackagesstandardpackage = $('#party-packages-standard-package');
+    var $partypackagespremiumpackage = $('#party-packages-premium-package');
+    var $partypackagesthetopshelfpackage = $('#party-packages-the-top-shelf-package');
+    var $partypackagesrooftoppackage = $('#party-packages-rooftop-package');
+    var $partypackagesthebachelorettepackage = $('#party-packages-the-bachelorette-package');
+    var $partypackagesbridalblackoutpackage = $('#party-packages-bridal-blackout-package');
+
+    var $partypackagepopup = $('.party-package-pop-up');
     var $partypackagespopup = $('.party-packages-pop-up');
-    var $premiumpackage = $('#premium-package');
-    var $premiumpackagedetails = $('#premium-package-details');
-    var $premiumminussign = $('#premium-minus-sign');
-    var $premiumplussign = $('#premium-plus-sign');
+  
+    var $partypackagesx = $('.party-packages-x');
+    var $individualpackagesx = $('.individual-packages-x');
+
     var $privatepartieswrapper = $('.private-parties-wrapper');
-    var $rooftoppackage = $('#rooftop-package');
-    var $rooftoppackagedetails = $('#rooftop-package-details');
-    var $rooftopminussign = $('#rooftop-minus-sign');
-    var $rooftopplussign = $('#rooftop-plus-sign');
-    var $standardpackage = $('#standard-package');
-    var $standardpackagedetails = $('#standard-package-details');
-    var $standardminussign = $('#standard-minus-sign');
-    var $standardplussign = $('#standard-plus-sign');
     var $thealleysuitepopup = $('#the-alley-suite-pop-up');
     var $thealleysuitereserve = $('#the-alley-suite-reserve');
-    var $thebachelorettepackage = $('#the-bachelorette-package');
-    var $thebachelorettepackagedetails = $('#the-bachelorette-package-details');
-    var $thebacheloretteminussign = $('#the-bachelorette-minus-sign');
-    var $thebacheloretteplussign = $('#the-bachelorette-plus-sign');
     var $thechapterroompopup = $('#the-chapter-room-pop-up');
     var $thechapterroomreserve = $('#the-chapter-room-reserve');
     var $theclubhousepopup = $('#the-clubhouse-pop-up');
@@ -87,10 +119,6 @@ $(document).ready(function(){
     var $theredroomreserve = $('#the-red-room-reserve');
     var $therooftoppopup = $('#the-rooftop-pop-up');
     var $therooftopreserve = $('#the-rooftop-reserve');
-    var $topshelfpackage = $('#top-shelf-package');
-    var $topshelfpackagedetails = $('#top-shelf-package-details');
-    var $topshelfminussign = $('#top-shelf-minus-sign');
-    var $topshelfplussign = $('#top-shelf-plus-sign');
     var $viploftloungepopup = $('#vip-loft-lounge-pop-up');
     var $viploftloungereserve = $('#vip-loft-lounge-reserve');
     var $privatepartiesrooms = $('.private-parties-rooms');
@@ -118,6 +146,55 @@ $(document).ready(function(){
     $headermenutitle.click(function(){
         $headermenudropdown.slideToggle();
         $headermenuarrow.toggleClass('head-arrow-flip');
+    });
+/*CONCERTS DROPDOWNS*/
+    $bizmarkie8219infobutton.click(function(){
+        $bizmarkie8219dropdown.slideDown();
+    });
+    $sunstereo8919infobutton.click(function(){
+        $sunstereo8919dropdown.slideDown();
+    });
+    $fatpockets81619infobutton.click(function(){
+        $fatpockets81619dropdown.slideDown();
+    });
+    $lime81619infobutton.click(function(){
+        $lime81619dropdown.slideDown();
+    });
+    $jimmysarr81719infobutton.click(function(){
+        $jimmysarr81719dropdown.slideDown();
+    });
+    $sasy82319infobutton.click(function(){
+        $sasy82319dropdown.slideDown();
+    });
+    $gondwana83019infobutton.click(function(){
+        $gondwana83019dropdown.slideDown();
+    });
+    $shinyribs9619infobutton.click(function(){
+        $shinyribs9619dropdown.slideDown();
+    });
+    $lateralus9719infobutton.click(function(){
+        $lateralus9719dropdown.slideDown();
+    });
+    $koewetzel92819infobutton.click(function(){
+        $koewetzel92819dropdown.slideDown();
+    });
+    $flatlandcavalry101919infobutton.click(function(){
+        $flatlandcavalry101919dropdown.slideDown();
+    });
+    $muscadinebloodline102419infobutton.click(function(){
+        $muscadinebloodline102419dropdown.slideDown();
+    });
+    $masonramsey11119infobutton.click(function(){
+        $masonramsey11119dropdown.slideDown();
+    });
+    $joshabbottband11919infobutton.click(function(){
+        $joshabbottband11919dropdown.slideDown();
+    });
+    $randyrogersband12719infobutton.click(function(){
+        $randyrogersband12719dropdown.slideDown();
+    });
+    $morganevans121319infobutton.click(function(){
+        $morganevans121319dropdown.slideDown();
     });
 /*SPORTS SCHEDULES*/
     $bears.click(function(){
@@ -466,12 +543,33 @@ $(document).ready(function(){
     });
 /*TABLE RESERVATIONS X*/
     $tablereservationx.click(function(){
+        $concertlistinginfodropdown.slideUp();
         $privatepartiesrooms.removeClass('schedule-background-fade');
         $privatepartieswrapper.removeClass('schedule-background-fade');
         $sportsschedule.removeClass('schedule-background-fade');
         $triviamonths.removeClass('schedule-background-fade');
         $eventswrapper.removeClass('schedule-background-fade');
         $tablereservation.fadeOut();
+    });
+    $partypackagesx.click(function(){
+        $privatepartiesrooms.removeClass('schedule-background-fade');
+        $partypackagespopup.fadeOut();
+        $partypackagesbasicpackage.fadeOut();
+        $partypackagesstandardpackage.fadeOut();
+        $partypackagespremiumpackage.fadeOut();
+        $partypackagesthetopshelfpackage.fadeOut();
+        $partypackagesrooftoppackage.fadeOut();
+        $partypackagesthebachelorettepackage.fadeOut();
+        $partypackagesbridalblackoutpackage.fadeOut();
+    });    
+    $individualpackagesx.click(function(){
+        $partypackagesbasicpackage.fadeOut();
+        $partypackagesstandardpackage.fadeOut();
+        $partypackagespremiumpackage.fadeOut();
+        $partypackagesthetopshelfpackage.fadeOut();
+        $partypackagesrooftoppackage.fadeOut();
+        $partypackagesthebachelorettepackage.fadeOut();
+        $partypackagesbridalblackoutpackage.fadeOut();
     });
 /*BEARS TABLE RESERVATIONS*/
     $bearspreseasonweek1button = $('#bears-preseason-week-1-button'); $bearspreseasonweek1popup = $('#bears-preseason-week-1-pop-up');$bearspreseasonweek1button.click(function(){$bearspreseasonweek1popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
@@ -829,45 +927,31 @@ $(document).ready(function(){
         $viploftloungepopup.fadeIn();
         $privatepartiesrooms.addClass('schedule-background-fade');
     });
-    /*PRIVATE PARTIES POP UPS*/
+    /*PARTY PACKAGE POP-UPS*/
     $partypackages.click(function(){
-        $partypackagespopup.show();
-        $privatepartieswrapper.addClass('schedule-background-fade');
+        $partypackagespopup.fadeIn();
+        $privatepartiesrooms.addClass('schedule-background-fade');
     });
-    $basicpackage.click(function(){
-        $basicpackagedetails.slideToggle();
-        $basicminussign.toggle();
-        $basicplussign.toggle();
+    $party1.click(function(){
+        $partypackagesbasicpackage.fadeIn();
     });
-    $bridalblackoutpackage.click(function(){
-        $bridalblackoutpackagedetails.slideToggle();
-        $bridalblackoutminussign.toggle();
-        $bridalblackoutplussign.toggle();
+    $party2.click(function(){
+        $partypackagesstandardpackage.fadeIn();
     });
-    $premiumpackage.click(function(){
-        $premiumpackagedetails.slideToggle();
-        $premiumminussign.toggle();
-        $premiumplussign.toggle();
+    $party3.click(function(){
+        $partypackagespremiumpackage.fadeIn();
     });
-    $rooftoppackage.click(function(){
-        $rooftoppackagedetails.slideToggle();
-        $rooftopminussign.toggle();
-        $rooftopplussign.toggle();
+    $party4.click(function(){
+        $partypackagesthetopshelfpackage.fadeIn();
     });
-    $standardpackage.click(function(){
-        $standardpackagedetails.slideToggle();
-        $standardminussign.toggle();
-        $standardplussign.toggle();
+    $party5.click(function(){
+        $partypackagesrooftoppackage.fadeIn();
     });
-    $thebachelorettepackage.click(function(){
-        $thebachelorettepackagedetails.slideToggle();
-        $thebacheloretteminussign.toggle();
-        $thebacheloretteplussign.toggle();
+    $party6.click(function(){
+        $partypackagesthebachelorettepackage.fadeIn();
     });
-    $topshelfpackage.click(function(){
-        $topshelfpackagedetails.slideToggle();
-        $topshelfminussign.toggle();
-        $topshelfplussign.toggle();
+    $party7.click(function(){
+        $partypackagesbridalblackoutpackage.fadeIn();
     });
 /*CALENDAR*/
     $tipsytuesdaybutton.click(function(){
@@ -882,26 +966,133 @@ $(document).ready(function(){
         $bullridingfridayspecials.fadeIn();
         $eventswrapper.addClass('schedule-background-fade');
     });
-/*MOMENT*/
-    sorryForPartying726rooftop(dateThing("2019-07-21"));
-    dayTwo(dateThing("2019-08-20"));
-    
 
-    function sorryForPartying726rooftop(daysAway){
+/***MOMENT***/
+/*CONCERTS*/
+    bizMarkie81619(showDate("2019-08-2"));
+    sunStereo8919(showDate("2019-08-9"));
+    fatPockets81619(showDate("2019-08-16"));
+    lime81619(showDate("2019-08-16"));
+    jimmySarr81719(showDate("2019-08-17"));
+    gondwana83019(showDate("2019-08-30"));
+    shinyRibs9619(showDate("2019-09-06"));
+    lateralus9719(showDate("2019-09-07"));
+    koeWetzel92819(showDate("2019-09-28"));
+    flatlandCavalry101919(showDate("2019-10-19"));
+    muscadineBloodline102419(showDate("2019-10-24"));
+    masonRamsey11119(showDate("2019-11-1"));
+    joshAbbottBand11919(showDate("2019-11-9"));
+    randyRogersBand12719(showDate("2019-12-7"));
+    morganEvans121319(showDate("2019-12-13"));
+    
+    function bizMarkie81619(daysAway){
         if(daysAway >= 1){
-            $('.7-26-sorry-for-partying').hide()
+            $('.biz-markie-8-2-19').hide()
         }else{
-            $('.7-26-sorry-for-partying').show()
+            $('.biz-markie-8-2-19').show()
         }
     }
-    function dayTwo(daysAway){
+    function sunStereo8919(daysAway){
         if(daysAway >= 1){
-            $('.day-2').hide()
+            $('.sun-stereo-8-9-19').hide()
         }else{
-            $('.day-2').show()
+            $('.sun-stereo-8-9-19').show()
         }
     }
-    function dateThing(val) {
+    function fatPockets81619(daysAway){
+        if(daysAway >= 1){
+            $('.fat-pockets-8-16-19').hide()
+        }else{
+            $('.fat-pockets-8-16-19').show()
+        }
+    }
+    function lime81619(daysAway){
+        if(daysAway >= 1){
+            $('.lime-8-16-19').hide()
+        }else{
+            $('.lime-8-16-19').show()
+        }
+    }
+    function jimmySarr81719(daysAway){
+        if(daysAway >= 1){
+            $('.jimmy-sarr-8-17-19').hide()
+        }else{
+            $('.jimmy-sarr-8-17-19').show()
+        }
+    }
+    function gondwana83019(daysAway){
+        if(daysAway >= 1){
+            $('.gondwana-8-30-19').hide()
+        }else{
+            $('.gondwana-8-30-19').show()
+        }
+    }
+    function shinyRibs9619(daysAway){
+        if(daysAway >= 1){
+            $('.shinyribs-9-6-19').hide()
+        }else{
+            $('.shinyribs-9-6-19').show()
+        }
+    }
+    function lateralus9719(daysAway){
+        if(daysAway >= 1){
+            $('.lateralus-9-7-19').hide()
+        }else{
+            $('.lateralus-9-7-19').show()
+        }
+    }
+    function koeWetzel92819(daysAway){
+        if(daysAway >= 1){
+            $('.koe-wetzel-9-28-19').hide()
+        }else{
+            $('.koe-wetzel-9-28-19').show()
+        }
+    }
+    function flatlandCavalry101919(daysAway){
+        if(daysAway >= 1){
+            $('.flatland-cavalry-10-19-19').hide()
+        }else{
+            $('.flatland-cavalry-10-19-19').show()
+        }
+    }
+    function muscadineBloodline102419(daysAway){
+        if(daysAway >= 1){
+            $('.muscadine-bloodline-10-24-19').hide()
+        }else{
+            $('.muscadine-bloodline-10-24-19').show()
+        }
+    }
+    function masonRamsey11119(daysAway){
+        if(daysAway >= 1){
+            $('.mason-ramsey-11-1-19').hide()
+        }else{
+            $('.mason-ramsey-11-1-19').show()
+        }
+    }
+    function joshAbbottBand11919(daysAway){
+        if(daysAway >= 1){
+            $('.josh-abbott-band-11-9-19').hide()
+        }else{
+            $('.josh-abbott-band-11-9-19').show()
+        }
+    }
+    function randyRogersBand12719(daysAway){
+        if(daysAway >= 1){
+            $('.randy-rogers-band-12-7-19').hide()
+        }else{
+            $('.randy-rogers-band-12-7-19').show()
+        }
+    }
+    function morganEvans121319(daysAway){
+        if(daysAway >= 1){
+            $('.morgan-evans-12-13-19').hide()
+        }else{
+            $('.morgan-evans-12-13-19').show()
+        }
+    }
+
+
+    function showDate(val) {
         // for now freezing the "now" so that precise testcases can be written.
         // var currDate = moment.now();
         var currDate = moment();
@@ -912,6 +1103,7 @@ $(document).ready(function(){
 
         return result;
     }
+
 /*MAIN UPCOMING CAROUSEL*/
     $('.event-wrapper').slick({
       fade: true,
@@ -961,5 +1153,18 @@ $(document).ready(function(){
       autoplaySpeed: 2500,
       lazyLoad: 'ondemand',
       pauseOnHover: false
+      });
+/*MAIN EVENTS CAROUSEL*/
+    $('.main-events-carousel-container').slick({
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      lazyLoad: 'ondemand',
+      pauseOnHover: false,
+      prevArrow: $('#main-events-arrows-left'),
+      nextArrow: $('#main-events-arrows-right')
       });
 });
