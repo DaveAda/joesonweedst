@@ -9,6 +9,12 @@ $(document).ready(function(){
     var $headermenutitle = $('.header-menu-title');
     var $headermenudropdown = $('.header-menu-dropdown');
     var $headershrinkpoint = $('.acm-award');
+    /*HOMEPAGE*/
+    var $faqminus1 = $('#faq-minus-1'); var $faqminus2 = $('#faq-minus-2'); var $faqminus3 = $('#faq-minus-3'); var $faqminus4 = $('#faq-minus-4'); var $faqminus5 = $('#faq-minus-5');
+    var $faqplus1 = $('#faq-plus-1'); var $faqplus2 = $('#faq-plus-2'); var $faqplus3 = $('#faq-plus-3'); var $faqplus4 = $('#faq-plus-4'); var $faqplus5 = $('#faq-plus-5');
+    var $answersboxmap = ('.answers-box-map');
+    var $answer1 = $('#answer-1'); var $answer2 = $('#answer-2'); var $answer3 = $('#answer-3'); var $answer4 = $('#answer-4'); var $answer5 = $('#answer-5');
+    var $question1 = $('#question-1'); var $question2 = $('#question-2'); var $question3 = $('#question-3'); var $question4 = $('#question-4'); var $question5 = $('#question-5');
     /*EVENTS*/
     var $bullridingfridaybutton = $('#bull-riding-friday-button');
     var $bullridingfridayspecials = $('.bull-riding-friday-specials');
@@ -147,6 +153,93 @@ $(document).ready(function(){
         $headermenudropdown.slideToggle();
         $headermenuarrow.toggleClass('head-arrow-flip');
     });
+/*FAQ TOGGLE*/
+    $question1.click(function(){
+        $faqminus1.toggle();
+        $faqplus1.toggle();
+            $faqminus2.hide();
+            $faqplus2.show();
+            $faqminus3.hide();
+            $faqplus3.show();
+            $faqminus4.hide();
+            $faqplus4.show();
+            $faqminus5.hide();
+            $faqplus5.show();
+        $answer1.toggle(); 
+        $answer2.hide();
+        $answer3.hide();
+        $answer4.hide();
+        $answer5.hide();
+        
+    })
+    $question2.click(function(){
+        $faqminus2.toggle();
+        $faqplus2.toggle();
+            $faqminus1.hide();
+            $faqplus1.show();
+            $faqminus3.hide();
+            $faqplus3.show();
+            $faqminus4.hide();
+            $faqplus4.show();
+            $faqminus5.hide();
+            $faqplus5.show();
+        $answer1.hide(); 
+        $answer2.toggle();
+        $answer3.hide();
+        $answer4.hide();
+        $answer5.hide(); 
+    })
+    $question3.click(function(){
+        $faqminus3.toggle();
+        $faqplus3.toggle();
+            $faqminus1.hide();
+            $faqplus1.show();
+            $faqminus2.hide();
+            $faqplus2.show();
+            $faqminus4.hide();
+            $faqplus4.show();
+            $faqminus5.hide();
+            $faqplus5.show();
+        $answer1.hide(); 
+        $answer2.hide();
+        $answer3.toggle();
+        $answer4.hide();
+        $answer5.hide(); 
+    })
+    $question4.click(function(){
+        $faqminus4.toggle();
+        $faqplus4.toggle();
+            $faqminus1.hide();
+            $faqplus1.show();
+            $faqminus2.hide();
+            $faqplus2.show();
+            $faqminus3.hide();
+            $faqplus3.show();
+            $faqminus5.hide();
+            $faqplus5.show();
+        $answer1.hide(); 
+        $answer2.hide();
+        $answer3.hide();
+        $answer4.toggle();
+        $answer5.hide(); 
+    })
+    $question5.click(function(){
+        $faqminus5.toggle();
+        $faqplus5.toggle();
+            $faqminus1.hide();
+            $faqplus1.show();
+            $faqminus2.hide();
+            $faqplus2.show();
+            $faqminus3.hide();
+            $faqplus3.show();
+            $faqminus4.hide();
+            $faqplus4.show();
+        $answer1.hide(); 
+        $answer2.hide();
+        $answer3.hide();
+        $answer4.hide();
+        $answer5.toggle(); 
+    })
 /*CONCERTS DROPDOWNS*/
     $bizmarkie8219infobutton.click(function(){
         $bizmarkie8219dropdown.slideDown();
@@ -953,7 +1046,7 @@ $(document).ready(function(){
     $party7.click(function(){
         $partypackagesbridalblackoutpackage.fadeIn();
     });
-/*CALENDAR*/
+/*EVENTS*/
     $tipsytuesdaybutton.click(function(){
         $tipsytuesdayspecials.fadeIn();
         $eventswrapper.addClass('schedule-background-fade');

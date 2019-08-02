@@ -43,6 +43,12 @@ body{
 	.header-menu-dropdown{
 		display: none;
 	}
+	/*MAIN*/
+	#faq-minus,
+	#faq-minus-1, #faq-minus-2, #faq-minus-3, #faq-minus-4, #faq-minus-5,
+	#answer-1, #answer-2, #answer-3, #answer-4, #answer-5{
+		display: none;
+	}
 	/*CONCERTS*/
 	#biz-markie-8-2-19-dropdown,
 	#sun-stereo-8-9-19-dropdown,
@@ -231,27 +237,59 @@ body{
 		transform: rotate(180deg);
 		transition: .5s;
 	}
-/***MAIN PAGE***/
+/*******MAIN PAGE*******/
 /*MAIN VIDEO*/
 	.main-video{
+		box-shadow: 0 10px 5px #000;
 		margin: 60px auto 0 auto;
 		max-width: 1500px;
+		position: relative;
 		width: 100%;
 	}
 	.jarallax{
-		height: 500px;
+		height: 530px;
 	}
 /*ACM AWARD*/
 	.acm-award{
-		background-color: #B5A267;
-		background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
-		box-shadow: 0 10px 10px #000;
-		margin: 0 auto;
-		max-width: 1500px;
-		width: 100%;
+		background-color: transparent;
+		bottom: 50px;
+		height: 200px;
+		position: absolute;
+		width: 600px;
 	}
-	
-	.acm-award-header{
+	.acm-img{
+		border-right: 300px solid transparent;
+		border-bottom: 250px solid #BBB08B;
+		box-sizing: border-box;
+		height: 100%;
+		width: 50%;
+	}
+	.acm-img img{
+		margin-top: 60px;
+		padding: 0 0 20px 20px;
+		width: 180px;
+	}
+	.acm-text{
+		background-color: #BBB08B;
+		box-shadow: -5px 5px 5px #000;
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 19px;
+		font-weight: 100;
+		margin: 10px 5px;
+		bottom: 0px;
+		right: 0;
+		
+		position: absolute;
+		text-shadow: -1px 1px 2px #000;
+	}
+	.acm-text-container{
+		border: 2px dashed #000;
+		margin: 5px;
+		padding: 0 5px;
+	}
+
+	/*.acm-award-header{
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
@@ -268,7 +306,7 @@ body{
 		font-family: 'News Cycle', sans-serif;
 		font-size: 40px;
 		text-shadow: -2px 2px #000;
-	}
+	}*/
 /*MAIN UPCOMING CAROUSEL*/
 	.main-upcoming{
 		margin: 40px auto 0 auto;
@@ -288,6 +326,21 @@ body{
 		justify-content: center;
 	}
 	/*UP NEXT*/
+	.main-next-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		color: #fff;
+		font-family: 'Roboto Mono';
+		font-size: 22px;
+		margin-bottom: 5px;
+		text-align: left;
+		text-shadow: -5px 5px 5px #000;
+	}
+	.main-next-heading-container{
+		border: 2px dashed #fff;
+		margin: 5px;
+		text-align: center;
+	}
 	.main-next-container{
 		display: flex;
 		flex-direction: column;
@@ -295,6 +348,8 @@ body{
 	}
 	.main-next img{
 		border: 2px solid #fff;
+		height: 100%;
+		max-height: 257.5px;
 		max-width: 384px;
 		position: relative;
 	}
@@ -321,14 +376,20 @@ body{
 		top: 0;
 	}
 	.next-concert-date-text{
-		align-items: center;
 		background-color: rgba(0,0,0,.5);
 		bottom: 6px;
-		display: flex;
 		left: 2px;
 		padding: 10px;
 		position: absolute;
 		width: calc(100% - 24px);
+	}
+	.next-concert-date-time-text-container{
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+	.band-date-name{
+		
 	}
 	#next-band-name{
 		color: #fff;
@@ -343,7 +404,14 @@ body{
 	#next-band-time span{
 		color: rgba(0,0,0,0);
 	}
-	.main-next .ticket-button{
+	.next-concert .ticket-button,
+	.next-rooftop .ticket-button{
+		border-bottom: 1px solid #fff;
+		border-right: 1px solid #fff;
+		position: relative;
+	}
+	.next-concert #table-p,
+	.next-rooftop #table-p{
 		font-family: 'Roboto Mono', sans-serif;
 		font-size: 12px;
 		text-align: center;
@@ -356,6 +424,21 @@ body{
 		padding: 0 5px;
 		position: relative;
 		width: 100%;
+	}
+	.main-featured-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		color: #fff;
+		font-family: 'Roboto Mono';
+		font-size: 32px;
+		margin-bottom: 5px;
+		text-align: center;
+		text-shadow: -3px 3px 5px #B5A267;
+		width: 100%;
+	}
+	.main-featured-heading-container{
+		border: 2px dashed #fff;
+		margin: 5px;
 	}
 	.main-upcoming-carousel-text{
 		color: #fff;
@@ -590,7 +673,7 @@ body{
 	.main-sports-banner{
 		color: #fff;
 		margin: 0 auto;
-		max-width: 1500px;
+		max-width: 1265px;
 		width: 100%;
 	}
 	.main-sports-banner-container{
@@ -794,6 +877,140 @@ body{
 	.side-boxes img{
 		width: 100%;
 	}
+/*CHECK OUT OUR PARTNERS*/
+	.partners{
+		background-color: #000;
+		border: 2px solid #fff;
+		margin: 50px auto;
+		max-width: calc(1200px - 4px);
+		width: 100%;
+	}
+	.partners-wrapper{
+		border: 2px dashed #fff;
+		margin: 5px;
+		padding: 5px;
+	}
+	.main-partners-heading{
+		color: #fff;
+		font-family: 'Roboto Mono';
+		font-size: 32px;
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: -2px 2px 3px #B5A267;
+	}
+	.partners-container{
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;
+		max-width: 90%;
+	}
+	.partners-container a{
+		color: #fff;
+		font-family: 'News Cycle', sans-serif;
+		text-align: center;
+		text-decoration: none;
+	}
+	.partners-info img{
+		max-height: 150px;
+		max-width: 200px;
+		transition: .3s;
+	}
+	.partners-info img:hover{
+		padding-bottom: 10px;
+		margin-top: -10px;
+		transition: .3s;
+	}
+/*FAQ*/
+	.faq{
+		background-color: #000;
+		border: 2px solid #fff;
+		color: #fff;
+		margin: 50px auto;
+		max-width: calc(1200px - 4px);
+		width: 100%;
+	}
+	.faq-container{
+		border: 2px dashed #fff;
+		margin: 5px;
+		padding: 15px;
+		position: relative;
+	}
+	.faq-heading{
+		color: #fff;
+		font-family: 'Roboto Mono';
+		font-size: 32px;
+		margin-bottom: 20px;
+		text-shadow: -2px 2px 3px #B5A267;
+	}
+	.faq-content{
+		display: flex;
+	}
+	.faq .lines-header{
+		display: flex;
+		font-family: 'h-neu', sans-serif;
+		font-size: 26px;
+		padding: 5px 0;
+	}
+	.faq .lines-header p:hover,
+	.faq .lines-header i:hover{
+		cursor: pointer;
+	}
+	.faq i{
+		color: #B5A267;
+		padding: 3px 10px 0 0;
+	}
+	.questions-wrapper{
+		width: 60%;
+	}
+	/*ANSWERS*/
+	.answers-box{
+		align-items: center;
+		background-color: #B5A267;
+		display: flex;
+		border: 2px solid #fff;
+		height: 100%;
+		max-height: 320px;
+		max-width: 460px;
+		position: relative;
+		width: 40%;
+		z-index: 2;
+	}
+	.answers-box-map{
+		background-color: #000;
+	}
+	.answers{
+		background-color: #B5A267;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+	.answers-container{
+		align-items: center;
+		display: flex;
+		height: 100%;
+	}
+	.answers p{
+		font-family: 'News Cycle', sans-serif;
+		font-size: 20px;
+		text-align: center;
+		padding: 0 20px;
+		text-shadow: -2px 2px 5px #000;
+	}
+	.answers a{
+		color: #fff;
+	}
+
+	.answers-box-map img{
+		max-width: 100%;
+		margin-bottom: -4px;
+		margin-top: 0;
+		transition: .3s;
+	}
+	.answers-box-map img:hover{
+		opacity: .6;
+		transition: .3s;
+	}
 /*MAIN BIO*/
 	.main-bio{
 		margin: 0 auto;
@@ -807,7 +1024,7 @@ body{
 		font-family: 'Roboto Mono';
 		font-size: 32px;
 		text-align: center;
-		text-shadow: -5px 5px 5px #000;
+		text-shadow: -2px 2px 3px #B5A267;
 	}
 	.main-bio-copy{
 		background-color: #000;
@@ -830,19 +1047,18 @@ body{
 		margin: 0 auto;
 	}
 	/*BIO COLUMNS*/
-
 	.bio-copy-column{
 		border: 2px dashed #fff;
 		margin: 5px;
 		padding: 0 40px;
 		width: 500px;
 	}
-	.bio-copy-column i{
+	.bio-copy-sections i{
 		color: #B5A267;
 		padding-right: 5px;
 	}
 	#bio-social{
-		padding: 5px 0;
+		padding-top: 5px;
 	}
 	#bio-social i{
 		font-size: 28px;
@@ -852,24 +1068,25 @@ body{
 		color: #fff;
 		transition: .3s;
 	}
-	#bio-contact,
-	.bio-columns,
-	#bio-hours{
+
+	#bio-contact{
+		padding: 20px 0 15px 0;
+	}
+	.bio-copy-column{
 		display: flex;
 		flex-direction: column;
-	}
-	.bio-columns{
-		justify-content: space-between;
+		justify-content: space-around;
+		height: 400px;
 	}
 	#bio-hours{
-		justify-content: center;
+		padding: 0 30px;
 	}
 	.bio-column-heading{
 		border-bottom: 2px solid #fff;
 		font-family: 'Roboto Mono', sans-serif;
 		font-size: 36px;
 	}
-	.bio-columns a,
+	.bio-copy-sections a,
 	.bio-hours,
 	.bio-hours p{
 		color: #fff;
@@ -886,12 +1103,38 @@ body{
 		max-width: 100%;
 	}
 	#bio-logo{
+		border: 2px dashed #fff;
 		margin: 5px 0;
+		padding: 0 40px;
+		width: 500px;
+	}
+	#bio-logo img{
+		display: block;
+		margin-top: 40px;
+		max-width: 310px;
+		min-width: 310px;
+	}
+	/*MAILING LIST*/
+	#main-mailing-list{
+		background-color: #B5A267;
+		border: 2px solid #fff;
+		margin: -2px 0 10px 0;
+	}
+	#main-mailing-list iframe{
+		background-color: #B5A267;
+		height: 90px !important;
+		width: 310px !important;
+	}
+	#main-mailing-list iframe #success{
+		color: #fff !important;
+	}
+	#newsletter-copy{
+		font-family: 'News Cycle';
 	}
 	#depends{
 		font-size: 12px;
 	}
-/***EVENTS PAGE***/
+/*******EVENTS PAGE*******/
 	.events-wrapper{
 		transition: .3s;
 	}
@@ -995,10 +1238,14 @@ body{
 		font-size: 20px;
 	}
 	#bull-pop-up{
+		top: 100px;
 		width: 90%;
 	}
-	.bull-riding-bottom{
-		width: 100%;
+	#bull-pop-up .weekly-specials-copy p{
+		font-size: 18px;
+	}
+	#bull-pop-up #weekly-pop-up-header{
+		font-size: 32px;
 	}
 	#bull-copy{
 		font-size: 16px;
@@ -1039,7 +1286,7 @@ body{
 	    color: #fff;
 	    font-family: 'News Cycle', sans-serif;
 	    font-size: 12px;
-	    padding: 5px 5px 20px 5px;
+	    padding: 5px 5px 25px 5px;
 	    right: 0;
 	    transition: .3s;
 	    width: 100px;
@@ -1053,7 +1300,7 @@ body{
 		cursor: pointer;
 		transition: .3s;
 	}
-/***CONCERTS PAGE***/
+/*******CONCERTS PAGE*******/
 	.concerts{
 		margin: 46px auto 0 auto;
 		max-width: 1500px;
@@ -1238,8 +1485,7 @@ body{
 		color: #B5A267;
 		transition: .3s;
 	}
-
-/***SPORTS PAGE***/
+/*******SPORTS PAGE*******/
 	/*SPORTS COPY*/
 	.body-wrapper{
 		margin: 0 auto;
@@ -1542,7 +1788,7 @@ body{
 	.nfl-regular-season{
 		margin: 50px 0;
 	}
-/***TRIVIA PAGE***/
+/*******TRIVIA PAGE*******/
 	.trivia{
 		margin: 0 auto;
 		max-width: 1500px;
@@ -1681,7 +1927,7 @@ body{
 	#smaller-logo-pop-up{
 		max-width: 200px;
 	}
-/***OTB PAGE***/
+/*******OTB PAGE*******/
 	/*OTB BANNER*/
 	.otb-wrapper{
 		margin: 140px auto 0 auto;
@@ -2043,17 +2289,17 @@ body{
 		height: 100%;
 		justify-content: center;
 		margin: 0 auto;
-		width: 70%;
+		width: 80%;
 	}
 	.package-pop-up-details .package-heading{
 		border-bottom: 2px solid #fff;
 		font-family: 'Roboto Mono', sans-serif;
-		font-size: 42px;
+		font-size: 40px;
 		padding-bottom: 10px;
 	}
 	.package-pop-up-details .package-option{
 		font-family: 'News Cycle', sans-serif;
-		font-size: 28px;
+		font-size: 24px;
 	}
 	.package-pop-up-details .package-details{
 		padding-top: 10px;
@@ -2061,7 +2307,168 @@ body{
 	.party-packages-pop-up-details .table-reservation-x{
 		padding: 10px 10px 0 0 ;
 	}
-/***TOPTOPTOPTOP***/
-	.toptoptoptop{
-		margin-top: 200px;
+
+
+/***MEDIA QUERIES***/
+@media(max-width:1220px){
+	.main-upcoming{
+		margin-top: 20px;
 	}
+	.main-upcoming-container{
+		align-items: center;
+		flex-direction: column-reverse;
+	}
+	.main-next{
+		margin-top: 50px;
+		max-width: 1010px;
+		width: 100%;
+	}
+	.main-next-container{
+		flex-direction: row;
+		justify-content: center;
+	}
+	.main-next-heading{
+		margin: 0 auto 3px auto;
+		max-width: calc(100% - 3px);
+		width: 100%
+	}
+	.next-concert{
+		margin-right: 2.5px;
+	}
+	.next-rooftop{
+		margin-left: 2.5px;
+	}
+	.main-next img,
+	.next-rooftop img{
+		max-width: 500px;
+	}
+	.main-next img,
+	.next-rooftop img{
+		max-height: 300px;
+		width: 100%;
+	}
+	#next-band-name{
+		font-size: 22px;
+	}
+	#next-band-name span{
+		display: none;
+	}
+	#next-band-time{
+		font-size: 16px;
+	}
+	#concert-br{
+		display: block;
+	}
+	.main-featured-heading{
+		margin: 20px 0 5px 0;
+		width: calc(100% - 4px);
+	}
+	.main-upcoming-carousel{
+		height: 100%;
+		max-width: 1010px;
+		padding: 0;
+	}
+	.main-upcoming-carousel .event-wrapper{
+		width: 100%;
+	}
+	.main-upcoming-carousel img{
+		max-width: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+@media(max-width:1050px){
+	.band-date-name{
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	#band-x{
+		display: none;
+	}
+	.main-next,
+	.main-upcoming-carousel{
+		max-width: 800px;
+	}
+	.main-next-container{
+		max-width: 800px;
+		width: calc(100% - 3px);
+	}
+	.main-next img,
+	.next-rooftop img{
+		height: 100%;
+		max-width: 400px;
+	}
+}
+@media(max-width:1000px){
+	header{
+		display: none;
+	}
+	.main-video{
+		margin-top: 0;
+	}
+}
+@media(max-width:840px){
+	.main-next,
+	.main-upcoming-carousel{
+		max-width: 600px;
+	}
+	.main-next-container{
+		width: calc(100% + 1px);
+	}
+	.main-upcoming-carousel .event-box img{
+		max-height: 380px;
+	}
+	.event-box .event-title{
+		font-size: 28px;
+	}
+	.event-box .event-date{
+		font-size: 16px;
+	}
+	.event-box .event-title-extras{
+		font-size: 14px;
+	}
+	.main-upcoming-carousel .ticket-button{
+		max-width: 100px;
+		min-width: 100px;
+		width: 100px;
+	}
+	.main-upcoming-carousel #table-p{
+		font-size: 14px;
+	}
+	.main-featured-heading h2{
+		font-size: 40px;
+		padding: 5px;
+	}
+	.main-next-container{
+		flex-direction: column;
+	}
+	.next-concert,
+	.next-rooftop{
+		margin: 0;
+	}
+	.next-concert img,
+	.next-rooftop img{
+		height: auto;
+		max-width: calc(100% - 4px);
+		object-fit:	cover;
+		width: 100%;
+	}
+}
+@media(max-width:640px){
+	.main-next,
+	.main-upcoming-carousel{
+		max-width: 475px;
+	}
+	.main-upcoming-carousel .event-box{
+		height: 400px;
+	}
+	.main-upcoming-carousel .event-box img{
+		height: 100%;
+		max-height: 100%;
+	}
+}
+@media(max-width:575px){
+	.acm-text{
+		font-size: 15px;
+	}
+}
