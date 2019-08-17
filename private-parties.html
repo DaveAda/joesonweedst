@@ -16,7 +16,7 @@
    	<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="private-events">
 <!--HEADER-->
 	<header>
 		<div class="header-container">
@@ -60,7 +60,7 @@
 									<a href="https://twitter.com/joesonweedst" target="blank_"><i class="fab fa-twitter"></i></a>
 									<a href="https://www.youtube.com/user/JoesBarChicago/featured" target="blank_"><i class="fab fa-youtube"></i></a>
 									<a href="tel:312-337-3486"><i class="fas fa-phone"></i></a>
-									<a href="#"><i class="fas fa-info"></i></a>
+									<a href="about.html"><i class="fas fa-info"></i></a>
 									<a href="https://goo.gl/maps/6btEr7sM4dp7fwVQ6" target="blank_"><i class="fas fa-map-marked-alt"></i></a>
 								</div>
 							</div>
@@ -71,12 +71,90 @@
 		</div>
 		<div id="header-shrink-point"></div>
 	</header>
+	<!--MOBILE HEADER-->
+	<div id="navbar" class="header-mobile">
+		<div class="header-mobile-container">
+			<div class="header-mobile-logo">
+				<a href="index.html">
+					<img src="media/images/logos/joes-main-logo.png"/>
+				</a>
+			</div>
+		</div>
+		<!--MOBILE HAMBURGER-->
+		<div class="mobile-hamburger">
+			<div class="mobile-hamburger-container">
+				<div id="burger-1" class="burger-piece"></div>
+				<div id="burger-2" class="burger-piece"></div>
+				<div id="burger-3" class="burger-piece"></div>
+			</div>
+		</div>
+	</div>
+	<!--MOBILE BODY-->
+	<div class="body-mobile">
+		<div class="body-mobile-container">
+			<div class="body-mobile-link"><a href="index.html">HOME</a></div>
+			<div class="body-mobile-link"><a href="events.html">EVENTS</a></div>
+			<div class="body-mobile-link"><a href="concerts.html">CONCERTS</a></div>
+			<div class="body-mobile-link"><a href="sports.html">SPORTS</a></div>
+			<div class="body-mobile-link"><a href="trivia.html">TRIVIA</a></div>
+			<div class="body-mobile-link"><a href="off-track-betting-otb.html">OTB</a></div>
+			<div class="body-mobile-link"><a href="private-parties.html">PRIVATE PARTIES</a></div>
+			<div id="joes-menu-mobile" class="body-mobile-link"><a href="#">JOE'S MENU<i class="fas fa-chevron-down mobile-menu-arrow"></i></a>
+				<div class="joes-menu-dropdown-mobile">
+					<div class="joes-menu-dropdown-mobile-container">
+						<div class="joes-menu-icons-mobile">
+							<a href="http://places.singleplatform.com/joes-on-weed-st/menu?ref=integration" target="blank_">
+								<img src="media/images/logos/menu-icon.png">
+							</a>
+						</div>
+						<div class="joes-menu-icons-mobile">
+							<a href="https://www.doordash.com/store/joe-s-bar-on-weed-st-chicago-2470/" target="blank_">
+								<img src="media/images/logos/doordash-icon.png"</>
+							</a>
+						</div>
+						<div class="joes-menu-icons-mobile">
+							<a href="https://www.grubhub.com/restaurant/joes-bar-940-w-weed-st-chicago/281294?classicAffiliateId=%2Fr%2Fw%2F21909%2F&utm_source=content-cms.grubhub.com&utm_medium=OOL&utm_campaign=order%20online&utm_content=281294" target="blank_">
+								<img src="media/images/logos/grubhub-icon.png"</>
+							</a>
+						</div>
+						<div class="joes-menu-icons-mobile">
+							<a href="https://www.ubereats.com/en-US/chicago/food-delivery/joes-bar/P_NLiunvTs6XTGwzx5vqmw/" target="blank_">
+								<img src="media/images/logos/ubereats-icon.png"</>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="about-mobile" class="body-mobile-link"><a href="#">ABOUT<i class="fas fa-chevron-down mobile-about-arrow"></i></a>
+				<div class="about-dropdown-mobile">
+					<div class="about-dropdown-mobile-container">
+						<div class="about-icons-mobile">
+							<div class="about-icons-row">
+								<a href="https://www.facebook.com/joesonweedst/" target="blank_"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/joesonweedst/" target="blank_"><i class="fab fa-instagram"></i></a>
+								<a href="https://twitter.com/joesonweedst" target="blank_"><i class="fab fa-twitter"></i></a>
+								<a href="https://www.youtube.com/user/JoesBarChicago/featured" target="blank_"><i class="fab fa-youtube"></i></a>
+							</div>
+							<div class="about-icons-row">
+								<a href="tel:312-337-3486"><i class="fas fa-phone"></i></a>
+								<a href="#"><i class="fas fa-info"></i></a>
+								<a href="#"><img src="media/images/logos/joes-main-logo.png"/></a>
+								<a href="https://goo.gl/maps/6btEr7sM4dp7fwVQ6" target="blank_"><i class="fas fa-map-marked-alt"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="private-parties-wrapper">
 <!--PRIVATE PARTIES ROOMS-->
 	<div class="private-parties-rooms">
 <!--PRIVATE PARTIES COPY-->
 	<div class="page-heading">
-		<p>BOOK YOUR NEXT PRIVATE PARTY AT JOE'S</p>
+		<div class="page-heading-container">
+			<p>BOOK YOUR NEXT PRIVATE PARTY AT JOE'S</p>
+		</div>
 	</div>
 	<div class="private-parties-copy">
 		<div class="private-parties-copy-container">
@@ -98,7 +176,7 @@
 							<p>THE CHAPTER ROOM</p>
 						</div>
 						<div class="room-copy">
-							<p>Upon entering Joe's you will be welcomed into a 3,100 sq. ft. space featuring table seating as well as 6 large comfortable booths, each with 2 built in personal 19 in. flat screens, a private bar with 8 mounted 60-in. flat screen plasmas as well as 6 more 50-in. plasmas mounted throughout the room. This room is a great spot for an upscale event and provides abundant seating. The Chapter Room can comfortably hold 200 people with seating for 150 people.</p>
+							<p>Upon entering Joe's, you will be welcomed into a 3,100 sq. ft. space featuring table seating as well as 6 large comfortable booths, each with 2 built in personal 19 in. flat screens, a private bar with 8 mounted 60-in. flat screen plasmas as well as 6 more 50-in. plasmas mounted throughout the room. This room is a great spot for an upscale event and provides abundant seating, able to comfortably hold 200 people with seating for 150 people.</p>
 						</div>
 						<div class="room-buttons">
 							<div id="the-chapter-room-reserve" class="room-reservation room-button-click">
@@ -239,7 +317,7 @@
 	<div id="the-chapter-room-pop-up" class="table-reservation">
 		<div class="schedule-info-heading">
 			<div class="schedule-text-heading">
-				<p>The Chapter Room</p>
+				<p>THE CHAPTER ROOM</p>
 			</div>
 		</div>
 		<div class="table-reservation-container">
@@ -264,7 +342,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -291,7 +369,7 @@
 	<div id="the-clubhouse-pop-up" class="table-reservation">
 		<div class="schedule-info-heading">
 			<div class="schedule-text-heading">
-				<p>The Clubhouse</p>
+				<p>THE CLUBHOUSE</p>
 			</div>
 		</div>
 		<div class="table-reservation-container">
@@ -316,7 +394,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -368,7 +446,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -420,7 +498,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -472,7 +550,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -524,7 +602,7 @@
 							<input type="text" name="company" placeholder="Company (if applicable)">
 						</div>
 						<div class="sports-form-input">
-							<input id="date-time-input" type="datetime-local" name="date" placeholder="Date & Time" required>
+							<input id="date-time-input" type="text" name="date" placeholder="Date & Time" required>
 						</div>
 						<div class="sports-form-input">
 							<input type="number" name="numberofpeople" placeholder="Number of People" required>
@@ -726,9 +804,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="party-packages-x">
+			<div class="party-packages-x">
 			<i class="far fa-times-circle"></i>
+		</div>
 		</div>
 	</div>
 

@@ -9,6 +9,22 @@ $(document).ready(function(){
     var $headermenutitle = $('.header-menu-title');
     var $headermenudropdown = $('.header-menu-dropdown');
     var $headershrinkpoint = $('.acm-award');
+    /*MOBILE*/
+    var $aboutmobile = $('#about-mobile');
+    var $aboutdropdownmobile = $('.about-dropdown-mobile');
+    var $burger1 = $('#burger-1');
+    var $burger2 = $('#burger-2');
+    var $burger3 = $('#burger-3');   
+    var $bodymobile = $('.body-mobile');
+    var $headermobile = $('.header-mobile');
+    var $headermobilecontainer = $('.header-mobile-container');
+    var $headermobilelogo = $('.header-mobile-logo');
+    var $joesmenumobile = $('#joes-menu-mobile');
+    var $joesmenudropdownmobile = $('.joes-menu-dropdown-mobile');
+    var $mobileaboutarrow = $('.mobile-about-arrow');
+    var $mobilehamburger = $('.mobile-hamburger');
+    var $mobilehamburgercontainer = $('.mobile-hamburger-container');
+    var $mobilemenuarrow = $('.mobile-menu-arrow');
     /*HOMEPAGE*/
     var $faqminus1 = $('#faq-minus-1'); var $faqminus2 = $('#faq-minus-2'); var $faqminus3 = $('#faq-minus-3'); var $faqminus4 = $('#faq-minus-4'); var $faqminus5 = $('#faq-minus-5');
     var $faqplus1 = $('#faq-plus-1'); var $faqplus2 = $('#faq-plus-2'); var $faqplus3 = $('#faq-plus-3'); var $faqplus4 = $('#faq-plus-4'); var $faqplus5 = $('#faq-plus-5');
@@ -24,27 +40,34 @@ $(document).ready(function(){
     var $tipsytuesdayspecials = $('.tipsy-tuesday-specials');
     var $eventswrapper = $('.events-wrapper');
     /*CONCERTS*/
-    var $bizmarkie8219infobutton = $('#biz-markie-8-2-19-info-button');
-    var $bizmarkie8219dropdown = $('#biz-markie-8-2-19-dropdown');
     var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
-    var $sunstereo8919infobutton = $('#sun-stereo-8-9-19-info-button');
-    var $sunstereo8919dropdown = $('#sun-stereo-8-9-19-dropdown');
-    var $fatpockets81619infobutton = $('#fat-pockets-8-16-19-info-button');
-    var $fatpockets81619dropdown = $('#fat-pockets-8-16-19-dropdown');
-    var $lime81619infobutton = $('#lime-8-16-19-info-button');
-    var $lime81619dropdown = $('#lime-8-16-19-dropdown');
+
     var $jimmysarr81719infobutton = $('#jimmy-sarr-8-17-19-info-button');
     var $jimmysarr81719dropdown = $('#jimmy-sarr-8-17-19-dropdown');
     var $sasy82319infobutton = $('#sasy-8-23-19-info-button');
     var $sasy82319dropdown = $('#sasy-8-23-19-dropdown');
+    var $overtheside82319infobutton = $('#over-the-side-8-23-19-info-button');
+    var $overtheside82319dropdown = $('#over-the-side-8-23-19-dropdown');
+    var $thesimpleremedy82419infobutton = $('#the-simple-remedy-8-24-19-info-button');
+    var $thesimpleremedy82419dropdown = $('#the-simple-remedy-8-24-19-dropdown');
+    var $rodtuffcurls82419infobutton = $('#rod-tuffcurls-8-24-19-info-button');
+    var $rodtuffcurls82419dropdown = $('#rod-tuffcurls-8-24-19-dropdown');
+    var $sunfallen83019infobutton = $('#sunfallen-8-30-19-info-button');
+    var $sunfallen83019dropdown = $('#sunfallen-8-30-19-dropdown');
     var $gondwana83019infobutton = $('#gondwana-8-30-19-info-button');
     var $gondwana83019dropdown = $('#gondwana-8-30-19-dropdown');
+    var $joefascetta83119infobutton = $('#joe-fascetta-8-31-19-info-button');
+    var $joefascetta83119dropdown = $('#joe-fascetta-8-31-19-dropdown');
+    var $loscafres9419infobutton = $('#los-cafres-9-4-19-info-button');
+    var $loscafres9419dropdown = $('#los-cafres-9-4-19-dropdown');
     var $shinyribs9619infobutton = $('#shinyribs-9-6-19-info-button');
     var $shinyribs9619dropdown = $('#shinyribs-9-6-19-dropdown');
     var $lateralus9719infobutton = $('#lateralus-9-7-19-info-button');
     var $lateralus9719dropdown = $('#lateralus-9-7-19-dropdown');
     var $koewetzel92819infobutton = $('#koe-wetzel-9-28-19-info-button');
     var $koewetzel92819dropdown = $('#koe-wetzel-9-28-19-dropdown');
+    var $foolhouse101819infobutton = $('#fool-house-10-18-19-info-button');
+    var $foolhouse101819dropdown = $('#fool-house-10-18-19-dropdown');
     var $flatlandcavalry101919infobutton = $('#flatland-cavalry-10-19-19-info-button');
     var $flatlandcavalry101919dropdown = $('#flatland-cavalry-10-19-19-dropdown');
     var $muscadinebloodline102419infobutton = $('#muscadine-bloodline-10-24-19-info-button');
@@ -53,6 +76,8 @@ $(document).ready(function(){
     var $masonramsey11119dropdown = $('#mason-ramsey-11-1-19-dropdown');
     var $joshabbottband11919infobutton = $('#josh-abbott-band-11-9-19-info-button');
     var $joshabbottband11919dropdown = $('#josh-abbott-band-11-9-19-dropdown');
+    var $parkermccollum112219infobutton = $('#parker-mccollum-11-22-19-info-button');
+    var $parkermccollum112219dropdown = $('#parker-mccollum-11-22-19-dropdown');
     var $randyrogersband12719infobutton = $('#randy-rogers-band-12-7-19-info-button');
     var $randyrogersband12719dropdown = $('#randy-rogers-band-12-7-19-dropdown');
     var $morganevans121319infobutton = $('#morgan-evans-12-13-19-info-button');
@@ -129,17 +154,32 @@ $(document).ready(function(){
     var $viploftloungereserve = $('#vip-loft-lounge-reserve');
     var $privatepartiesrooms = $('.private-parties-rooms');
     /*TRIVIA*/
-    var $theofficejuly31 = $('#the-office-july-31');
+    /*var $theofficejuly31 = $('#the-office-july-31');
     var $theofficejuly31reservation = $('#the-office-july-31-reservation');
     var $wrestlingaugust7 = $('#wrestling-august-7');
-    var $wrestlingaugust7reservation = $('#wrestling-august-7-reservation');
+    var $wrestlingaugust7reservation = $('#wrestling-august-7-reservation');*/
     var $newgirlaugust14 = $('#new-girl-august-14');
     var $newgirlaugust14reservation = $('#new-girl-august-14-reservation');
     var $itsalwayssunnyaugust21 = $('#its-always-sunny-august-21');
     var $itsalwayssunnyaugust21reservation = $('#its-always-sunny-august-21-reservation');
     var $theofficeaugust28 = $('#the-office-august-28');
     var $theofficeaugust28reservation = $('#the-office-august-28-reservation');
+    var $thisisusseptember11 = $('#this-is-us-september-11');
+    var $thisisusseptember11reservation = $('#this-is-us-september-11-reservation');
+    var $friendsseptember18reservation = $('#friends-september-18-reservation');
+    var $friendsseptember18 = $('#friends-september-18');
+    var $seinfeldseptember25reservation = $('#seinfeld-september-25-reservation');
+    var $seinfeldseptember25 = $('#seinfeld-september-25');
+    var $disneyoctober2reservation = $('#disney-october-2-reservation');
+    var $disneyoctober2 = $('#disney-october-2');
+    var $theofficeoctober9 = $('#the-office-october-9');
+    var $theofficeoctober9reservation = $('#the-office-october-9-reservation');
+    var $parksandrecoctober23 = $('#parks-and-rec-october-23');
+    var $parksandrecoctober23reservation = $('#parks-and-rec-october-23-reservation');
+    var $harrypotteroctober30 = $('#harry-potter-october-30');
+    var $harrypotteroctober30reservation = $('#harry-potter-october-30-reservation');
     var $triviamonths = $('.trivia-months');
+
 /*HEADER LOGO SHRINK*/
     $headershrinkpoint.waypoint(function(){
         $headerlogo.toggleClass('header-logo-shrink');
@@ -153,6 +193,30 @@ $(document).ready(function(){
         $headermenudropdown.slideToggle();
         $headermenuarrow.toggleClass('head-arrow-flip');
     });
+/*HEADER MOBILE DROPDOWN*/
+    $aboutmobile.click(function(){
+        $aboutdropdownmobile.slideToggle();
+        $mobilemenuarrow.removeClass('head-arrow-flip');
+        $mobileaboutarrow.toggleClass('head-arrow-flip');
+        $joesmenudropdownmobile.slideUp();
+    });
+    $joesmenumobile.click(function(){
+        $joesmenudropdownmobile.slideToggle();
+        $mobilemenuarrow.toggleClass('head-arrow-flip');
+        $mobileaboutarrow.removeClass('head-arrow-flip');
+        $aboutdropdownmobile.slideUp();
+    });
+    $mobilehamburgercontainer.click(function(){
+        $bodymobile.fadeToggle();
+        $burger1.toggleClass('burger1b');
+        $burger2.toggleClass('burger2b');
+        $burger3.toggleClass('burger3b');
+        $headermobile.toggleClass('header-mobile-faded');
+        $headermobilecontainer.toggleClass('header-mobile-container-faded');
+        $headermobilelogo.toggleClass('mobile-header-logo-fade');
+        $mobilehamburger.toggleClass('mobile-hamburger-fixed');
+    });
+
 /*FAQ TOGGLE*/
     $question1.click(function(){
         $faqminus1.toggle();
@@ -241,26 +305,32 @@ $(document).ready(function(){
         $answer5.toggle(); 
     })
 /*CONCERTS DROPDOWNS*/
-    $bizmarkie8219infobutton.click(function(){
-        $bizmarkie8219dropdown.slideDown();
-    });
-    $sunstereo8919infobutton.click(function(){
-        $sunstereo8919dropdown.slideDown();
-    });
-    $fatpockets81619infobutton.click(function(){
-        $fatpockets81619dropdown.slideDown();
-    });
-    $lime81619infobutton.click(function(){
-        $lime81619dropdown.slideDown();
-    });
     $jimmysarr81719infobutton.click(function(){
         $jimmysarr81719dropdown.slideDown();
+    });
+    $overtheside82319infobutton.click(function(){
+        $overtheside82319dropdown.slideDown();
     });
     $sasy82319infobutton.click(function(){
         $sasy82319dropdown.slideDown();
     });
+    $thesimpleremedy82419infobutton.click(function(){
+        $thesimpleremedy82419dropdown.slideDown();
+    });
+    $rodtuffcurls82419infobutton.click(function(){
+        $rodtuffcurls82419dropdown.slideDown();
+    });
+    $sunfallen83019infobutton.click(function(){
+        $sunfallen83019dropdown.slideDown();
+    });
     $gondwana83019infobutton.click(function(){
         $gondwana83019dropdown.slideDown();
+    });
+    $joefascetta83119infobutton.click(function(){
+        $joefascetta83119dropdown.slideDown();
+    });
+    $loscafres9419infobutton.click(function(){
+        $loscafres9419dropdown.slideDown();
     });
     $shinyribs9619infobutton.click(function(){
         $shinyribs9619dropdown.slideDown();
@@ -270,6 +340,9 @@ $(document).ready(function(){
     });
     $koewetzel92819infobutton.click(function(){
         $koewetzel92819dropdown.slideDown();
+    });
+    $foolhouse101819infobutton.click(function(){
+        $foolhouse101819dropdown.slideDown();
     });
     $flatlandcavalry101919infobutton.click(function(){
         $flatlandcavalry101919dropdown.slideDown();
@@ -282,6 +355,9 @@ $(document).ready(function(){
     });
     $joshabbottband11919infobutton.click(function(){
         $joshabbottband11919dropdown.slideDown();
+    });
+     $parkermccollum112219infobutton.click(function(){
+        $parkermccollum112219dropdown.slideDown();
     });
     $randyrogersband12719infobutton.click(function(){
         $randyrogersband12719dropdown.slideDown();
@@ -921,14 +997,14 @@ $(document).ready(function(){
     $tarheelsfootballweek12button = $('#tarheels-football-week-12-button'); $tarheelsfootballweek12popup = $('#tarheels-football-week-12-pop-up');$tarheelsfootballweek12button.click(function(){$tarheelsfootballweek12popup.fadeIn();$sportsschedule.addClass('schedule-background-fade');});
 
 /*TRIVIA*/
-    $theofficejuly31reservation.click(function(){
+    /*$theofficejuly31reservation.click(function(){
         $theofficejuly31.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
     });
     $wrestlingaugust7reservation.click(function(){
         $wrestlingaugust7.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
-    });
+    });*/
     $newgirlaugust14reservation.click(function(){
         $newgirlaugust14.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
@@ -939,6 +1015,34 @@ $(document).ready(function(){
     });
     $theofficeaugust28reservation.click(function(){
         $theofficeaugust28.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $thisisusseptember11reservation.click(function(){
+        $thisisusseptember11.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $friendsseptember18reservation.click(function(){
+        $friendsseptember18.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $seinfeldseptember25reservation.click(function(){
+        $seinfeldseptember25.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $disneyoctober2reservation.click(function(){
+        $disneyoctober2.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $theofficeoctober9reservation.click(function(){
+        $theofficeoctober9.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+    $parksandrecoctober23reservation.click(function(){
+        $parksandrecoctober23.fadeIn();
+        $triviamonths.addClass('schedule-background-fade');
+    });
+     $harrypotteroctober30reservation.click(function(){
+        $harrypotteroctober30.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
     });
 /*PRIVATE PARTIES*/
@@ -1061,51 +1165,28 @@ $(document).ready(function(){
     });
 
 /***MOMENT***/
-/*CONCERTS*/
-    bizMarkie81619(showDate("2019-08-2"));
-    sunStereo8919(showDate("2019-08-9"));
-    fatPockets81619(showDate("2019-08-16"));
-    lime81619(showDate("2019-08-16"));
+/**********CONCERTS/**********/
     jimmySarr81719(showDate("2019-08-17"));
+    overTheSide(showDate("2019-08-23"));
+    sasy(showDate("2019-08-23"));
+    theSimpleRemedy82419(showDate("2019-08-24"));
+    sunFallen83019(showDate("2019-08-30"));
     gondwana83019(showDate("2019-08-30"));
+    joeFascetta83119(showDate("2019-08-31"));
+    losCafres9419(showDate("2019-09-04"));
     shinyRibs9619(showDate("2019-09-06"));
     lateralus9719(showDate("2019-09-07"));
     koeWetzel92819(showDate("2019-09-28"));
+    foolHouse101819(showDate("2019-10-18"));
     flatlandCavalry101919(showDate("2019-10-19"));
     muscadineBloodline102419(showDate("2019-10-24"));
     masonRamsey11119(showDate("2019-11-1"));
     joshAbbottBand11919(showDate("2019-11-9"));
+    parkerMcCollum112219(showDate("2019-11-22"));
     randyRogersBand12719(showDate("2019-12-7"));
     morganEvans121319(showDate("2019-12-13"));
     
-    function bizMarkie81619(daysAway){
-        if(daysAway >= 1){
-            $('.biz-markie-8-2-19').hide()
-        }else{
-            $('.biz-markie-8-2-19').show()
-        }
-    }
-    function sunStereo8919(daysAway){
-        if(daysAway >= 1){
-            $('.sun-stereo-8-9-19').hide()
-        }else{
-            $('.sun-stereo-8-9-19').show()
-        }
-    }
-    function fatPockets81619(daysAway){
-        if(daysAway >= 1){
-            $('.fat-pockets-8-16-19').hide()
-        }else{
-            $('.fat-pockets-8-16-19').show()
-        }
-    }
-    function lime81619(daysAway){
-        if(daysAway >= 1){
-            $('.lime-8-16-19').hide()
-        }else{
-            $('.lime-8-16-19').show()
-        }
-    }
+    
     function jimmySarr81719(daysAway){
         if(daysAway >= 1){
             $('.jimmy-sarr-8-17-19').hide()
@@ -1113,11 +1194,53 @@ $(document).ready(function(){
             $('.jimmy-sarr-8-17-19').show()
         }
     }
+    function overTheSide(daysAway){
+        if(daysAway >= 1){
+            $('.over-the-side-8-23-19').hide()
+        }else{
+            $('.over-the-side-8-23-19').show()
+        }
+    }
+    function sasy(daysAway){
+        if(daysAway >= 1){
+            $('.sasy-8-23-19').hide()
+        }else{
+            $('.sasy-8-23-19').show()
+        }
+    }
+    function theSimpleRemedy82419(daysAway){
+        if(daysAway >= 1){
+            $('.the-simple-remedy-8-24-19').hide()
+        }else{
+            $('.the-simple-remedy-8-24-19').show()
+        }
+    }
+    function sunFallen83019(daysAway){
+        if(daysAway >= 1){
+            $('.sunfallen-8-30-19').hide()
+        }else{
+            $('.sunfallen-8-30-19').show()
+        }
+    }
     function gondwana83019(daysAway){
         if(daysAway >= 1){
             $('.gondwana-8-30-19').hide()
         }else{
             $('.gondwana-8-30-19').show()
+        }
+    }
+    function joeFascetta83119(daysAway){
+        if(daysAway >= 1){
+            $('.joe-fascetta-8-31-19').hide()
+        }else{
+            $('.joe-fascetta-8-31-19').show()
+        }
+    }
+    function losCafres9419(daysAway){
+        if(daysAway >= 1){
+            $('.losCafres-9-4-19').hide()
+        }else{
+            $('.losCafres-9-4-19').show()
         }
     }
     function shinyRibs9619(daysAway){
@@ -1139,6 +1262,13 @@ $(document).ready(function(){
             $('.koe-wetzel-9-28-19').hide()
         }else{
             $('.koe-wetzel-9-28-19').show()
+        }
+    }
+    function foolHouse101819(daysAway){
+        if(daysAway >= 1){
+            $('.fool-house-10-18-19').hide()
+        }else{
+            $('.fool-house-10-18-19').show()
         }
     }
     function flatlandCavalry101919(daysAway){
@@ -1169,6 +1299,13 @@ $(document).ready(function(){
             $('.josh-abbott-band-11-9-19').show()
         }
     }
+    function parkerMcCollum112219(daysAway){
+        if(daysAway >= 1){
+            $('.parker-mccollum-11-22-19').hide()
+        }else{
+            $('.parker-mccollum-11-22-19').show()
+        }
+    }
     function randyRogersBand12719(daysAway){
         if(daysAway >= 1){
             $('.randy-rogers-band-12-7-19').hide()
@@ -1191,7 +1328,7 @@ $(document).ready(function(){
         var currDate = moment();
         var dateToTest = moment(val);
         // if dateToTest will always be in past, use currDate as the base to diff, else be prepared to handle the negative outcomes. 
-        var result = currDate.diff(dateToTest, 'days')
+        var result = currDate.diff(dateToTest, 'minutes')
         console.log(result);
 
         return result;
@@ -1207,7 +1344,8 @@ $(document).ready(function(){
       autoplaySpeed: 5000,
       lazyLoad: 'ondemand',
       prevArrow: $('#main-upcoming-arrows-left'),
-      nextArrow: $('#main-upcoming-arrows-right')
+      nextArrow: $('#main-upcoming-arrows-right'),
+      pauseOnFocus: false
       });
 /*MAIN INSTAGRAM FEED*/
     var feed = new Instafeed({
@@ -1228,8 +1366,23 @@ $(document).ready(function(){
           autoplaySpeed: 2000,
           prevArrow: $('#arrow-left'),
           nextArrow: $('#arrow-right'),
+          mobileFirst: true,
           slidesToShow: 4,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          responsive: [
+        {
+            breakpoint: 1220,
+            settings: {
+            slidesToShow: 4
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+            slidesToShow: 2
+              }
+        }
+          ]
         });
       },
       success: function() {
@@ -1245,19 +1398,47 @@ $(document).ready(function(){
       autoplay: true,
       autoplaySpeed: 2500,
       lazyLoad: 'ondemand',
-      pauseOnHover: false
+      pauseOnHover: false,
+      pauseOnFocus: false
       });
 /*MAIN EVENTS CAROUSEL*/
     $('.main-events-carousel-container').slick({
-      fade: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      lazyLoad: 'ondemand',
-      pauseOnHover: false,
-      prevArrow: $('#main-events-arrows-left'),
-      nextArrow: $('#main-events-arrows-right')
-      });
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        lazyLoad: 'ondemand',
+        pauseOnHover: false,
+        prevArrow: $('#main-events-arrows-left'),
+        nextArrow: $('#main-events-arrows-right'),
+        pauseOnFocus: false
+    });
+/*ABOUT CAROUSEL*/
+    $('.about-copy-slideshow').slick({
+        speed: 8000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: false,
+        cssEase: 'linear',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+        pauseOnFocus: false
+    });
 });
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-450px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
