@@ -39,7 +39,15 @@
 	</style>
 </head>
 <body>
-	<?php 
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	?>
+	if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$email = $_POST['email'];
@@ -51,12 +59,20 @@
 	$typeofevent = $_POST['typeofevent'];
 
 	$formcontent="From: $firstname $lastname \nE-Mail: $email \nPhone: $phone \nMessage: $message \nCompany: $company \nDate and Time: $date \nNumber of People: $numberofpeople \nType of Event: $typeofevent";
-	$recipient = "dave@daveada.com";
+	$recipient = "events@joesbar.com";
 	$subject = "V.I.P. Loft Lounge Reservation";
-	$mailheader = "From: Private Party Reservation \r\n";
+	$mailheader = "From: Reservations@joesbar.com \r\n";
 	mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 	echo "<div class='form-text'>Thank you for your reservation inquiry.  We will contact you shortly.</div>";
 	echo "<div class='form-image'><img src='../../../media/images/logos/joes-main-logo.png'/>";
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
 	?>
 </body>
 </html>

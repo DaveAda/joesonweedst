@@ -1,5 +1,9 @@
 /*FONTS*/
 @font-face{
+	font-family: 'chopin';
+	src: url('../fonts/chopin.ttf');
+}
+@font-face{
 	font-family: 'gotham';
 	src: url('../fonts/gotham-black.otf');
 }
@@ -25,6 +29,10 @@
 }
 body{
 	background-color: #394145;
+	position: relative;
+}
+.main-main-main{
+	display: none !important;
 }
 .coffee{
 	background-color: green;
@@ -40,7 +48,9 @@ body{
 	}
 /*DISPLAY NONE*/
 	.header-about-dropdown,
-	.header-menu-dropdown{
+	.header-menu-dropdown,
+	#copy-break,
+	#tuff-br{
 		display: none;
 	}
 	/*MOBILE*/
@@ -49,7 +59,8 @@ body{
 	.joes-menu-dropdown-mobile,
 	.header-mobile,
 	.mobile-hamburger,
-	.body-mobile{
+	.body-mobile,
+	.mobile-header-way{
 		display: none;
 	}
 	/*MAIN*/
@@ -60,27 +71,41 @@ body{
 	#upcoming-events-break{
 		display: none;
 	}
+	/*UP NEXT TOP*/
+	.hardy-1-31-20-next,
+	.jason-boland-2-6-20-next{
+		display: none;
+	}
+	/*UP NEXT BOTTOM*/
+	.jason-boland-2-6-20-rooftop,
+	.matt-stell-2-7-20-rooftop{
+		display: none;
+	}
+	/*EVENTS*/
+	#new-years-eve-12-31-19-dropdown,
+	#country-for-a-cause-1-5-20-dropdown{
+		display: none;
+	}
 	/*CONCERTS*/
-	#jimmy-sarr-8-17-19-dropdown,
-	#over-the-side-8-23-19-dropdown,
-	#sasy-8-23-19-dropdown,
-	#the-simple-remedy-8-24-19-dropdown,
-	#rod-tuffcurls-8-24-19-dropdown,
-	#sunfallen-8-30-19-dropdown,
-	#gondwana-8-30-19-dropdown,
-	#joe-fascetta-8-31-19-dropdown,
-	#los-cafres-9-4-19-dropdown,
-	#shinyribs-9-6-19-dropdown,
-	#lateralus-9-7-19-dropdown,
-	#koe-wetzel-9-28-19-dropdown,
-	#fool-house-10-18-19-dropdown,
-	#flatland-cavalry-10-19-19-dropdown,
-	#muscadine-bloodline-10-24-19-dropdown,
-	#mason-ramsey-11-1-19-dropdown,
-	#josh-abbott-band-11-9-19-dropdown,
-	#parker-mccollum-11-22-19-dropdown,
-	#randy-rogers-band-12-7-19-dropdown,
-	#morgan-evans-12-13-19-dropdown{
+	#riley-green-1-3-20-dropdown,
+	#johnny-alletto-1-4-20-dropdown,
+	#chief-1-4-20-dropdown,
+	#country-for-a-cause-1-5-20-dropdown,
+	#gone-west-1-9-20-dropdown,
+	#rendition-1-10-20-dropdown,
+	#trb-1-11-20-dropdown,
+	#keith-relief-1-12-20-dropdown,
+	#pie-1-17-20-dropdown,
+	#thbn-1-18-20-dropdown,
+	#rfr-1-25-20-dropdown,
+	#hardy-1-31-20-dropdown,
+	#jason-boland-2-6-20-dropdown,
+	#matt-stell-2-7-20-dropdown,
+	#tbbn-2-8-20-dropdown,
+	#the-cadillac-three-2-21-20-dropdown,
+	#canaan-smith-2-22-20-dropdown,
+	#ryan-hurd-2-27-20-dropdown,
+	#ryan-hurd-2-28-20-dropdown{
 		display: none;
 	}
 	/*SPORTS*/
@@ -102,13 +127,15 @@ body{
 		display: none;
 	}
 	/*TRIVIA*/
-	#friends-july-10{
-		display: none;
-	}
+	
 	/*PRIVATE PARTIES*/
 	.party-packages-pop-up,
 	.package-pop-up-details{
 		display: none;
+	}
+	.party-packages-page{
+		display: block;
+		position: relative;
 	}
 /*HEADER*/
 	header{
@@ -301,6 +328,9 @@ body{
 		width: 30px;
 		z-index: 9999;
 	}
+	.body-mobile-container-column{
+		text-align: center;
+	}
 /*BURGER FLIP*/
     #burger-1, #burger-2, #burger-3{
         transition: .5s;
@@ -328,7 +358,7 @@ body{
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 485px;
-		height: 100vh;
+		height: 110vh;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -367,7 +397,7 @@ body{
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
-		width: 80%;
+		width: 100%;
 	}
 	.joes-menu-icons-mobile{
 		max-width: 100px;
@@ -389,7 +419,7 @@ body{
 	}
 	.about-dropdown-mobile-container{
 		margin: 0 auto;
-		max-width: 80%;
+		max-width: 100%;
 	}
 	.about-icons-mobile{
 		display: flex;
@@ -511,10 +541,13 @@ body{
 	}
 	.main-next img{
 		border: 2px solid #fff;
-		height: 100%;
+		height: 384px;
 		max-height: 257.5px;
 		max-width: 384px;
+		object-fit: cover;
+		object-position: top;
 		position: relative;
+		width: 100%;
 	}
 	.next-concert,
 	.next-rooftop{
@@ -582,7 +615,7 @@ body{
 	}
 	/*CAROUSEL*/
 	.main-upcoming-carousel{
-		height: 500px;
+		height: 100%;
 		max-width: 800px;
 		padding: 0 5px;
 		position: relative;
@@ -615,13 +648,14 @@ body{
 		width: calc(100% + 4px);
 	}
 	.event-box{
+		max-height: 500px;
+		max-width: 900px;
 		position: relative;
 	}
 	.event-box img{
 		display: block;
-		height: 100%;
-		max-height: 500px;
-		max-width: 900px;
+		height: 500px;
+		object-fit: cover;
 		width: 100%;
 	}
 	.event-box .event-info{
@@ -696,10 +730,27 @@ body{
 		cursor: pointer;
 		transition: .2s;
 	}
-
-
 	#album-title{
 		font-style: italic;
+	}
+	#matt-stell-main-carousel{
+		object-position: 0 -50px;
+	}
+/*WHITE CLAW BANNER*/
+	#wcw-home{
+		margin: 40px auto 0 auto;
+		max-width: 1500px;
+		width: 100%;
+	}
+	.wcw-banner-container{
+		border: 2px solid #fff;
+		margin: 0 auto;
+		max-width: 1192px;
+		width: 100%;
+	}
+	.wcw-banner img{
+		display: block;
+		max-width: 100%;
 	}
 /*SOCIAL MEDIA*/
 	.social-media{
@@ -837,7 +888,7 @@ body{
 	.main-sports-banner{
 		color: #fff;
 		margin: 0 auto;
-		max-width: 1198px;
+		max-width: 1199px;
 		position: relative;
 		width: 100%;
 	}
@@ -924,6 +975,12 @@ body{
 		text-align: center;
 		text-shadow: -5px 5px 5px #000
 	}
+	.main-events-carousel-box{
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		height: 447px;
+		max-height: 447px;
+	}
 	.main-events-carousel-box img{
 		display: block;
 		max-width: 800px;
@@ -942,7 +999,7 @@ body{
 	}
 	.main-events-date-text{
 		align-items: center;
-		background-color: rgba(0,0,0,.5);
+		background-color: rgba(0,0,0,.8);
 		bottom: 0;
 		display: flex;
 		justify-content: space-between;
@@ -951,30 +1008,8 @@ body{
 		position: absolute;
 		width: calc(100% - 20px);
 	}
-	.main-events-date-text-box{
-		align-items: center;
-		display: flex;
-	}
-	.main-events-date-text-box img{
-		max-width: 120px;
-	}
-	#main-events-name{
-		color: #fff;
-		font-family: 'Roboto Mono', sans-serif;
-		font-size: 28px;
-	}
-	.main-events-date-text-box #span-line{
-		color: #fff;
-		font-family: 'h-neu', sans-serif;
-		font-size: 32px;
-	}
-	#main-events-time{
-		color: #fff;
-		font-family: 'Roboto Mono', sans-serif;
-		font-size: 16px;
-	}
-	#main-events-time span{
-		color: rgba(0,0,0,0);
+	.main-events-date-text .event-title{
+		font-size: 26px;
 	}
 	.main-events-date-text .ticket-button{
 		border-bottom: 1px solid #fff;
@@ -1300,33 +1335,64 @@ body{
 		max-width: 310px;
 		min-width: 310px;
 	}
-	/*MAILING LIST*/
-	#main-mailing-list{
-		background-color: #B5A267;
-		border: 2px solid #fff;
-		margin: -2px 0 10px 0;
-		overflow: hidden;
-	}
-	#main-mailing-list iframe{
-		background-color: #B5A267;
-		height: 90px !important;
-		width: 310px !important;
-	}
-	#newsletter-copy{
-		font-family: 'News Cycle';
+	#bio-newsletter #bio-contact-heading{
+		border-bottom: none;
 	}
 	#depends{
 		font-size: 12px;
 	}
-
+	/*MAILING LIST*/
+	#main-mailing-list{
+		background-color: #B5A267;
+		border: 2px solid #fff;
+		overflow: hidden;
+	}
+	#main-mailing-list iframe{
+		height: 87px !important;
+		width: 310px !important;
+	}
+	#main-table{
+		background-color: #B5A267;
+	}
+	#main-mailing-list html{
+		background-color: red !important;
+	}
+	#main-table #email{
+		color: #000;
+		font-family: Helvetica, sans-serif;
+		font-size: 14px;
+		padding: 2px;
+		width: calc(100% - 8px);
+	}
+	#main-table #submit-button{
+		background-color: #000;
+		border: 2px solid #fff;
+		font-family: Helvetica, sans-serif;
+		font-size: 14px;
+		margin: 10px 0;
+		padding: 5px 0;
+		color: #fff;
+		width: 100%;
+	}
+	iframe{
+		background-color: #B5A267;
+	}
 	.error{
-		color: green !important;
+		background-color: #B5A267;
+		font-family: Helvetica;
+		color: red;
+	}
+	#success{
+		color: #B5A267;
+		font-family: Helvetica, sans-serif;
+		font-size: 14px;
+		text-align: center;
 	}
 /*******EVENTS PAGE*******/
 	.events-wrapper{
 		transition: .3s;
 	}
-	/*WEEKLY EVENTS*/
+/*WEEKLY EVENTS*/
 	.weekly-events-container{
 		display: flex;
 		justify-content: center;
@@ -1434,6 +1500,10 @@ body{
 	#specials-italics{
 		font-size: 20px;
 	}
+	#food-specials-hours{
+		font-family: 'News Cycle', sans-serif;
+		font-size: 12px;
+	}
 	#bull-pop-up{
 		top: 100px;
 		width: 90%;
@@ -1496,6 +1566,29 @@ body{
 		border-color: #000;
 		cursor: pointer;
 		transition: .3s;
+	}
+/*WHITE CLAW BANNER*/
+	.wcw-banner{
+		margin: 50px auto 0 auto;
+		max-width: 1500px;
+		width: 100%;
+	}
+	.wcw-banner-container{
+		border: 2px solid #fff;
+		margin: 0 auto;
+		max-width: 1192px;
+		width: 100%;
+	}
+	.wcw-banner img{
+		display: block;
+		max-width: 100%;
+	}
+/***SPECIAL EVENTS***/
+	.calendar .concert-listing-info{
+		max-height: none;
+	}
+	.calendar .concerts-list .page-heading{
+		margin-top: 25px;
 	}
 /*******CONCERTS PAGE*******/
 	.concerts{
@@ -1575,9 +1668,14 @@ body{
 	.concert-listing-image img{
 		height: 100%;
     	display: block;
+    	max-height: 200px;
+    	min-height: 200px;
     	max-width: 300px;
     	object-fit: cover;
     	width: 300px;
+	}
+	#img-no-max{
+		max-height: none;
 	}
 	.concert-listing-info{
 		border-left: 2px dashed #fff;
@@ -1586,16 +1684,33 @@ body{
 		flex-direction: column;
 		justify-content: space-between;
 		max-height: 250px;
-		overflow: auto;
+		overflow-x: hidden;
+		overflow-y: auto;
 		padding: 0 10px 10px 10px;
 		position: relative;
 		text-shadow: 2px 2px #000;
 		width: 100%;
+		z-index: 10;
+	}
+	.white-claw-concert .concert-listing-info::before{
+		background-image: url(../media/images/upcoming/white-claw-winter-logo.png);
+		background-position: -20px;
+		background-size: 100px 100px;
+		content:"";
+		height: 100%;
+		left: -10px;
+		overflow: hidden;
+		opacity: .5;
+		position: absolute;
+		top: 0;
+		width: calc(100% + 20px);
+		z-index: 1;
 	}
 	.concert-listing .info-top{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		z-index: 1;
 	}
 	.concert-listing .artist{
 		font-family: 'Roboto Mono', sans-serif;
@@ -1607,6 +1722,7 @@ body{
 	.show-details{
 		align-items: center;
 		display: flex;
+		z-index: 1;
 	}
 	.concert-listing .date,
 	.concert-listing .doors,
@@ -1633,6 +1749,46 @@ body{
 	}
 	.info-button:hover{
 		color: #fff;
+	}
+	.info-sans-serif{
+		font-family: sans-serif;
+	}
+	.anything-box-11-29-19-next img{
+		background-color: #000;
+		object-fit: cover;
+	}
+	#riley-green-img-concerts{
+		object-position: 50% 20%;
+	}
+	#gone-west-green-img-concerts{
+		max-height: 300px;
+	}
+	#hello-dave{
+		object-position: 0 0;
+	}
+	#hello-dave-a{
+		font-size: 16px;
+	}
+	#tuff-fest-img{
+		min-height: 100%;
+		object-position: 100% 0;
+	}
+	#tuff-dash{
+		color: #fff;
+	}
+	#new-years-eve-12-31-19-main img,
+	.johnny-alletto-1-4-20 img{
+		object-position: 0 0;
+	}
+	#hurd-photo{
+		object-position: 0 -15px;
+	}
+	#thbn{
+		max-height: none;
+		object-fit: contain;
+	}
+	#keith-relief-events{
+		max-height: none;
 	}
 /*CONCERT LISTING DROPDOWN*/
 	.concert-listing-info-dropdown{
@@ -1693,6 +1849,9 @@ body{
 		color: #B5A267;
 		transition: .3s;
 	}
+	#matt-stell-img{
+		object-position: 0 -20px;
+	}
 /*******SPORTS PAGE*******/
 	/*SPORTS COPY*/
 	.body-wrapper{
@@ -1708,7 +1867,13 @@ body{
 		max-width: 1500px;
 		padding: 0 40px;
 		text-align: center;
-		text-transform: uppercase;
+	}
+	/*SPORTS SPECIAL*/
+	.sports-page-heading{
+		margin-top: 50px;
+	}
+	.sports-special-column{
+		flex-wrap: wrap;
 	}
 	/*SPORTS LOGOS*/
 	.sports-teams{
@@ -1770,29 +1935,28 @@ body{
 		font-size: 50px;
 		padding: 0 10px;	
 	}
-	.sports-schedule-column-wrapper{
-		display: flex;
-		margin: 0 auto;
-		width: 90%;
-	}
 	.sports-schedule-column{
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 		margin: 0 auto;
-		width: 100%;
+		width: 90%;
+	}
+/*TEAM COLUMN HEIGHTS*/
+	#hoosiers-basketball-schedule .sports-schedule-column,
+	#illini-basketball-schedule .sports-schedule-column,
+	#tarheels-basketball-schedule .sports-schedule-column{
+		height: 870px;
 	}
 	#dot{
 		padding: 0 5px;
 	}
-	.sports-schedule-container,
+	.team-24{
+		font-size: 24px;
+	}
 	.game-details{
 		align-items: center;
 		display: flex;
-	}
-	.sports-schedule-container{
-		flex-direction: column;
-		margin: 0 auto;
-		width: 100%;
 	}
 	.individual-game{
 		align-items: center;
@@ -1800,15 +1964,15 @@ body{
 		display: flex;
 		justify-content: space-between;
 		max-height: 70px;
+		max-width: 100%;
 		min-height: 70px;
-		width: 100%;
 	}
 	.individual-game-container{
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
-		width: 80%;
+		width: 460px;
 	}
 	.bye-week .game-details{
 		justify-content: center;
@@ -1845,6 +2009,11 @@ body{
 		opacity: .2;
 		transition: .3s;
 	}
+	#bears-week-13-button{
+		font-size: 20px;
+		text-align: center;
+		width: 124px;
+	}
 	/*RESERVE TABLE*/
 	.game-reserve-table{
 		background-color: gray;
@@ -1861,6 +2030,10 @@ body{
 	.game-reserve-table p{
 		border: 2px dashed #000;
 		padding: 5px 15px;
+	}
+	.sports-page .table-reservation{
+		top: 100px;
+		z-index: 10000;
 	}
 	/*TABLE RESERVATION FORM*/
 	.table-reservation{
@@ -1994,7 +2167,7 @@ body{
 		border: 1px solid #fff;
 		box-shadow: -10px 10px 5px #000;
 		margin: 20px 0;
-		max-height: 200px;
+		max-height: 300px;
 		max-width: 100%;
 		position: relative;
 	}
@@ -2004,6 +2177,7 @@ body{
 		width: 100%;
 	}
 	.trivia-logo img{
+		max-height: 200px;
 		max-width: 350px;
 		padding: 50px;
 	}
@@ -2014,24 +2188,15 @@ body{
 		justify-content: center;
 		width: 100%;
 	}
-	#himym{
-		max-width: 250px;
-		padding: 50px;
-	}
-	#iasip,
-	#new-girl{
-		max-width: 320px;
-		padding: 50px;
-	}
-	#wrestling{
+	#christmas-movies{
 		color: #fff;
-		font-family: 'wrestling', sans-serif;
+		font-family: 'chopin', sans-serif;
 		font-size: 80px;
 		-webkit-text-stroke-width: 1px;
    		-webkit-text-stroke-color: #000;
 	}
 	.trivia-weeks .trivia-background{
-		height: 200px;
+		height: 300px;
 	}
 	.trivia-weeks-container{
 		position: absolute;
@@ -2391,7 +2556,8 @@ body{
 	.package-column img{
 		display: block;
 		height: 175px;
-		max-width: 100%
+		max-width: 100%;
+		object-fit: cover;
 	}
 	.package-no-border img{
 		width: 140px;
@@ -2583,6 +2749,77 @@ body{
 		width: 600px;
 	}
 /***MEDIA QUERIES***/
+/********FOOTER********/
+
+	footer{
+		background-color: #000;
+		border: 2px solid #B5A267;
+		color: #fff;
+		font-family: 'Roboto Mono', sans-serif;
+		left: 0;
+		margin: 50px auto 0 auto;
+		max-width: 1500px;
+		position: absolute;
+		right: 0;
+		width: calc(100% - 4px);
+	}
+	.footer-container{
+		align-items: center;
+		border: 2px dashed #B5A267;
+		display: flex;
+		justify-content: space-between;
+		margin: 5px;
+		max-width: 100%;
+		padding: 10px;
+	}
+	.footer-container a{
+		color: #fff;
+		text-decoration: none;
+	}
+	.footer-container i{
+		color: #B5A267;
+	}.footer-container span{
+		font-size: 22px;
+	}
+	.footer-left{
+		height: 100%;
+		width: 50%;
+	}
+	.footer-left-container{
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.footer-right-container{
+		font-size: 24px;
+		text-align: center;
+	}
+	.footer-social-media{
+		margin-bottom: 10px;
+	}
+
+	/*.footer-links{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}*/
+	/***FOOTER LEFT***/
+	.footer-left img{
+		max-width: 30%;
+	}
+	.footer-left span{
+		color: #B5A267;
+	}
+	.footer-contact i{
+		padding-right: 10px;
+	}
+	.footer-links{
+		display: flex;
+	}
+	#footer-copyright{
+		margin-bottom: 5px;
+	}
 @media(max-width:1225px){
 	.room-buttons p{
 		font-size: 18px;
@@ -2654,6 +2891,10 @@ body{
 		object-fit: cover;
 		width: 100%;
 	}
+	/*WCW BANNER*/
+		#wcw-home-container{
+			max-width: 1006px;
+		}
 	/*SOCIAL MEDIA*/
 	#instafeed img{
 		width: calc(100% - 10px);
@@ -2674,7 +2915,7 @@ body{
 	}
 	/*UPCOMING EVENTS*/
 	.main-events{
-		margin-bottom: 480px;
+		margin-bottom: 375px;
 	}
 	.main-events-container{
 		align-items: center;
@@ -2735,6 +2976,9 @@ body{
 	.weekly-box img{
 		max-width: 100%;
 	}
+	.sports-special-column .weekly-box{
+		max-width: none;
+	}
 }
 @media(max-width:1200px){
 	.sports-teams{
@@ -2756,7 +3000,7 @@ body{
 		max-width: 800px;
 	}
 	.season-title{
-		max-width: 800px;
+		max-width: 90%;
     	justify-content: center;
     	width: 100%;
 	}
@@ -2775,6 +3019,13 @@ body{
 		margin-bottom: 5px;
 		max-width: 300px;
 		width: 300px;
+	}
+	#bears-week-13-button{
+		max-width: calc(100% - 34px);
+		width: 100%;
+	}
+	#bears-thanksgiving{
+		display: none;
 	}
 }
 @media(max-width:1120px){
@@ -2827,6 +3078,10 @@ body{
 	.concert-listing .time{
 		font-size: 18px;
 	}
+	/*FOOTER*/
+	.footer-left{
+		width: 100%;
+	}
 }
 @media(max-width:1065px){
 	#sports-logos-8{
@@ -2855,7 +3110,18 @@ body{
 		max-width: 400px;
 	}
 }
+@media(max-width:1050px){
+	#hoosiers-basketball-schedule .sports-schedule-column,
+	#illini-basketball-schedule .sports-schedule-column,
+	#tarheels-basketball-schedule .sports-schedule-column{
+		height: auto;
+	}
+}
 @media(max-width:1030px){
+	/*WCW BANNER*/
+		#wcw-home-container{
+			max-width: 796px;
+		}
 	#joes-rosemont-logo{
 		margin-bottom: 20px;
 	}
@@ -2980,6 +3246,13 @@ body{
 	.concert-listing-container{
 		height: 230px;
 	}
+	.concert-listing-image img{
+		max-height: none;
+	}
+	/*SPORTS*/
+	.sports-page-heading{
+		margin-top: 50px;
+	}
 	/*TRIVIA CONTAINER*/
 	.trivia-container{
 		margin: 0 auto;
@@ -3035,6 +3308,21 @@ body{
 	}
 	/***SPORTS PAGE***/
 }
+@media(max-width:930px){
+	.footer-container{
+		flex-direction: column;
+		padding: 10px 0;
+	}
+	.footer-left{
+		text-align: center;
+	}
+	.footer-right{
+		margin-top: 20px;
+	}
+	#footer-ada{
+		margin-bottom: 5px;
+	}
+}
 @media(max-width:920px){
 	/*ABOUT PAGE*/
 	.about-img-image{
@@ -3061,16 +3349,19 @@ body{
 		transition: .3s;
 	}
 	.weekly-box img{
-		width: 100%;
+		width: 350px;
 	}
-	/*EVENTS PAGE*/
+	/*SPORTS PAGE*/
+	.sports-special-column .weekly-box{
+		max-width: 350px;
+	}
 }
 @media(max-width:880px){
 	#weekly-specials{
 		width: 305px;
 	}
 	#weekly-specials{
-		top: 20px;
+		top: 0;
 	}
 	.weekly-specials-image img{
 		max-width: 300px;
@@ -3155,6 +3446,10 @@ body{
 	}
 }
 @media(max-width:820px){
+	/*HOMEPAGE*/
+	#main-mailing-list iframe{
+		width: 100% !important;
+	}
 	/*SPORTS*/
 	.main-sports-banner{
 		width: 600px;
@@ -3169,7 +3464,7 @@ body{
 	}
 	/*UPCOMING EVENTS*/
 	.main-events{
-		margin-bottom: 160px;
+		margin-bottom: 280px;
 	}
 	.main-events-carousel{
 		max-width: 600px;
@@ -3272,6 +3567,7 @@ body{
 	}
 	.concert-listing-image img{
 		border-left: 2px dashed #fff;
+		max-height: 300px;
 		max-width: calc(100% - 2px);
 		width: 100%;
 	}
@@ -3407,6 +3703,10 @@ body{
 	}
 }
 @media(max-width:625px){
+	/*HOMEPAGE*/
+	#main-mailing-list iframe{
+		width: 100% !important;
+	}
 	/*SPORTS*/
 	.main-sports-banner{
 		width: 475px;
@@ -3423,7 +3723,7 @@ body{
 	}
 	/*UPCOMING EVENTS*/
 	.main-events{
-		margin-bottom: 60px;
+		margin-bottom: 240px;
 	}
 	.main-events-carousel{
 		max-width: 475px;
@@ -3500,6 +3800,11 @@ body{
 		width: 500px;
 	}
 }
+@media(max-width:600px){
+	#christmas-movies{
+		font-size: 60px;
+	}
+}
 @media(max-width:590px){
 	.party-packages-x{
 		right: 0px;
@@ -3516,6 +3821,24 @@ body{
 	}
 	.weekly-small-font-size{
 		font-size: 14px;
+	}
+	.footer-container{
+		max-width: 100%;
+	}
+	#footer-phone{
+		margin-bottom: 5px;
+	}
+	.footer-contact{
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media(max-width:550px){
+	#copy-break{
+		display: block;
+	}
+	#copy-break-2{
+		display: none;
 	}
 }
 @media(max-width:540px){
@@ -3553,6 +3876,10 @@ body{
 	.header-mobile,
 	.mobile-hamburger{
 		display: block;
+	}
+	.mobile-header-way{
+		margin-top: 500px;
+		position: absolute;
 	}
 	.header-mobile{
 		position: fixed;
@@ -3682,6 +4009,10 @@ body{
 		opacity: 1;
 	}
 	/*MAIN VIDEO*/
+	.main-video{
+		max-width: none;
+		width: 992px;
+	}
 	.main-video .jarallax{
 		height: 1200px;
 	}
@@ -3703,9 +4034,8 @@ body{
 		border: 5px solid #000;
 		font-size: 60px;
 		left: 0;
-    	width: calc(100% - 5px);
     	right: 0;
-    	margin-bottom: 0;
+    	margin: 10px 0 0 0;
     	text-align: center;
     	width: calc(100% - 10px);
 	}
@@ -3716,12 +4046,13 @@ body{
 	/*UPCOMING*/
 		/*MAIN UPCOMING*/
 	.main-next, .main-upcoming-carousel{
-		max-width: 1000px;
+		max-width: none;
+		width: 100%;
 	}
-	.main-next-heading,
-	.main-featured-heading,{
-	    border: 5px solid #fff;
-	    width: calc(100% - 12px);
+	.main-upcoming-carousel .main-featured-heading{
+		border: 5px solid #fff;
+		margin-left: 0px;
+		width: 100%;
 	}
 	.main-featured-heading-container,
 	.main-next-heading-container{
@@ -3731,20 +4062,34 @@ body{
 		padding-bottom: 10px;
 		text-shadow: -7px 7px 10px #B5A267;
 	}
+	.main-upcoming{
+		max-width: none;
+	}
 	.main-upcoming .event-wrapper{
 		 border: 5px solid #fff;
-		 width: calc(100% - 2px);
+		 width: calc(100% + 10px);
+	}
+	.main-upcoming .event-box{
+		height: 1000px;
+		max-height: 1000px;
 	}
 	.event-box img{
 		max-height: 1000px;
 		min-height: 1000px;
+		max-width: 100%;
+		min-width: 1000px;
+	}
+	.main-upcoming .event-box .event-info{
+		width: 1000px;
 	}
 	.main-upcoming-arrows-left{
+		color: #fff;
 		font-size: 80px;
 		left: 20px;
 		top: 55%;
 	}
 	.main-upcoming-arrows-right{
+		color: #fff;
 		font-size: 80px;
 		right: 20px;
 		top: 55%;
@@ -3765,7 +4110,7 @@ body{
 		font-size: 50px;
 	}
 	.event-box .ticket-button{
-		width: 260px;
+		width: 360px;
 	}
 	.ticket-button{
 		font-size: 50px;
@@ -3778,6 +4123,12 @@ body{
 	.main-next-container{
 		flex-direction: column;
 		max-width: none;
+		width: 100%;
+	}
+	.main-next .main-next-heading{
+		border: 5px solid #fff;
+		width: 100%;
+		max-width: none;
 	}
 	.next-concert,
 	.next-rooftop{
@@ -3785,7 +4136,7 @@ body{
 		max-height: 600px;
 		min-height: 600px;
 		border: 5px solid #fff;
-		width: calc(100% - 8px);
+		width: 100%
 	}
 	.next-concert img,
 	.next-rooftop img{
@@ -3815,6 +4166,16 @@ body{
 		font-size: 40px;
 		width: auto;
 	}
+	.wcw-banner{
+		margin-top: 10px;
+	}
+	#wcw-home{
+		max-width: calc(100% + 14px);
+	}
+	#wcw-home-container{
+		max-width: none;
+		width: calc(100% + 10px);
+	}
 	/*SOCIAL MEDIA*/
 	.social-media-container{
 		margin: 100px 0;
@@ -3833,6 +4194,8 @@ body{
 	}
 	.instagram{
 		height: 500px;
+		max-width: none;
+		width: calc(100% + 14px);
 	}
 	#instafeed img{
 		height: 500px;
@@ -3849,6 +4212,7 @@ body{
 		overflow: hidden;
 	}
 	.instafeed-arrows-left, .instafeed-arrows-right{
+		color: #fff;
 		font-size: 80px;
 		padding: 0 20px;
 	}
@@ -3865,7 +4229,7 @@ body{
 		border: 5px solid #fff;
 		height: 1000px;
 		overflow: hidden;
-		width: calc(100% - 34px);
+		width: calc(100% - 18px);
 	}
 	.main-sports-banner-container .sports-logos{
 		display: flex;
@@ -3892,44 +4256,49 @@ body{
 	}
 	/*MAIN EVENTS*/
 	.main-events{
-		margin: 5px 0 0 3px;
+		margin: 5px 0 0 0;
+		max-width: none;
+    	width: 984px;
 	}
 	.main-events-container{
 		align-items: flex-start;
 		max-height: none;
 	}
 	.main-events-carousel{
-		height: 700px;
-		max-width: calc(100% - 5px);
+		height: 1015px;
+		max-width: none;
+		width: calc(100% + 7px);
 	}
 	.main-events-carousel-container{
 		border: 5px solid #fff;
+		height: 1015px;
 		width: 100%;
 	}
 	.main-events-carousel img{
-		height: 700px;
+		height: 1000px;
 		object-fit: cover;
 	}
-	.main-events-date-text,
-	.main-events-date-text-box{
+	.main-events-carousel-box{
+		height: 1000px;
+		max-height: 1000px;
+	}
+	.main-events-date-text{
 		flex-direction: column;
+	}
+	.main-events-carousel-box .event-details{
+		text-align: center;
+	}
+	.main-events-carousel-box .event-title{
+		font-size: 70px;
+	}
+	.main-events-carousel-box .event-title-extras{
+		font-size: 34px;
+	}
+	.main-events-carousel-box .event-date{
+		font-size: 50px;
 	}
 	.main-events-date{
 		font-size: 44px;
-	}
-	#main-events-name{
-		font-size: 60px;
-		text-shadow: -7px 7px 10px #000;
-	}
-	#main-events-name #span-line{
-		display: none;
-	}
-	#main-events-time{
-		font-size: 40px;
-		text-shadow: -7px 7px 10px #000;
-	}
-	#main-events-time span{
-		display: none;
 	}
 	.main-events-date-text .ticket-button{
 		margin: 10px 0;
@@ -3940,11 +4309,13 @@ body{
 		font-size: 40px;
 	}
 	.main-events-arrows-left{
+		color: #fff;
 		font-size: 80px;
 		padding-left: 20px;
 		top: 40%;
 	}
 	.main-events-arrows-right{
+		color: #fff;
 		font-size: 80px;
 		padding-right: 20px;
 		top: 40%;
@@ -3952,6 +4323,10 @@ body{
 	.main-events-side-boxes{
 		margin-top: 20px;
 		max-width: 100%;
+	}.main-events .main-events-side-boxes-heading{
+		border: 5px solid #fff;
+		margin-left: 0px;
+		width: calc(100% - 3px);
 	}
 	.main-events-side-boxes-heading-container{
 		border: 5px dashed #fff;
@@ -3966,7 +4341,7 @@ body{
 	.main-events-side-boxes-container{
 		border: 5px solid #fff;
 		max-height: none;
-		width: calc(100% - 8px);
+		width: calc(100% - 4px);
 	}
 	.side-boxes-column img{
 		max-width: 100%;
@@ -3976,7 +4351,7 @@ body{
 	/*PARTNERS*/
 	.partners{
 		border: 5px solid #fff;
-		max-width: calc(100% - 5px);
+		max-width: 100%;
 	}
 	.partners-wrapper{
 		border: 5px dashed #fff;
@@ -4019,7 +4394,7 @@ body{
 	/*FAQ*/
 	.faq{
 		border: 5px solid #fff;
-		max-width: calc(100% - 5px);
+		max-width: 100%;
 	}
 	.faq-container {
 	    border: 5px dashed #fff;
@@ -4058,7 +4433,7 @@ body{
 	}
 	.main-bio-copy{
 		border: 5px solid #fff;
-		max-width: calc(100% - 5px);
+		max-width: calc(100% - 0px);
 		width: 100%;
 	}
 	.main-bio-copy-container {
@@ -4119,8 +4494,160 @@ body{
 		font-size: 80px;
 		padding: 0 25px;
 	}
+	#bio-phone,
+	#bio-email,
+	#bio-address,
+	.bio-hours{
+		padding: 5px 0;
+	}
 	#main-mailing-list iframe html head{
 		font-size: 200px !important;
+	}
+	/*FOOTER*/
+	footer{
+		border-width: 5px;
+	}
+	.footer-container{
+		border-width: 5px;
+		flex-direction: column;
+		font-size: 40px;
+		padding: 20px 0;
+	}
+	.footer-container span{
+		font-size: 50px;
+	}
+	.footer-left{
+		text-align: center;
+	}
+	.footer-social-media i{
+		font-size: 60px;
+		padding: 0 5px;
+	}
+	.footer-contact{
+		display: flex;
+		flex-direction: column;
+	}
+	#footer-phone,
+	#footer-map,
+	#footer-copyright,
+	#footer-ada{
+		margin-bottom: 10px;
+	}
+	#copy-break{
+		display: block;
+	}
+	#copy-break-2{
+		display: none;
+	}
+	/***EVENTS PAGE***/
+	.calendar .page-heading{
+		background-color: #000;
+		border: 5px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 330px;
+    	width: calc(100% - 5px);
+	}
+	.calendar .page-heading-container{
+		border: 5px dashed #fff;
+		font-size: 70px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.weekly-events-container{
+		flex-direction: column;
+	}
+	.weekly-events-column{
+		justify-content: space-between;
+	}
+	.weekly-box{
+		margin-bottom: 20px;
+		max-width: none;
+		width: 48%;
+	}
+	.weekly-box a{
+		width: 100%;
+	}
+	.weekly-box p{
+		font-size: 40px;
+	}
+	.weekly-events img{
+		width: 100%;
+	}
+	#weekly-specials,
+	#bull-pop-up{
+		top: 40px;
+		width: 900px;
+		z-index: 10000;
+	}
+	.karaoke-thursday-specials .weekly-specials-container #weekly-pop-up-header,
+	#bull-pop-up .weekly-specials-container #weekly-pop-up-header{
+		font-size: 90px;
+	}
+	.karaoke-thursday-specials .weekly-specials-container .weekly-specials-copy p,
+	#bull-pop-up .weekly-specials-container .weekly-specials-copy p{
+		font-size: 50px;
+	}
+	#bull-pop-up{
+		height: 1500px;
+	}
+	#bull-pop-up .weekly-specials-container{
+		height: 100%;
+	}
+	#bull-pop-up .weekly-specials-image img{
+		display: none
+	}
+	#bull-copy{
+		padding: 0 5px;
+	}
+	#bull-riding-form input {
+	    font-size: 50px;
+	    height: 60px;
+	}
+	#bull-riding-form textarea {
+	    font-size: 50px;
+	    height: 70px;
+	}
+	#bull-reservation-submit input, 
+	#bull-reservation-reset input{
+		height: 90px;
+    	padding: 0 0 40px 0;
+    	width: 300px;
+   	}
+   	.bull-reservation-form-buttons{
+   		height: 90px;
+   	}
+	.weekly-specials-image img{
+		max-width: none;
+		width: 100%;
+	}
+	.weekly-specials-container{
+		flex-direction: column;
+	}
+	.weekly-specials-image-container{
+		width: 100%;
+	}
+	.weekly-specials-copy{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.table-reservation #weekly-pop-up-header,
+	#bull-pop-up #weekly-pop-up-header{
+		font-size: 60px;
+		padding: 0;
+		width: 800px;
+	}
+	.weekly-specials-copy p,
+	#bull-pop-up .weekly-specials-copy p{
+		font-size: 40px;
+	}
+	.karaoke-thursday-specials .weekly-specials-copy{
+		width: auto;
+	}
+	.table-reservation-x i {
+	    font-size: 60px;
+	    padding: 20px;
 	}
 	/***CONCERTS PAGE***/
 	.concerts-banner .jarallax {
@@ -4164,6 +4691,7 @@ body{
 	}
 	.concert-listing-image img{
 		border-left: none;
+		max-height: 630px;
 		max-width: calc(100% - 2px);
 		width: 100%;
 	}
@@ -4221,24 +4749,33 @@ body{
 		font-size: 60px;
 	}
 	.concert-listing-info-dropdown .opening-act{
-		font-size: 36px;
+		font-size: 42px;
 	}
 	.show-details{
 		font-size: 55px;
 	}
 	.artist-bio, .show-details-p{
-		font-size: 40px;
+		font-size: 48px;
 	}
 	.about-the-show a{
 		font-size: 50px;
 	}
+	#tuff-dash{
+		display: none;
+	}
+	#tuff-br{
+		display: block;
+	}
 	/*SPORTS*/
+	.sports-page{
+		margin-top: 330px;
+	}
 	.sports-page .page-heading{
 		background-color: #000;
 		border: 5px solid #fff;
 		padding: 0;
 		position: relative;
-    	margin-top: 330px;
+    	margin-top: 10px;
     	width: calc(100% - 5px);
 	}
 	.sports-page .page-heading-container{
@@ -4247,6 +4784,19 @@ body{
 		margin: 10px;
 		padding-bottom: 10px;
 		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.sports-special-column{
+		justify-content: center;
+	}
+	.sports-special-column .weekly-box{
+		margin: 30px 0;
+		width: 80%;
+	}
+	.sports-special-column .weekly-box p{
+		font-size: 55px;
+	}
+	.sports-special-column .weekly-box .weekly-small-font-size p{
+		font-size: 44px;
 	}
 	.sports-teams{
 		max-width: 100%;
@@ -4277,13 +4827,27 @@ body{
 	.sports-schedule-container{
 		max-width: 100%;
 	}
+	#hoosiers-basketball-schedule .sports-schedule-column, 
+	#illini-basketball-schedule .sports-schedule-column,
+	#tarheels-basketball-schedule .sports-schedule-column{
+		height: auto;
+	}
 	.sports-schedule .season-title{
+		align-items: center;
 		border-bottom: 5px solid #000;
+		flex-direction: column;
 		max-width: none;
 		width: 90%;
 	}
 	.sports-schedule .season-title p{
 		font-size: 150px;
+	}
+	.sports-schedule .season-title span{
+		display: none;
+	}
+	.sports-schedule .upcoming-schedule{
+		font-size: 100px;
+		padding-top: 40px;
 	}
 	.individual-game{
 		border-bottom: 5px solid #000;
@@ -4398,7 +4962,11 @@ body{
 		max-width: none;
 		width: 100%;
 	}
-
+	#bears-week-13-button{
+		font-size: 64px;
+		max-width: calc(100% - 60px);
+		width: 100%;
+	}
 	/*TRIVIA*/
 	.trivia-months{
 		width: 100%;
@@ -4432,6 +5000,7 @@ body{
 		height: 800px;
 	}
 	.trivia-logo img{
+		max-height: 300px;
 		max-width: 800px;
 	}
 	.trivia-date {
@@ -4456,6 +5025,9 @@ body{
 	}
 	#wrestling{
 		font-size: 170px;
+	}
+	#christmas-movies{
+		font-size: 140px;
 	}
 	.trivia .table-reservation{
 		padding: 20px 0;
@@ -4579,7 +5151,7 @@ body{
 	.private-events .table-reservation{
 		padding-bottom: 20px;
 		top: 320px;
-		width: 900px;
+		width: 950px;
 	}
 	.private-events .table-reservation-column-wrapper{
 		flex-direction: column;
@@ -4616,6 +5188,52 @@ body{
 	.private-events #room-reservation-reset{
 		padding-right: 12px;
 		text-align: right;
+	}
+	.party-packages-pop-up{
+		top: 330px;
+	}
+	.party-packages-pop-up-container{
+		width: 950px;
+	}
+	.party-packages-x {
+	    position: absolute;
+	    right: 5px;
+	    top: -75px;
+	}
+	.party-packages-x i{
+		font-size: 60px;
+	}
+	.package{
+		border: 5px solid #fff;
+	}
+	.package-container{
+		border: 5px dashed #fff;
+		height: calc(100% - 22px);
+	}
+	.individual-packages-x{
+		padding: 30px;
+	}
+	.individual-packages-x i{
+		font-size: 60px;
+	}
+	.package-column img{
+		height: 350px;
+		object-fit: cover;
+	}
+	.package-no-border img{
+		width: 100%;
+	}
+	.package-column p{
+		font-size: 44px;
+	}
+	.package-pop-up-details{
+		height: calc(100% - 2px);
+	}
+	.package-pop-up-details .package-heading{
+		font-size: 70px;
+	}
+	.package-details p{
+		font-size: 50px;
 	}
 	/*ABOUT PAGE*/
 	.about-heading{
@@ -4664,5 +5282,879 @@ body{
 	.fancybox-toolbar,
 	.fancybox-button{
 		display: none !important
+	}
+}
+/*IPHONE 8 LANDSCAPE*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+	.table-reservation,
+	.trivia .table-reservation{
+		z-index: 9999;
+	}
+	/*MOBILE MENU*/
+	header{
+		display: none;
+	}
+	.header-mobile,
+	.mobile-hamburger{
+		display: block;
+	}
+	.header-mobile{
+		position: fixed;
+		transition: .3s;
+	}
+	.mobile-header-way{
+		margin-top: 150px;
+		position: absolute;
+	}
+	.header-mobile-faded{
+		box-shadow: 0 0 0 #000;
+		transition: .3s;
+	}
+	.header-mobile-container{
+		transition: .3s;
+	}
+	.header-mobile-container-faded{
+		background-color: rgba(0,0,0,0);
+		transition: .3s;
+	}
+	.body-mobile {
+		background-position: center;
+    	background-size: 400px;
+   	}
+   	.body-mobile-container,
+   	.body-mobile-container-wrapper{
+   		height: 100%;
+   		max-width: 100%;
+   	}
+   	.body-mobile-link{
+   		padding: 8px 0;
+   	}
+   	.body-mobile-container-wrapper{
+   		align-items: center;
+	    display: flex;
+	    justify-content: space-around;
+	    width: 700px;
+   	}
+   	.body-mobile-container-column{
+   		margin-bottom: 40px;
+   	}
+   	.body-mobile-container a{
+   		font-size: 40px;
+   		text-shadow: -7px 7px 8px #B5A267;
+   	}
+   	.body-mobile-container i{
+   		font-size: 18px;
+   		padding-left: 20px;
+   	}
+   	.joes-menu-dropdown-mobile-container {
+	    display: flex;
+	    justify-content: space-between;
+	    margin: 0 auto;
+	    width: 100%;
+	}
+   	.joes-menu-icons-mobile{
+   		max-width: 100%;
+   	} 
+   	.about-dropdown-mobile-container{
+   		height: auto;
+   		max-width: 100%;
+   		width: 100%;
+   	}
+   	.about-icons-mobile {
+	    justify-content: space-between;
+	    height: auto;
+	}
+   	.about-icons-row img, 
+   	.joes-menu-icons-mobile img {
+	    align-items: center;
+	    background-color: #B5A267;
+	    border-radius: 90px;
+	    color: #fff;
+	    display: flex;
+	    font-size: 18px;
+	    height: auto;
+	    justify-content: center;
+	    margin: 10px 0 0 0;
+	    padding: 0;
+	    width: auto;
+	    max-width: 70px;
+   	}
+   	.about-icons-row i{
+   		align-items: center;
+	    background-color: #B5A267;
+	    border-radius: 90px;
+	    color: #fff;
+	    display: flex;
+	    font-size: 36px;
+	    justify-content: center;
+	    margin: 10px 0 0 0;
+	    padding: 0;
+	   
+   	}
+   	.head-arrow-flip {
+	    padding: 4px 20px 0px 0px !important;
+	    transform: rotate(180deg);
+	    transition: .5s;
+	}
+/*BURGER FLIP*/
+    .mobile-header-logo-fade{
+        opacity: 0;
+        transition: .3s;
+    }
+    .mobile-hamburger-fixed{
+        position: fixed;
+    }
+/*ACM*/
+	.acm-text-container h3{
+		font-size: 32px;
+	}
+/*UPCOMING CAROUSEL*/
+	.main-featured-heading-container h2{
+		font-size: 60px;
+	}
+	.event-box{
+		max-width: none;
+	}
+	.main-next, .main-upcoming-carousel,
+	.instagram,
+	.main-sports-banner,
+	.main-events-carousel,
+	.main-events-side-boxes,
+	.faq,
+	.partners,
+	.main-bio{
+		max-width: 950px;
+		width: 100%;
+	}
+	.main-next-container{
+		max-width: 947px;
+		width: 100%;
+	}
+	.main-next-heading-container h2,
+	.main-events-side-boxes-heading-container h2,
+	.main-partners-heading{
+		font-size: 44px;
+		text-shadow: -7px 7px 8px #B5A267;
+	}
+	.main-events-side-boxes-heading-container h2,
+	.main-next-heading-container h2{
+		padding: 2px 0 12px 0;
+	}
+	.main-next img, 
+	.next-rooftop img{
+		max-width: 475px;
+	}
+	.next-concert{
+		margin-right: 3.5px;
+	}
+	.next-rooftop{
+		margin-left: 3.5px;
+	}
+	.next-concert-date,
+	.next-rooftop-date,
+	.main-events-date{
+		font-size: 24px;
+		padding: 5px;
+	}
+	#next-band-name,
+	#main-events-name{
+		font-size: 30px;
+	}
+	#next-band-time,
+	#main-events-time{
+		font-size: 22px;
+	}
+	.main-upcoming-arrows-left,
+	.main-upcoming-arrows-right,
+	.main-events-arrows-right,
+	.main-events-arrows-left{
+		color: #fff;
+		font-size: 40px;
+		margin: 0 18px;
+	}
+	.instafeed-arrows-left,
+	.instafeed-arrows-right{
+		color: #fff;
+		font-size: 40px;
+		padding: 0 18px;
+	}
+	.next-concert #table-p,
+	.next-rooftop #table-p,
+	.main-events-date-text #table-p{
+		font-size: 18px;
+	}
+/*WCW*/
+	#wcw-home{
+		margin-top: 25px;
+	}
+/*SOCIAL MEDIA*/
+	.social-media-heading{
+		font-size: 44px;
+	}
+	.social-media-container{
+		margin: 40px 0;
+	}
+	.social-media-icons{
+		max-width: 400px;
+		padding-top: 40px;
+	}
+	.social-media .icon i {
+		font-size: 60px;
+	}
+	#instafeed img,
+	.insta-likes,
+	.answers-box,
+	.answers-box img{
+		height: 400px;
+		max-height: 400px;
+	}
+	.insta-likes:first-child{
+		color: green;
+	}
+	.insta-caption{
+		font-size: 24px;
+	}
+/*MAIN EVENTS*/
+	.main-events{
+		margin: 10px 0 480px 12px;
+		max-width: 955px;
+	}
+	.main-events-heading{
+		font-size: 40px;
+	}
+	.main-events-carousel{
+		height: 1000px;
+		max-width: calc(100% - 5px);
+	}
+	.main-events-carousel-container{
+		border: 2px solid #fff;
+		height: 508px;
+		width: 100%;
+	}
+	.main-events-carousel img{
+		height: 500px;
+		object-fit: cover;
+	}
+	.main-events-carousel-box{
+		height: 500px;
+		max-height: 500px;
+	}
+	.main-events-carousel-box .event-title{
+		font-size: 40px;
+	}
+	.main-events-carousel-box .event-title-extras{
+		font-size: 24px;
+	}
+	.main-events-carousel-box .event-date{
+		font-size: 22px;
+	}
+	.main-events-carousel-box .ticket-button{
+		padding: 5px;
+		text-align: center;
+		width: 200px;
+	}
+	.main-events-date-text #table-p{
+		font-size: 20px;
+	}
+	.main-events-side-boxes{
+		margin-left: 0px;
+		margin-top: 5px;
+		max-width: 950px;
+		width: 950px;
+	}
+	.main-sports-banner{
+		max-width: 950px !important;
+	}
+	.main-sports-banner-container{
+		overflow: hidden;
+	}
+	.main-sports-copy-wrapper{
+		width: 930px;
+	}
+	.main-sports-copy-container{
+		font-size: 40px;
+	}
+	.sports-copy-links{
+		font-size: 28px;
+	}
+	#sports-logos-7,
+	#sports-logos-8,
+	#sports-logos-9{
+		display: block;
+	}
+/*FAQ*/
+	.questions-wrapper,
+	.answers-box{
+		max-width: 100%;
+		width: 95%;
+	}
+	.lines-header p{
+		font-size: 32px;
+	}
+	.answers p{
+		font-size: 32px;
+	}
+/*CHECK OUT OUR PARTNERS*/
+	.partners .main-partners-heading{
+		font-size: 40px;
+	}
+	.partners-container{
+		max-width: 95%;
+	}
+	.partners img{
+		max-width: 200px;
+	}
+	.partners-info p{
+		font-size: 20px;
+	}
+	#joes-rosemont-logo{
+		margin-bottom: 10px;
+	}
+/*MAIN BIO HEADING*/
+	.main-bio-heading{
+		font-size: 32px;
+		text-shadow: -7px 7px 8px #B5A267;
+	}
+	.main-bio h1{
+		font-size: 40px;
+	}
+	.bio-column-heading{
+		font-size: 56px;
+	}
+	.bio-copy-column{
+		height: auto;
+		justify-content: space-between;
+	}
+	#bio-contact{
+		padding: 0;
+	}
+	#bio-newsletter{
+		padding-bottom: 5px;
+	}
+	.bio-copy-sections a,
+	.bio-hours,
+	.bio-hours p{
+		font-size: 24px;
+	}
+	#bio-phone,
+	#bio-email,
+	#bio-address,
+	.bio-hours{
+		padding: 5px 0;
+	}
+	.bio-copy-sections a, 
+	.bio-hours, 
+	.bio-hours p{
+		font-size: 34px;
+	}
+	#t-r{
+		font-size: 30px;
+	}
+	#depends{
+		font-size: 18px;
+	}
+	.bio-copy-sections i{
+		padding-right: 15px;
+	}
+	#bio-social i{
+		font-size: 40px;
+	}
+/*FOOTER*/
+	footer{
+		border-width: 2px;
+	}
+	.footer-container{
+		border-width: 2px;
+		flex-direction: column;
+		font-size: 24px;
+		padding: 20px 0;
+	}
+	.footer-container span{
+		font-size: 40px;
+	}
+	.footer-left{
+		text-align: center;
+	}
+	.footer-social-media i{
+		font-size: 40px;
+		padding: 0 5px;
+	}
+	.footer-contact{
+		display: flex;
+		flex-direction: column;
+	}
+	#footer-phone,
+	#footer-copyright,
+	#footer-ada{
+		margin-bottom: 10px;
+	}
+	
+	/***EVENTS PAGE***/
+	#wcw-home .wcw-banner-container{
+		max-width: calc(100% - 4px);
+	}
+	.calendar .page-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 150px;
+    	width: calc(100% - 5px);
+	}
+	.calendar .page-heading-container{
+		border: 2px dashed #fff;
+		font-size: 52px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.weekly-events-container{
+		width: 100%;
+	}
+	.weekly-box p{
+		font-size: 24px;
+	}
+	.weekly-box .weekly-small-font-size{	
+	    display: flex;
+	    height: 120px;
+	    justify-content: center;
+	    align-items: center;
+
+	}
+	.weekly-box .weekly-small-font-size p{
+		font-size: 20px;
+		height: auto;
+		padding: 0 5px;
+	}
+	.calendar .table-reservation,
+	#bull-pop-up{
+		height: 450px;
+		top: 10px;
+		z-index: 10000;
+	}
+	.calendar .weekly-specials-container{
+		height: 100%;
+		overflow-x: scroll;
+	}
+	.calendar .weekly-specials-copy{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		max-height: calc(100% - 20px);
+		padding: 10px 0;
+		position: absolute;
+		max-width: 100%;
+	}
+	.calendar .weekly-specials-copy{
+		height: 504px;
+	}
+	.tipsy-tuesday-specials #weekly-pop-up-header,
+	.karaoke-thursday-specials #weekly-pop-up-header,
+	#bull-pop-up #weekly-pop-up-header{
+		font-size: 44px;
+   		margin: 5px auto 0 auto;
+		width: 700px;
+	}
+	.tipsy-tuesday-specials #weekly-pop-up-header{
+		font-size: 36px;
+   		margin: 0 auto;
+	}
+	.weekly-specials-copy p,
+	#bull-pop-up .weekly-specials-copy p{
+		font-size: 28px;
+	}
+	.karaoke-thursday-specials .weekly-specials-copy,
+	.weekly-specials-container{
+		width: 100%;
+	}
+	#bull-pop-up .weekly-specials-image{
+		display: none;
+	}
+	#bull-riding-form{
+		top: 480px;
+    	position: relative;
+    	width: 880px;
+	}
+	#bull-copy{
+		padding: 0 10px;
+	}
+	#bull-riding-form input {
+	    font-size: 24px;
+	    height: 40px;
+	}
+	#bull-riding-form textarea {
+	    font-size: 24px;
+	    height: 60px;
+	}
+	#bull-reservation-submit input, 
+	#bull-reservation-reset input{
+		height: 50px;
+    	padding: 0 0 40px 0;
+    	width: 200px;
+   	}
+   	.bull-reservation-form-buttons{
+   		height: 90px;
+   	}
+	/***CONCERTS PAGE***/
+	.concerts-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 10px;
+    	width: calc(100% - 5px);
+	}
+	.concerts-heading-container{
+		border: 2px dashed #fff;
+		font-size: 36px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.concert-listing-container{
+		height: 330px;
+	}
+	.concert-listing-info{
+		max-height: none;
+	}
+	.concert-listing .date{
+		font-size: 32px;
+	}
+	.concert-listing-info-dropdown .opening-act{
+		font-size: 24px;
+	}
+	.concert-listing .doors,
+	.concert-listing .time,
+	.concert-listing-info .info-button,
+	.concert-listing-info .ticket-button{
+	    font-size: 24px;
+	}
+	.concert-listing-info-dropdown .artist {
+	    font-size: 42px;
+	}
+	.about-the-show a{
+		font-size: 24px;
+	}
+	.show-details{
+		font-size: 28px;
+	}
+	.artist-bio,
+	.show-details-p{
+		font-size: 24px;
+	}
+	#parker-img{
+		object-position: 0;
+	}
+	#tuff-dash{
+		display: none;
+	}
+	#tuff-br{
+		display: block;
+	}
+	/*SPORTS*/
+	.sports-page{
+		margin-top: 150px;
+	}
+	.sports-page .page-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 50px;
+    	width: calc(100% - 5px);
+	}
+	.sports-page .page-heading-container{
+		border: 2px dashed #fff;
+		font-size: 48px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.sports-special-column .weekly-box{
+		max-width: 300px;
+	}
+	.sports-special-column .weekly-box img{
+		width: 100%;
+	}
+	.sports-special-column .weekly-box .weekly-small-font-size p{
+		font-size: 24px;
+	}
+	.sports-logos-container{
+	    flex-direction: row;
+	    margin: 0 auto;
+	    max-height: none;
+	    max-width: none;
+	}
+	.main-sports-banner{
+		color: #fff;
+		margin: 0 auto;
+		max-width: 1198px;
+		position: relative;
+		width: 100%;
+	}
+	.main-sports-banner-container{
+		background-color: #000;
+		border: 2px solid #fff;
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 10px;
+		position: relative;
+	}
+	.sports-teams{
+		max-width: none;
+	}
+	.sports-logos-box{
+		height: 98px;
+		max-height: auto;
+	}
+	.logos-2 {
+	    margin: 0;
+	}
+	.sports-logos-container img {
+	    border: 2px dashed #fff;
+	    margin: 5px;
+	    max-height: 80px;
+	    padding: 2px;
+	    transition: .5s;
+	}
+	.main-sports-banner-container .sports-logos{
+		text-align: center;
+	}
+	.main-sports-banner-container .sports-logos img{
+		max-height: 110px;
+		max-width: 160px;
+		opacity: .4;
+		padding: 5px;
+	}
+	.sports-copy{
+		font-size: 32px;
+	}
+	.sports-schedule-container{
+		max-width: 100%;
+	}
+	#hoosiers-basketball-schedule .sports-schedule-column, 
+	#illini-basketball-schedule .sports-schedule-column,
+	#tarheels-basketball-schedule .sports-schedule-column{
+		height: auto;
+	}
+	.sports-schedule .season-title{
+		border-bottom: 5px solid #000;
+		max-width: none;
+		width: 90%;
+	}
+	.sports-schedule .season-title p{
+		font-size: 70px;
+	}
+	.sports-schedule .upcoming-schedule{
+		font-size: 70px;
+		padding-top: 40px;
+	}
+	.individual-game{
+		border-bottom: 5px solid #000;
+		height: auto;
+		max-height: none;
+		min-height: none;
+	}
+	.individual-game-container{
+		flex-direction: column;
+		padding: 20px 0;
+		width: 90%;
+	}
+	.game-details{
+		justify-content: center;
+		padding-bottom: 20px;
+		text-align: center;
+		width: 100%;
+	}
+	.game-details img{
+		max-width: 150px;
+		padding-right: 20px;
+	}
+	.sports-schedule p{
+		font-size: 60px;
+	}
+	.game-details span{
+		font-size: 50px;
+	}
+	.game-reserve-table{
+		border: 5px solid #000;
+		max-width: none;
+		width: 100%;
+	}
+	.game-reserve-table p {
+	    border: 2px dashed #000;
+	    font-size: 40px;
+	    margin: 5px;
+	}
+	.bye-week{
+		height: 200px;
+	}
+	.bye-week .game-details{
+		padding: 0;
+	}
+	.bye-week img{
+		display: none;
+	}
+	.sports-page .table-reservation{
+		border: 2px solid #fff;
+		padding: 0;
+		top: 10px;
+		width: 950px;
+	}
+	.sports-page .table-reservation-one,
+	.sports-page .table-reservation-two{
+		display: flex;
+	    flex-direction: column;
+	    width: 100%;
+	}
+	.schedule-logo-heading img{
+		max-height: 100px;
+		max-width: 200px;
+	}
+	.sports-page .table-reservation-x{
+		top: 10px;
+		right: 10px;
+	}
+	.sports-page .table-reservation-x i{
+		font-size: 40px;
+	}
+	.sports-page .schedule-text-heading{
+		font-size: 40px;
+	}
+	.sports-page .schedule-logo-heading p{
+		font-size: 50px;
+		padding: 0 20px;
+	}
+	#reservation-time-subscript{
+		font-size: 22px;
+	}
+	.sports-page .table-reservation-form-buttons {
+		margin: 0 auto;
+	    width: calc(100% - 12px);
+	}
+	.sports-page .table-reservation input{
+		font-family: 'Roboto Condensed', sans-serif;
+	    font-size: 24px;
+	    /*height: 60px;*/
+	    margin: 10px 0;
+	    max-width: calc(100% - 28px);
+	    padding: 2px 0 2px 10px;
+	    width: 100%;
+	}
+	.sports-page .table-reservation textarea{
+		font-family: 'Roboto Condensed', sans-serif;
+	    font-size: 24px;
+	    height: 30px;
+	    margin: 10px 0;
+	    padding: 2px 0 2px 10px;
+	}
+	.sports-page .table-reservation-container input{
+		height: auto;
+	}
+	.sports-page #table-reservation-submit,
+	.sports-page #table-reservation-reset{
+		    font-family: 'Roboto Condensed', sans-serif;
+		    font-size: 44px;
+		    height: 60px;
+		    margin: 10px 0;
+		    max-width: none;
+		    padding: 0;
+		    text-align: center;
+		    width: 400px;
+	}
+	.sports-page #table-reservation-submit input,
+	.sports-page #table-reservation-reset input{
+		max-width: none;
+		width: 90%;
+	}
+	#bears-week-13-button{
+		font-size: 40px;
+		max-width: calc(100% - 44px);
+		width: 100%;
+	}
+	/***TRVIA PAGE***/
+	.trivia-month-column .page-heading{
+		background-color: #000;
+		border: 2px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 150px;
+    	width: calc(100% - 5px);
+	}
+	.trivia-month-column .page-heading-container{
+		border: 2px dashed #fff;
+		font-size: 48px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.trivia-weeks{
+		max-height: 400px;
+	}
+	.trivia-weeks .trivia-background{
+		height: 400px;
+	}
+	.trivia-logo img{
+		max-width: 800px;
+	}
+	.trivia-date,
+	.trivia-reserve-table{
+		font-size: 32px;
+	}
+	.trivia .table-reservation{
+		top: 40px;
+		width: 900px;
+	}
+	.trivia .table-reservation-container input{
+		font-size: 24px;
+		width: 250px;
+	}
+	.trivia #reservation-time-subscript{
+		font-size: 12px;
+	}
+	.trivia .table-reservation-container input{
+		height: auto;
+	}
+	/***PRIVATE PARTIES***/
+	.private-events .page-heading{
+		background-color: #000;
+		border: 5px solid #fff;
+		padding: 0;
+		position: relative;
+    	margin-top: 100px;
+    	width: calc(100% - 5px);
+	}
+	.private-events .page-heading-container{
+		border: 5px dashed #fff;
+		font-size: 56px;
+		margin: 10px;
+		padding-bottom: 10px;
+		text-shadow: -7px 7px 10px #B5A267;
+	}
+	.private-parties-copy p{
+		font-size: 32px;
+	}
+	.room{
+		max-width: 950px;
+	}
+	.room-title{
+		font-size: 60px;
+	}
+	.room-copy p{
+		font-size: 24px;
+	}
+	.room-buttons{
+		max-width: 55%;
+	}
+	.room-buttons #room-button-p{
+		font-size: 26px;
+	}
+	.private-events .table-reservation{
+		top: 60px;
+	}
+	.party-packages-pop-up{
+		top: 5px;
 	}
 }

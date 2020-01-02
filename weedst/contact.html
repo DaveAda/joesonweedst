@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BASSET CHICAGO</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../media/images/logos/the-hair-band-night-logo.png"/>
+   	<link href="css/style.css" rel="stylesheet" type="text/css">
+   	<link href="css/jarallax.css" rel="stylesheet" type="text/css">
+   	<link href="css/slick.css" rel="stylesheet" type="text/css">
+   	<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+   	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--HEADER-->
+	<header>
+		<div class="header-container">
+		<!--HEADER TABS-->
+			<div class="header-tabs">
+				<div class="header-tabs-container">
+					<div class="header-tabs-left">
+						<!--HOME TAB-->
+						<div class="individual-tab-left">
+							<div class="individual-tab-container">
+								<a href="index.html">HOME</a>
+							</div>
+						</div>
+						<!--FAQS TAB-->
+						<div class="individual-tab-left">
+							<div class="individual-tab-container">
+								<a href="faq.html">FAQS</a>
+							</div>
+						</div>
+						<!--RESOURCES TAB-->
+						<div class="individual-tab-left">
+							<div class="individual-tab-container">
+								<a href="resources.html">RESOURCES</a>
+							</div>
+						</div>
+					</div>
+					<!--HEADER LOGO-->
+					<div class="header-logo">
+						<a href="index.html"><img src="media/images/basset-chicago-logo.png"/></a>
+					</div>
+					<div class="header-tabs-right">
+						<!--CONTACT US TAB-->
+						<div class="individual-tab-right">
+							<div class="individual-tab-container">
+								<a href="contact.html">CONTACT US</a>
+							</div>
+						</div>
+						<!--HEADER SOCIAL MEDIA-->
+						<div class="header-social-media">
+							<div class="header-social-media-container">
+								<div class="header-facebook">
+									<a href="#"><i class="fab fa-facebook"></i></a>
+								</div>
+								<div class="header-instagram">
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div>
+								<div class="header-linkedin">
+									<a href="#"><i class="fab fa-linkedin"></i></a>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<!--BODY-->
+	<div class="contact">
+		<div class="contact-container">
+			<div class="contact-form">
+				<form action="contact-form.php" id="contactForm" target="_blank" method="POST" accept-charset="utf-8">
+					<div class="contact-wrapper">
+						<div class="contact-one">
+							<div class="form-input">
+								<input  type="text" name="firstname" placeholder="First Name" required>
+							</div>
+							<div class="form-input">
+								<input  type="text" name="lastname" placeholder="Last Name" required>
+							</div>
+						</div>
+						<div class="contact-two">
+							<div class="form-input">
+								<input  type="email" name="email" placeholder="E-Mail" required>
+							</div>
+							<div class="form-input">
+								<input  type="tel" name="phone" placeholder="Phone" required>
+							</div>
+						</div>
+					</div>
+					<div class="contact-dropdown">
+						<select id="department" type="text" name="department">
+						  <option value="onsite-training" name="onsite-training">Book an Onsite Training</option>
+						  <option value="help" name="help">Website/Online Account Help</option>
+						  <option value="card" name="card">Changes/Replacement Card</option>
+						  <option value="other" name="other">Other</option>
+						</select>
+					</div>
+					<div class="contact-message">
+					    <textarea type="text" name="message" placeholder="Whatever you want it to say here" required></textarea>
+					    <input id="name2" type="text" name="name2" placeholder="Are You A Robot?&hellip;" required>
+					</div>
+					<div class="contact-form-buttons">
+					    <div id="contact-submit" onClick="submitForm()"><input type="submit" name="submit" value="SUBMIT"></div>
+					    <div id="contact-reset"><input type="reset" name="reset" value="RESET"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+<form action="#" id="contactForm" method="post" accept-charset="utf-8">
+        <input id="name" type="text" name="firstname" minlength="2" placeholder="Your Name&hellip;" required>
+        <input id="name" type="text" name="lastname" minlength="2" placeholder="Your Name&hellip;" required>
+        <input id="email" type="email" name="email" placeholder="Your Email&hellip;" required>
+        <input id="name2" type="text" name="name2" placeholder="Are You A Robot?&hellip;" required>
+        <select id="department" type="text" name="department">
+          <option value="customer" name="customer">I am a customer</option>
+          <option value="distribution" name="distribution">department in distribution</option>
+          <option value="press" name="press">I am with the press</option>
+          <option value="career" name="career">department in a career position</option>
+          <option value="other" name="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Your Message&hellip;" required></textarea>
+        <input type="submit" value="Send away!">
+    </form>
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhtkSJ639lpxabi0QZUeut3KFCFJhoWek&callback=initMap"
+  type="text/javascript"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="js/jarallax/jarallax.min.js"></script>
+<script src="js/jarallax/jarallax-video.min.js"></script>
+<script src="js/jarallax/jarallax-element.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="http://res.cloudinary.com/vsevolodts/raw/upload/v1503371762/timeit.min.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

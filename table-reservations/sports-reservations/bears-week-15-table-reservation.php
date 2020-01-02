@@ -40,6 +40,7 @@
 </head>
 <body>
 	<?php 
+	if ($_SERVER['REQUEST_METHOD'] === 'POST'){ 
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
 	$email = $_POST['email'];
@@ -49,12 +50,13 @@
 	$message = $_POST['message'];
 
 	$formcontent="From: $firstname $lastname \nE-Mail: $email \nPhone: $phone \nNumber of People: $numberofpeople \nReservation Time: $reservationtime\nMessage: $message";
-	$recipient = "dave@daveada.com";
+	$recipient = "events@joesbar.com";
 	$subject = "BEARS - 12/15 - WEEK 15";
-	$mailheader = "From: Sports Reservation \r\n";
+	$mailheader = "From: Reservations@joesbar.com \r\n";
 	mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 	echo "<div class='form-text'>Thank you for your table reservation.  We will contact you shortly.</div>";
 	echo "<div class='form-image'><img src='../../media/images/logos/joes-main-logo.png'/>";
+	}
 	?>
 </body>
 </html>
