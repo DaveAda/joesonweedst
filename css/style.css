@@ -31,6 +31,7 @@ body{
 	background-color: #394145;
 	position: relative;
 }
+
 .main-main-main{
 	display: none !important;
 }
@@ -49,8 +50,9 @@ body{
 /*DISPLAY NONE*/
 	.header-about-dropdown,
 	.header-menu-dropdown,
-	#copy-break,
-	#tuff-br{
+	.next-concert-hide,
+	.next-rooftop-hide,
+	#copy-break{
 		display: none;
 	}
 	/*MOBILE*/
@@ -71,41 +73,8 @@ body{
 	#upcoming-events-break{
 		display: none;
 	}
-	/*UP NEXT TOP*/
-	.hardy-1-31-20-next,
-	.jason-boland-2-6-20-next{
-		display: none;
-	}
-	/*UP NEXT BOTTOM*/
-	.jason-boland-2-6-20-rooftop,
-	.matt-stell-2-7-20-rooftop{
-		display: none;
-	}
-	/*EVENTS*/
-	#new-years-eve-12-31-19-dropdown,
-	#country-for-a-cause-1-5-20-dropdown{
-		display: none;
-	}
 	/*CONCERTS*/
-	#riley-green-1-3-20-dropdown,
-	#johnny-alletto-1-4-20-dropdown,
-	#chief-1-4-20-dropdown,
-	#country-for-a-cause-1-5-20-dropdown,
-	#gone-west-1-9-20-dropdown,
-	#rendition-1-10-20-dropdown,
-	#trb-1-11-20-dropdown,
-	#keith-relief-1-12-20-dropdown,
-	#pie-1-17-20-dropdown,
-	#thbn-1-18-20-dropdown,
-	#rfr-1-25-20-dropdown,
-	#hardy-1-31-20-dropdown,
-	#jason-boland-2-6-20-dropdown,
-	#matt-stell-2-7-20-dropdown,
-	#tbbn-2-8-20-dropdown,
-	#the-cadillac-three-2-21-20-dropdown,
-	#canaan-smith-2-22-20-dropdown,
-	#ryan-hurd-2-27-20-dropdown,
-	#ryan-hurd-2-28-20-dropdown{
+	.concert-listing-info-dropdown{
 		display: none;
 	}
 	/*SPORTS*/
@@ -518,7 +487,7 @@ body{
 		display: flex;
 		justify-content: center;
 	}
-	/*UP NEXT*/
+/*UP NEXT*/
 	.main-next-heading{
 		background-color: #000;
 		border: 2px solid #fff;
@@ -553,6 +522,12 @@ body{
 	.next-rooftop{
 		position: relative;
 	}
+	.wcw-homepage img{
+		background-color: #000;
+		background-image: url('../media/images/upcoming/white-claw-winter-logo.png');
+		background-position: -10px -10px;
+		background-size: 40px 40px;
+	}
 	.rooftop-concert-series{
 		color: #fff;
 		font-family: 'Roboto Mono', sans-serif;
@@ -584,13 +559,13 @@ body{
 		display: flex;
 		justify-content: space-between;
 	}
-	.band-date-name{
-		
-	}
 	#next-band-name{
 		color: #fff;
 		font-family: 'Roboto Mono', sans-serif;
 		font-size: 16px;
+	}
+	.thbn-1-18-20-rooftop #next-band-name{
+		font-size: 12px;
 	}
 	#next-band-time{
 		color: #fff;
@@ -613,7 +588,7 @@ body{
 		text-align: center;
 		width: 80px;
 	}
-	/*CAROUSEL*/
+/*CAROUSEL*/
 	.main-upcoming-carousel{
 		height: 100%;
 		max-width: 800px;
@@ -691,7 +666,7 @@ body{
 		font-family: 'Roboto Mono', sans-serif;
 		position: relative;
 		text-align: center;
-		width: 200px;
+		min-width: 200px;
 	}
 	.event-box .rooftop-button{
 		color: #fff;
@@ -736,9 +711,14 @@ body{
 	#matt-stell-main-carousel{
 		object-position: 0 -50px;
 	}
+	#thbn-next{
+		background-color: #000;
+		object-fit: contain;
+		object-position: 0 14px;
+	}
 /*WHITE CLAW BANNER*/
 	#wcw-home{
-		margin: 40px auto 0 auto;
+		margin:  20px auto;
 		max-width: 1500px;
 		width: 100%;
 	}
@@ -953,6 +933,9 @@ body{
 		max-width: 1200px;
 		width: 100%;
 	}
+	.main-events .main-featured-heading{
+		width: calc(100% - 5px);
+	}
 	.main-events-container{
 		display: flex;
 		height: 100%;
@@ -983,6 +966,7 @@ body{
 	}
 	.main-events-carousel-box img{
 		display: block;
+		height: 100%;
 		max-width: 800px;
 		width: 100%;
 	}
@@ -999,7 +983,7 @@ body{
 	}
 	.main-events-date-text{
 		align-items: center;
-		background-color: rgba(0,0,0,.8);
+		background-color: rgba(0,0,0,.5);
 		bottom: 0;
 		display: flex;
 		justify-content: space-between;
@@ -1016,7 +1000,8 @@ body{
 		border-right: 1px solid #fff;
 		position: relative;
 	}
-	.main-events #table-p{
+	.main-events #table-p,
+	.nfl-playoffs-table-p{
 		font-family: 'Roboto Mono', sans-serif;
 		font-size: 16px;
 	}
@@ -1127,8 +1112,10 @@ body{
 	.partners-box{
 		align-items: flex-end;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-around;
-		width: 50%;
+		width: 100%;
+		
 	}
 	.partners-info img{
 		max-height: 150px;
@@ -1416,6 +1403,7 @@ body{
 		color: #fff;
 		display: flex;
 		font-family: 'Roboto Mono', sans-serif;
+		max-width: 280px;
 		text-align: center;
 		transition: .3s;
 	}
@@ -1566,6 +1554,9 @@ body{
 		border-color: #000;
 		cursor: pointer;
 		transition: .3s;
+	}
+	#nfl-table-reservation-button{
+		width: auto;
 	}
 /*WHITE CLAW BANNER*/
 	.wcw-banner{
@@ -1757,38 +1748,8 @@ body{
 		background-color: #000;
 		object-fit: cover;
 	}
-	#riley-green-img-concerts{
-		object-position: 50% 20%;
-	}
-	#gone-west-green-img-concerts{
-		max-height: 300px;
-	}
-	#hello-dave{
-		object-position: 0 0;
-	}
-	#hello-dave-a{
-		font-size: 16px;
-	}
-	#tuff-fest-img{
-		min-height: 100%;
-		object-position: 100% 0;
-	}
-	#tuff-dash{
-		color: #fff;
-	}
-	#new-years-eve-12-31-19-main img,
-	.johnny-alletto-1-4-20 img{
-		object-position: 0 0;
-	}
 	#hurd-photo{
 		object-position: 0 -15px;
-	}
-	#thbn{
-		max-height: none;
-		object-fit: contain;
-	}
-	#keith-relief-events{
-		max-height: none;
 	}
 /*CONCERT LISTING DROPDOWN*/
 	.concert-listing-info-dropdown{
@@ -1942,11 +1903,68 @@ body{
 		margin: 0 auto;
 		width: 90%;
 	}
+	#conference-logo-heading{
+		display: flex;
+		flex-direction: column;
+	}
+	.conference-games{
+		align-items: center;
+		display: flex;
+	}
+	.next-season-text{
+		display: none;
+	}
+/*MARCH MADNESS*/
+	.march-madness{
+		margin: 40px auto 0 auto;
+		max-width: 1500px;
+		width: 100%;
+	}
+	.march-madness-container{
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
+	}
+	.march-madness-logo{
+		margin: 0 auto;
+		max-width: 600px;
+	}
+	.march-madness-logo img{
+		width: 100%;
+	}
+	.march-madness-blurb p{
+		color: #fff;
+		font-family: 'profootball', sans-serif;
+		font-size: 50px;
+		text-align: center;
+		text-shadow: 1px 1px 3px #1D1819, -1px -1px 3px #1D1819, -1px 1px 3px #1D1819, 1px -1px 3px #1D1819;
+	}
+	.march-madness-blurb span{
+		color: #0072BB;
+		transition: .3s;
+	}
+	.march-madness-form-pop-hover{
+		color: #fff !important;
+		cursor: pointer;
+		transition: .3s;
+	}
+	#march-madness-pop-up select{
+		color: rgba(0,0,0,.6);
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 18px;
+		height: 30px;
+		margin: 10px;
+		width: calc(100% - 20px);
+	}
 /*TEAM COLUMN HEIGHTS*/
 	#hoosiers-basketball-schedule .sports-schedule-column,
 	#illini-basketball-schedule .sports-schedule-column,
 	#tarheels-basketball-schedule .sports-schedule-column{
-		height: 870px;
+		height: 250px;
+	}
+	#blackhawks-schedule .sports-schedule-column,
+	#bulls-schedule .sports-schedule-column{
+		height: 800px;
 	}
 	#dot{
 		padding: 0 5px;
@@ -3595,6 +3613,9 @@ body{
 	.artist-bottom-info{
 		padding-bottom: 5px;
 	}
+	.ryan-hurd-2-28-20 .concert-listing-image img{
+		max-height: 600px;
+	}
 }
 @media(max-width:730px){
 	#upcoming-events-break{
@@ -3753,6 +3774,7 @@ body{
 		margin: 20px 0;
 	}
 	.partners-box{
+		align-items: center;
 		flex-direction: column;
 	}
 	.partners img{
@@ -3971,7 +3993,7 @@ body{
 	    padding: 0;
 	    width: 150px
    	}
-   	/*BURGER FLIP*/
+/*BURGER FLIP*/
     .mobile-header-logo-fade{
         opacity: 0;
         transition: .3s;
@@ -4008,7 +4030,7 @@ body{
 	.body-mobile{
 		opacity: 1;
 	}
-	/*MAIN VIDEO*/
+/*MAIN VIDEO*/
 	.main-video{
 		max-width: none;
 		width: 992px;
@@ -4043,8 +4065,8 @@ body{
 		border: 5px dashed #000;
 		margin: 10px;
 	}
-	/*UPCOMING*/
-		/*MAIN UPCOMING*/
+/*UPCOMING*/
+/*MAIN UPCOMING*/
 	.main-next, .main-upcoming-carousel{
 		max-width: none;
 		width: 100%;
@@ -4116,7 +4138,12 @@ body{
 		font-size: 50px;
 		margin: 10px 0;
 	}
-		/*UP NEXT*/
+	#big-games-home{
+		background-color: #000;
+		object-fit: contain;
+		object-position: top;
+	}
+/*UP NEXT*/
 	.main-next{
 		margin-top: 100px;
 	}
@@ -4176,7 +4203,22 @@ body{
 		max-width: none;
 		width: calc(100% + 10px);
 	}
-	/*SOCIAL MEDIA*/
+	#hardy-mobile{
+		object-position: -350px 0;
+	}
+	#game-watch-carousel{
+		width: auto
+	}
+	.thbn-1-18-20-rooftop #next-band-name{
+		font-size: 14px;
+	}
+	.wcw-homepage img{
+		background-color: #000;
+		background-image: url('../media/images/upcoming/white-claw-winter-logo.png');
+		background-position: -10px -10px;
+		background-size: 100px 100px;
+	}
+/*SOCIAL MEDIA*/
 	.social-media-container{
 		margin: 100px 0;
 	}
@@ -4216,8 +4258,8 @@ body{
 		font-size: 80px;
 		padding: 0 20px;
 	}
-	/*MAIN EVENTS*/
-		/*SPORTS*/
+/*MAIN EVENTS*/
+/*SPORTS*/
 	.main-events-heading{
 		font-size: 62px;
 	}
@@ -4303,7 +4345,7 @@ body{
 	.main-events-date-text .ticket-button{
 		margin: 10px 0;
 		text-align: center;
-		width: 330px;
+		width: auto;
 	}
 	.main-events-date-text #table-p{
 		font-size: 40px;
@@ -4357,25 +4399,16 @@ body{
 		border: 5px dashed #fff;
 		margin: 10px;
 	}
+	.partners-container{
+		max-width: 100%;
+	}
 	.main-partners-heading{
 		font-size: 60px;
 		text-shadow: -7px 7px 10px #B5A267;
 	}
 	.partners-box{
-     	display: block;
-     	height: 800px;
-	}
-	.box-1{
 		align-items: center;
-     	display: flex;
      	flex-direction: column;
-     	justify-content: space-between;
-	}
-	.box-2{
-		align-items: center;
-     	display: flex;
-     	flex-direction: column-reverse;
-     	justify-content: space-between;
 	}
 	.partners img{
 		display: block;
@@ -4570,7 +4603,7 @@ body{
 		width: 100%;
 	}
 	.weekly-box p{
-		font-size: 40px;
+		font-size: 38px;
 	}
 	.weekly-events img{
 		width: 100%;
@@ -4760,12 +4793,6 @@ body{
 	.about-the-show a{
 		font-size: 50px;
 	}
-	#tuff-dash{
-		display: none;
-	}
-	#tuff-br{
-		display: block;
-	}
 	/*SPORTS*/
 	.sports-page{
 		margin-top: 330px;
@@ -4793,7 +4820,7 @@ body{
 		width: 80%;
 	}
 	.sports-special-column .weekly-box p{
-		font-size: 55px;
+		font-size: 48px;
 	}
 	.sports-special-column .weekly-box .weekly-small-font-size p{
 		font-size: 44px;
@@ -4967,7 +4994,22 @@ body{
 		max-width: calc(100% - 60px);
 		width: 100%;
 	}
-	/*TRIVIA*/
+/*MARCH MADNESS*/
+	.march-madness-logo{
+		margin: 20px auto 40px auto;
+		max-width: 800px;
+	}
+	.march-madness-blurb p{
+		font-size: 90px;
+	}
+	#march-madness-pop-up select{
+		background-color: #fff;
+		font-size: 44px;
+		height: auto;
+		margin-left: 0;
+		width: calc(100% - 10px);
+	}
+/*TRIVIA*/
 	.trivia-months{
 		width: 100%;
 	}
@@ -5483,6 +5525,14 @@ body{
 	.main-events-date-text #table-p{
 		font-size: 18px;
 	}
+	#game-watch-carousel{
+		width: auto;
+	}
+	#big-games-home{
+		background-color: #000;
+		object-fit: contain;
+		object-position: top;
+	}
 /*WCW*/
 	#wcw-home{
 		margin-top: 25px;
@@ -5714,6 +5764,9 @@ body{
 	.weekly-box p{
 		font-size: 24px;
 	}
+	#conference-games-p{
+		font-size: 18px;
+	}
 	.weekly-box .weekly-small-font-size{	
 	    display: flex;
 	    height: 120px;
@@ -5846,13 +5899,7 @@ body{
 	#parker-img{
 		object-position: 0;
 	}
-	#tuff-dash{
-		display: none;
-	}
-	#tuff-br{
-		display: block;
-	}
-	/*SPORTS*/
+/*SPORTS*/
 	.sports-page{
 		margin-top: 150px;
 	}
@@ -6069,12 +6116,22 @@ body{
 		max-width: none;
 		width: 90%;
 	}
-	#bears-week-13-button{
-		font-size: 40px;
-		max-width: calc(100% - 44px);
-		width: 100%;
+/*MARCH MADNESS*/
+	.march-madness-logo{
+		margin: 20px auto 40px auto;
+		max-width: 600px;
 	}
-	/***TRVIA PAGE***/
+	.march-madness-blurb p{
+		font-size: 60px;
+	}
+	#march-madness-pop-up select{
+		background-color: #fff;
+		font-size: 24px;
+		height: auto;
+		margin-left: 0;
+		width: calc(100% - 10px);
+	}
+/***TRVIA PAGE***/
 	.trivia-month-column .page-heading{
 		background-color: #000;
 		border: 2px solid #fff;
@@ -6157,4 +6214,5 @@ body{
 	.party-packages-pop-up{
 		top: 5px;
 	}
+
 }
