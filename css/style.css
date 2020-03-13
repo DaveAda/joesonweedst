@@ -1960,7 +1960,7 @@ body{
 	#hoosiers-basketball-schedule .sports-schedule-column,
 	#illini-basketball-schedule .sports-schedule-column,
 	#tarheels-basketball-schedule .sports-schedule-column{
-		height: 250px;
+		height: auto;
 	}
 	#blackhawks-schedule .sports-schedule-column,
 	#bulls-schedule .sports-schedule-column{

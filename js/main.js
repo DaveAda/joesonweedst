@@ -319,22 +319,10 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
             if(daysAway >= 1){
                 $('.st-patricks-3-14-20').hide()
     }}
-/*3-17-20 ST. PATRICK'S DAY PARDI*/
-    var $jonpardi031720infobutton = $('#jon-pardi-3-17-20-info-button');
-    var $jonpardi031720dropdown = $('#jon-pardi-3-17-20-dropdown');
-    $jonpardi031720infobutton.click(function(){
-        $jonpardi031720dropdown.slideDown();
-    });
-    jonPardi031720ConcertHide(showDate("2020-03-17"));
-        function jonPardi031720ConcertHide(daysAway){
-            if(daysAway >= 1){
-                $('.jon-pardi-3-17-20').hide()
-            }
-        }
 /*3-18-20 PARKS AND REC --- TRIVIA ---*/
     var $parksandrecmarch18reservation = $('#parks-and-rec-march-18-reservation');
     var $parksandrecmarch18 = $('#parks-and-rec-march-18');
-    parksandrec031820(showDate("2020-03-12"));
+    parksandrec031820(showDate("2020-03-19"));
         function parksandrec031820(daysAway){
             if(daysAway >= 1){
                 $('.parks-and-rec-3-18-20').hide()
@@ -359,7 +347,7 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
 /*3-25-20 PARKS AND REC --- TRIVIA ---*/
     var $gilmoregirlsmarch25reservation = $('#gilmore-girls-march-25-reservation');
     var $gilmoregirlsmarch25 = $('#gilmore-girls-march-25');
-    gilmoregirls032520(showDate("2020-03-12"));
+    gilmoregirls032520(showDate("2020-03-26"));
         function gilmoregirls032520(daysAway){
             if(daysAway >= 1){
                 $('.gilmore-girls-3-25-20').hide()
@@ -390,19 +378,6 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
                 $('.hudson-moore-3-28-20').hide()
             }
         }
-/*4-1-20 COUNTRY MUSIC --- TRIVIA ---*/
-    var $countrymusicapril1reservation = $('#country-music-april-1-reservation');
-    var $countrymusicapril1 = $('#country-music-april-1');
-    countryMusic040120(showDate("2020-04-02"));
-        function countryMusic040120(daysAway){
-            if(daysAway >= 1){
-                $('.country-music-4-1-20').hide()
-            }
-        }
-    $countrymusicapril1reservation.click(function(){
-        $countrymusicapril1.fadeIn();
-        $triviamonths.addClass('schedule-background-fade');
-    });
 /*4-3-20 MANA*/
     var $mana4320infobutton = $('#mana-4-3-20-info-button');
     var $mana4320dropdown = $('#mana-4-3-20-dropdown');
@@ -449,6 +424,27 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
         $friendsapril8.fadeIn();
         $triviamonths.addClass('schedule-background-fade');
     });
+/*4-11-20 WALKER HAYES: TRIPLE PLAY TOUR*/
+    var $walkerHayes041120infobutton = $('#walker-hayes-4-11-20-info-button');
+    var $walkerHayes041120dropdown = $('#walker-hayes-4-11-20-dropdown');
+    $walkerHayes041120infobutton.click(function(){
+        $walkerHayes041120dropdown.slideDown();
+    });
+    walkerHayes041120ConcertShow(showDate("2020-03-11 08:59:00"));
+        function walkerHayes041120ConcertShow(daysAway){
+            if(daysAway >= 1){
+                $('.walker-hayes-4-11-20').show()
+            }
+            else{
+                $('.walker-hayes-4-11-20').hide()
+            }
+        }
+    walkerHayes041120ConcertHide(showDate("2020-04-17"));
+        function walkerHayes041120ConcertHide(daysAway){
+            if(daysAway >= 1){
+                $('.walker-hayes-4-11-20').hide()
+            }
+        }
 /*4-15-20 THE OFFICE --- TRIVIA ---*/
     var $theofficeapril15reservation = $('#the-office-april-15-reservation');
     var $theofficeapril15 = $('#the-office-april-15');
@@ -1186,7 +1182,7 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
 /*HOOSIERS BASKETBALL SCHEDULE TIMER*/
     hoosiersBasketballGame34(showDate("2020-03-05"));function hoosiersBasketballGame34(daysAway){if(daysAway >= 1){$('#hoosiers-basketball-3-4-timer').hide()}}
     hoosiersBasketballGame37(showDate("2020-03-08"));function hoosiersBasketballGame37(daysAway){if(daysAway >= 1){$('#hoosiers-basketball-3-7-timer').hide()}}
-    hoosiersBasketballNextSeason(showDate("2020-03-09"));
+    hoosiersBasketballNextSeason(showDate("2020-03-08"));
     function hoosiersBasketballNextSeason(daysAway){
         if(daysAway >= 1){
             $('#hoosiers-basketball-next-season').show();
@@ -1223,7 +1219,7 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
 /*TARHEELS BASKETBALL SCHEDULE TIMER*/
     tarheelsBasketballGame33(showDate("2020-03-04"));function tarheelsBasketballGame33(daysAway){if(daysAway >= 1){$('#tarheels-basketball-3-3-timer').hide()}}
     tarheelsBasketballGame37(showDate("2020-03-08"));function tarheelsBasketballGame37(daysAway){if(daysAway >= 1){$('#tarheels-basketball-3-7-timer').hide()}}
-    tarheelsBasketballNextSeason(showDate("2020-03-09"));
+    tarheelsBasketballNextSeason(showDate("2020-03-08"));
     function tarheelsBasketballNextSeason(daysAway){
         if(daysAway >= 1){
             $('#tarheels-basketball-next-season').show();
@@ -1360,24 +1356,19 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
 
 /**********FEATURED UPCOMING CAROUSEL/**********/
 /*MAIN CONCERT CAROUSEL TIMER*/
-    nextonedownfeatured1(showDate("2020-02-23"));
+    nextonedownfeatured1(showDate("2020-03-29"));
         function nextonedownfeatured1(daysAway){
             if(daysAway >= 1){
-                 $('.event-wrapper').slick('removeSlide', true);
+                $('.event-wrapper').slick('slickRemove',0);
             }
-        }
-    nextonedownfeatured2(showDate("2020-03-07"));
+        } 
+    nextonedownfeatured2(showDate("2020-04-12"));
         function nextonedownfeatured2(daysAway){
             if(daysAway >= 1){
-                 $('.event-wrapper').slick('removeSlide', true);
+                $('.event-wrapper').slick('slickRemove',0);
             }
-        }
-    nextonedownfeatured3(showDate("2020-03-29"));
-        function nextonedownfeatured3(daysAway){
-            if(daysAway >= 1){
-                 $('.event-wrapper').slick('removeSlide', true);
-            }
-        }       
+
+        }      
 /**********UP NEXT TOP/**********/
         thecadillacthree022120next(showDate("2020-02-22"));
             function thecadillacthree022120next(daysAway){
@@ -1386,11 +1377,18 @@ var $concertlistinginfodropdown = $('.concert-listing-info-dropdown');
                     $('.twc-3-7-20-next').show();
                 }
             }
-        twc030720next(showDate("2020-03-15"));
+        twc030720next(showDate("2020-03-08"));
             function twc030720next(daysAway){
                 if(daysAway >= 1){
                     $('.twc-3-7-20-next').hide();
                     $('.sixteen-candles-3-14-20-next').show();
+                }
+            }
+        candles031420next(showDate("2020-03-15"));
+            function candles031420next(daysAway){
+                if(daysAway >= 1){
+                    $('.sixteen-candles-3-14-20-next').hide();
+                    $('.then-again-3-21-20-next').show();
                 }
             }
         thenAGain032120next(showDate("2020-03-22"));

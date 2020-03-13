@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
 	<title></title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../media/images/logos/joes-main-logo.png"/>
@@ -51,10 +51,11 @@
 	$message = $_POST['message'];
 
 	$formcontent="From: $firstname $lastname \nE-Mail: $email \nPhone: $phone \nNumber of People: $numberofpeople \nReservation Time: $reservationtime \nGame: $game \nMessage: $message";
-	$recipient = "dave@daveada.com";
+	$recipient = "events@joesbar.com";
 	$subject = "March Madness General Form";
 	$mailheader = "From: Reservations@joesbar.com \r\n";
 	mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+	header("Location: ../../../weedst/sports.html?mailsend");
 	echo "<div class='form-text'>Thank you for your table reservation.  We will contact you shortly.</div>";
 	echo "<div class='form-image'><img src='../../../media/images/logos/joes-main-logo.png'/>";
 	}
